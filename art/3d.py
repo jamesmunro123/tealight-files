@@ -54,7 +54,23 @@ def handle_keydown(key):
   elif key == "down":
     dtheta=-0.1
   elif key == "c":
-    dalpha=-0.1  
+    dalpha=-0.1
+    
+def handle_keydown(key):
+  global dphi, dtheta, dalpha
+  if key == "left":
+    dphi=0
+  elif key == "up":
+    dtheta=0
+  elif key == "d":
+    dalpha=0
+  elif key == "right":
+    dphi=-0
+  elif key == "down":
+    dtheta=-0
+  elif key == "c":
+    dalpha=-0 
+    
 def handle_frame():
   sleep(30)  
   global phi, theta, alpha, dphi, dtheta, dalpha
