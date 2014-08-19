@@ -37,6 +37,8 @@ def linethree(x1,y1,z1,x2,y2,z2):
   
   
 def handle_keydown(key):
+  global phi, theta, alpha
+  
   if key == "a":
     phi=phi+0.1
   elif key == "s":
