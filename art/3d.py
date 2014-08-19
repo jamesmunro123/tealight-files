@@ -53,7 +53,7 @@ def handle_keydown(key):
     dtheta=-0.1
   elif key == "c":
     dalpha=-0.1  
-def handle_fram():
+def handle_frame():
   sleep(30)  
   global phi, theta, alpha, dphi, dtheta, dalpha
   
