@@ -55,14 +55,7 @@ def handle_keydown(key):
   elif key == "c":
     dalpha=-0.1
     
-def handle_keyup():
-  dphi=0
-  dtheta=0
-  dalpha=0
 
-def handle_frame():
-  
-  global phi, theta, alpha, dphi, dtheta, dalpha
   
   phi=phi+dphi
   theta=theta+dtheta
