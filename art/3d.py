@@ -45,6 +45,13 @@ def handle_keydown(key):
     theta=theta+0.1
   elif key == "d":
     alpha=alpha+0.1
+  elif key == "z":
+    phi=phi-0.1
+  elif key == "x":
+    theta=theta-0.1
+  elif key == "c":
+    alpha=alpha-0.1 
+    
 
   color("white")
   box(0,0,screen_width,screen_height)
