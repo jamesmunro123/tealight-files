@@ -53,7 +53,12 @@ def handle_keydown(key):
   elif key == "down":
     dtheta=-0.1
   elif key == "c":
-    dalpha=-0.1 
+    dalpha=-0.1
+    
+def handle_keyup
+  dphi=0
+  dtheta=0
+  dalpha=0
 
 def handle_frame():
   
