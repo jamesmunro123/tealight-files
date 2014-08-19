@@ -12,4 +12,8 @@ def linethree(x1,y1,z1,x2,y2,z2):
   line(a1,b1,a2,b2)
   print a2-screen_width/2
   print b2-screen_height/2
-linethree(0,0,0,100,0,0)
+
+  
+  
+  
+  linethree(0,0,0,100,0,0)
