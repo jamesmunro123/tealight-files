@@ -39,15 +39,15 @@ def linethree(x1,y1,z1,x2,y2,z2):
 def handle_keydown(key):
   global phi, theta, alpha
   
-  if key == "a":
+  if key == "left":
     phi=phi+0.1
-  elif key == "s":
+  elif key == "up":
     theta=theta+0.1
   elif key == "d":
     alpha=alpha+0.1
-  elif key == "z":
+  elif key == "right":
     phi=phi-0.1
-  elif key == "x":
+  elif key == "down":
     theta=theta-0.1
   elif key == "c":
     alpha=alpha-0.1 
