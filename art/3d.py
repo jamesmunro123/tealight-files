@@ -46,7 +46,7 @@ def handle_keydown(key):
   elif key == "d":
     alpha=alpha+0.1
 
-  color(white)
+  color(#000)
   box(0,0,screen_width,screen_height)
   color(black)
   linethree(0,0,0,100,0,0)
