@@ -4,9 +4,9 @@ import math
 
 from tealight.art import screen_width, screen_height
 
-phi=0.1
-theta=0.4
-alpha=0.1
+phi=0
+theta=0
+alpha=0
 
 def linethree(x1,y1,z1,x2,y2,z2):
 
