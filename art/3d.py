@@ -4,10 +4,12 @@ import math
 
 from tealight.art import screen_width, screen_height
 
+phi=0.1
+theta=0.4
+alpha=0.1
+
 def linethree(x1,y1,z1,x2,y2,z2):
-  phi=0.1
-  theta=0.4
-  alpha=0.1
+
   a1=x1*math.cos(phi)-y1*math.sin(phi)
   b1=x1*math.sin(phi)+y1*math.cos(phi)
   
@@ -35,6 +37,14 @@ def linethree(x1,y1,z1,x2,y2,z2):
   
   
 def handle_keydown(key):
+  if key == "a":
+    phi=phi+0.1
+  elif key == "s":
+    theta=theta+0.1
+  elif key == "d":
+    alpha=alpha+0.1
+
+   
   linethree(0,0,0,100,0,0)
   linethree(100,0,0,100,0,100)
   linethree(100,0,100,0,0,100)
