@@ -4,6 +4,8 @@ import math
 
 from tealight.art import screen_width, screen_height
 
+from tealight.utils import sleep
+
 phi=0
 theta=0
 alpha=0
