@@ -56,7 +56,7 @@ def handle_keydown(key):
   elif key == "c":
     dalpha=-0.1
     
-def handle_keydown(key):
+def handle_keyup(key):
   global dphi, dtheta, dalpha
   if key == "left":
     dphi=0
