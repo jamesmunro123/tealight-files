@@ -40,27 +40,21 @@ def linethree(x1,y1,z1,x2,y2,z2):
   
   
 def handle_keydown(key):
-  global dphi, dtheta, dalpha
+  global phi, theta, alpha
   
   if key == "left":
-    dphi=0.1
+    phi=phi+0.1
   elif key == "up":
-    dtheta=0.1
+    theta=theta+0.1
   elif key == "d":
-    dalpha=0.1
+    alpha=alpha+0.1
   elif key == "right":
-    dphi=-0.1
+    phi=phi-0.1
   elif key == "down":
-    dtheta=-0.1
+    theta=theta-0.1
   elif key == "c":
-    dalpha=-0.1
+    alpha=alpha-0.1
     
-
-  
-  phi=phi+dphi
-  theta=theta+dtheta
-  alpha=alpha+dalpha
-  
     
 
   color("white")
