@@ -14,8 +14,8 @@ def linethree(x1,y1,z1,x2,y2,z2):
   c1=b1*math.cos(theta)-z1*math.sin(theta)
   d1=b1*math.sin(theta)+z1*math.cos(theta)
   
-  e1=a1*math.cos(alpha)-c1*math.sin(alpha)
-  f1=a1*math.sin(alpha)+c1*math.cos(alpha)
+  e1=screen_width/2+a1*math.cos(alpha)-c1*math.sin(alpha)
+  f1=screen_height/2a1*math.sin(alpha)+c1*math.cos(alpha)
   
   
   a2=x2*math.cos(phi)-y2*math.sin(phi)
@@ -24,8 +24,8 @@ def linethree(x1,y1,z1,x2,y2,z2):
   c2=b2*math.cos(theta)-z2*math.sin(theta)
   d2=b2*math.sin(theta)+z2*math.cos(theta)
   
-  e2=a2*math.cos(alpha)-c2*math.sin(alpha)
-  f2=a2*math.sin(alpha)+c2*math.cos(alpha)
+  e2=screen_width/2+a2*math.cos(alpha)-c2*math.sin(alpha)
+  f2=screen_height/2a2*math.sin(alpha)+c2*math.cos(alpha)
   
   a1=screen_width/2+x1*math.sqrt(3)/2-y1/2
   b1=screen_height/2+x1/2+y1*math.sqrt(3)/2-z1
