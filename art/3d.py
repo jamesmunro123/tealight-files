@@ -1,6 +1,6 @@
 from tealight.art import (color, line, spot, circle, box, image, text, background)
 
-from math import (math, sqrt)
+import math
 
 
 def linethree(x1,y1,z1,x2,y2,z2):
