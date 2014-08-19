@@ -34,7 +34,7 @@ def linethree(x1,y1,z1,x2,y2,z2):
   line(e1,f1,e2,f2)
   
   
-def handle_frame:
+def handle_frame():
   linethree(0,0,0,100,0,0)
   linethree(100,0,0,100,0,100)
   linethree(100,0,100,0,0,100)
