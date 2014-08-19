@@ -8,6 +8,6 @@ def linethree(x1,y1,z1,x2,y2,z2):
   b1=1000+x1/2+y1*math.sqrt(3)/2-z1
   a2=1000+x2*math.sqrt(3)/2-y2/2
   b2=1000+x2/2+y2*math.sqrt(3)/2-z2
-  line(a1,a2,30,40)
+  line(a1,a2,b1,b2)
 
 linethree(0,0,0,1,0,0)
