@@ -109,7 +109,7 @@ def handle_frame():
   color("white")
   box(0,0,screen_width,screen_height)
   
-  a=sorted(1,2,3)
+  a=sorted([1,3,2])
   
   color("black")
   side(-100,-100,-100,100,-100,-100,-100,-100,100)
