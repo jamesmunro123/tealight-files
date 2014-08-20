@@ -111,7 +111,8 @@ def handle_frame():
   
   cube=[1,0,0,"black",-1,0,0,"red",0,1,0,"green",0,-1,0,"yellow",0,0,1,"blue",0,0,-1,"white"]
  
-  for i in range(1,7)
+  for i in range(1,7):
+    print(i)
     
   
   color("black")
