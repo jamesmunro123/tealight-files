@@ -86,6 +86,7 @@ def side(x1,y1,z1,x2,y2,z2,x3,y3,z3):
   a5=a1+a2
   print a5
   line(*a5)
+  line(0,0,1,1)
 
   color("white")
   box(0,0,screen_width,screen_height)
