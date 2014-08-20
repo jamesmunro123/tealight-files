@@ -85,7 +85,6 @@ def side(x1,y1,z1,x2,y2,z2,x3,y3,z3):
   a2=xy3(x2,y2,z2)
   a3=xy3(x3,y3,z3)
   a5=a1+a2+a3
-  print a5
   parallel(*a5)
 
 def handle_frame():
