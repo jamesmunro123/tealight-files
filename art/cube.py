@@ -98,6 +98,8 @@ def handle_frame():
   box(0,0,screen_width,screen_height)
   color("black")
   side(-100,-100,-100,100,-100,-100,-100,-100,100)
+  color("red")
+  side(-100,-100,-100,-100,100,-100,-100,-100,100)
   #linethree(100,-100,-100,100,-100,100)
   #linethree(100,-100,100,-100,-100,100)
   #linethree(-100,-100,-100,-100,-100,100)
