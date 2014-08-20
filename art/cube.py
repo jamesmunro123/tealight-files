@@ -70,14 +70,21 @@ def handle_frame():
   phi=phi+dphi
   theta=theta+dtheta
   alpha=alpha+dalpha
+  
+def parallel(x1,y1,x2,y2,x3,y3):
+  x4=x2+x3-x1
+  y4=y2+y3-y1
+  for i in range(x1,x2):
+    line(i,(y2-y1)*(i-x1)/(x2-x1)+y1,x3-x1+i,(y2-y1)*(i-x1)/(x2-x1)+y3)
+ 
     
 def side(x1,y1,z1,x2,y2,z2,x3,y3,z3):
   a1=xy3(x1,y1,z1)
   a2=xy3(x2,y2,z2)
   a3=xy3(x3,y3,z3)
-  a5=a1+a2
+  a5=a1+a2+a3
   print a5
-  line(*a5)
+  parallel(*a5)
 
 color("white")
 box(0,0,screen_width,screen_height)
