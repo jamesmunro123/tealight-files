@@ -109,8 +109,9 @@ def handle_frame():
   color("white")
   box(0,0,screen_width,screen_height)
   
-  cube=[(1,0,0),(-1,0,0),(0,1,0),(0,-1,0),(0,0,1),(0,0,-1)]
-  print(cube[2:3])
+  cube=[1,0,0,"black",-1,0,0,0,1,0,0,-1,0,0,0,1,0,0,-1]
+  print(cube[2:5])
+  
   color("black")
   side(-100,-100,-100,100,-100,-100,-100,-100,100)
   color("red")
