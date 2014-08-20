@@ -109,14 +109,8 @@ def handle_frame():
   color("white")
   box(0,0,screen_width,screen_height)
   
-  a=student_tuples = [
-        ('john', 'A', 15),
-        ('jane', 'B', 12),
-        ('dave', 'B', 10),
-  ]
-  b=sorted(student_tuples, key=lambda student: student[2])
-  print(b)
-  
+  cube=[(1,0,0),(-1,0,0),(0,1,0),(0,-1,0),(0,0,1),(0,0,-1)]
+  cube(2)
   color("black")
   side(-100,-100,-100,100,-100,-100,-100,-100,100)
   color("red")
