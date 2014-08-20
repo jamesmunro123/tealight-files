@@ -109,7 +109,11 @@ def handle_frame():
   color("white")
   box(0,0,screen_width,screen_height)
   
-  a=sorted([1,3,2])
+  a=student_tuples = [
+        ('john', 'A', 15),
+        ('jane', 'B', 12),
+        ('dave', 'B', 10),
+]
   print(a)
   
   color("black")
