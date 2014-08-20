@@ -79,7 +79,7 @@ def handle_frame():
   theta=theta+dtheta
   alpha=alpha+dalpha
     
-def side(x1,y1,z1,x2,y2,z2,x3,y3,z3)
+def side(x1,y1,z1,x2,y2,z2,x3,y3,z3):
   a1=xy3(x1,y1,z1)
   a2=xy3(x2,y2,z2)
   a3=xy3(x3,y3,z3)
