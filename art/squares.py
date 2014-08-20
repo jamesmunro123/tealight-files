@@ -1,6 +1,6 @@
 from tealight.art import (color, line, spot, circle, box, image, text, background, color)
 
-color("rgba(255,128,0,0.5)")
+color("rgba(255,128,0,1)")
 
 
 def parallel(x1,y1,x2,y2,x3,y3):
