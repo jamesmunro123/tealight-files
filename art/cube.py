@@ -72,9 +72,10 @@ def parallel(x1,y1,x2,y2,x3,y3):
   y2=int(y2)
   x3=int(x3)
   y3=int(y3)
-  for j in range(0,1000):
-    i=x1+(x2-x1)*j/1000
-    line(i,(y2-y1)*(i-x1)/(x2-x1)+y1,x3-x1+i,(y2-y1)*(i-x1)/(x2-x1)+y3)
+  if x2!=x1
+    for j in range(0,1000):
+      i=x1+(x2-x1)*j/1000
+      line(i,(y2-y1)*(i-x1)/(x2-x1)+y1,x3-x1+i,(y2-y1)*(i-x1)/(x2-x1)+y3)
   for i in range(0,1000):
     i=x2+(x1-x2)*j/1000
     line(i,(y1-y2)*(i-x2)/(x1-x2)+y2,x3-x1+i,(y1-y2)*(i-x2)/(x1-x2)+y3+y2-y1)
