@@ -31,7 +31,11 @@ def xy3(x1,y1,z1):
 #  a2=screen_width/2+x2*math.sqrt(3)/2-y2/2
 #  b2=screen_height/2+x2/2+y2*math.sqrt(3)/2-z2
   return (e1,f1)
-  
+
+def z3(x1,y1,z1):
+  b1=x1*math.sin(phi)+y1*math.cos(phi)
+  f1=b1*math.sin(theta)+z1*math.cos(theta)
+  return f1
   
 def handle_keydown(key):
   global dphi, dtheta, dalpha
@@ -104,6 +108,9 @@ def handle_frame():
   alpha=alpha+dalpha
   color("white")
   box(0,0,screen_width,screen_height)
+  
+  
+  
   color("black")
   side(-100,-100,-100,100,-100,-100,-100,-100,100)
   color("red")
