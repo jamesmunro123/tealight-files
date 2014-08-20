@@ -85,7 +85,7 @@ def handle_frame():
   box(0,0,screen_width,screen_height)
   color("black")
   xy3(-100,-100,-100,100,-100,-100)
-  
+  line(e1,f1,e2,f2)
   #linethree(100,-100,-100,100,-100,100)
   #linethree(100,-100,100,-100,-100,100)
   #linethree(-100,-100,-100,-100,-100,100)
