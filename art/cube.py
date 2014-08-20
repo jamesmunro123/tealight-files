@@ -85,6 +85,7 @@ def side(x1,y1,z1,x2,y2,z2,x3,y3,z3):
   a3=xy3(x3,y3,z3)
   a4=a3+a2-a1
   a5=a1+a2
+  print(a5)
   line(*a5)
 
   color("white")
