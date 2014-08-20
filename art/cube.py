@@ -109,8 +109,10 @@ def handle_frame():
   color("white")
   box(0,0,screen_width,screen_height)
   
-  cube=[1,0,0,"black",-1,0,0,0,1,0,0,-1,0,0,0,1,0,0,-1]
-  print(cube[2:5])
+  cube=[1,0,0,"black",-1,0,0,"red",0,1,0,"green",0,-1,0,"yellow",0,0,1,"blue",0,0,-1,"white"]
+ 
+  for i in range(1,7)
+    
   
   color("black")
   side(-100,-100,-100,100,-100,-100,-100,-100,100)
