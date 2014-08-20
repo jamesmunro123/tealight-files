@@ -2,4 +2,7 @@ from tealight.art import (color, line, spot, circle, box, image, text, backgroun
 
 color("rgba(255,128,0,0.5)")
 
+
+def 
+
 box(100,100,100,200)
