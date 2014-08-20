@@ -100,7 +100,7 @@ def side(x1,y1,z1,x2,y2,z2,x3,y3,z3):
   parallel(*a5)
 
 def handle_frame():
-  sleep(30)  
+  sleep(50)  
   global phi, theta, alpha, dphi, dtheta, dalpha
   
   phi=phi+dphi
