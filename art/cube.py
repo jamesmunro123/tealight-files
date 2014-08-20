@@ -63,13 +63,7 @@ def handle_keyup(key):
   elif key == "c":
     dalpha=-0 
     
-def handle_frame():
-  sleep(30)  
-  global phi, theta, alpha, dphi, dtheta, dalpha
-  
-  phi=phi+dphi
-  theta=theta+dtheta
-  alpha=alpha+dalpha
+
   
 def parallel(x1,y1,x2,y2,x3,y3):
   x1=int(x1)
@@ -90,12 +84,19 @@ def side(x1,y1,z1,x2,y2,z2,x3,y3,z3):
   print a5
   parallel(*a5)
 
-color("white")
-box(0,0,screen_width,screen_height)
-color("black")
-side(-100,-100,-100,100,-100,-100,-100,-100,100)
-#linethree(100,-100,-100,100,-100,100)
-#linethree(100,-100,100,-100,-100,100)
+def handle_frame():
+  sleep(30)  
+  global phi, theta, alpha, dphi, dtheta, dalpha
+  
+  phi=phi+dphi
+  theta=theta+dtheta
+  alpha=alpha+dalpha
+  color("white")
+  box(0,0,screen_width,screen_height)
+  color("black")
+  side(-100,-100,-100,100,-100,-100,-100,-100,100)
+  #linethree(100,-100,-100,100,-100,100)
+  #linethree(100,-100,100,-100,-100,100)
   #linethree(-100,-100,-100,-100,-100,100)
   #linethree(-100,100,-100,100,100,-100)
   #linethree(100,100,-100,100,100,100)
