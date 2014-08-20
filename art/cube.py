@@ -78,6 +78,8 @@ def parallel(x1,y1,x2,y2,x3,y3):
     line(i,(y1-y2)*(i-x2)/(x1-x2)+y2,x3-x1+i,(y1-y2)*(i-x2)/(x1-x2)+y3+y2-y1)
   for i in range(y1,y3):
     line((x3-x1)*(i-y1)/(y3-y1)+x1,i,(x3-x1)*(i-y1)/(y3-y1)+x2,i+y2-y1)
+  for i in range(y3,y1):
+    line((x1-x3)*(i-y3)/(y1-y3)+x3,i,(x1-x3)*(i-y3)/(y1-y3)+x3+x2-x1,i+y2-y1)
 def side(x1,y1,z1,x2,y2,z2,x3,y3,z3):
   a1=xy3(x1,y1,z1)
   a2=xy3(x2,y2,z2)
