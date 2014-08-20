@@ -13,7 +13,7 @@ dphi=0
 dtheta=0
 dalpha=0
 
-def xy3(x1,y1,z1,x2,y2,z2):
+def xy3(x1,y1,z1):
 
   a1=x1*math.cos(phi)-y1*math.sin(phi)
   b1=x1*math.sin(phi)+y1*math.cos(phi)
@@ -24,21 +24,13 @@ def xy3(x1,y1,z1,x2,y2,z2):
   e1=screen_width/2+a1*math.cos(alpha)-c1*math.sin(alpha)
   f1=screen_height/2+a1*math.sin(alpha)+c1*math.cos(alpha)
   
-  
-  a2=x2*math.cos(phi)-y2*math.sin(phi)
-  b2=x2*math.sin(phi)+y2*math.cos(phi)
-  
-  c2=b2*math.cos(theta)-z2*math.sin(theta)
-  d2=b2*math.sin(theta)+z2*math.cos(theta)
-  
-  e2=screen_width/2+a2*math.cos(alpha)-c2*math.sin(alpha)
-  f2=screen_height/2+a2*math.sin(alpha)+c2*math.cos(alpha)
+
   
 #  a1=screen_width/2+x1*math.sqrt(3)/2-y1/2
 #  b1=screen_height/2+x1/2+y1*math.sqrt(3)/2-z1
 #  a2=screen_width/2+x2*math.sqrt(3)/2-y2/2
 #  b2=screen_height/2+x2/2+y2*math.sqrt(3)/2-z2
-  return (e1,f1,e2,f2)
+  return (e1,f1)
   
   
 def handle_keydown(key):
