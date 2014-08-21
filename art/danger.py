@@ -10,7 +10,7 @@ from tealight.utils import sleep
 
 a=[]
 n=7
-s1=8
+s1=10
 e=0.2
 e2=1
 radius=20
