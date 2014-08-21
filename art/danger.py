@@ -31,7 +31,7 @@ for i in range (0,4*n):
       print (n1,n2)
       if nn<1600:
         c=1
-        print c
+        #print c
         r1=randint(10,screen_width-10)
         r2=randint(10,screen_height-10)
         a[7*i]=r1
