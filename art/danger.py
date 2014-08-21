@@ -169,16 +169,16 @@ def handle_frame():
       a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
       
   if hippo1==1:
-    color("(255,100,0)")
+    color("(255,0,0)")
     circle(screen_width/2-domain/2,screen_height/2,hipporadius)
   if hippo2==1:
-    color("(255,100,0)")
+    color("(255,0,255)")
     circle(screen_width/2,screen_height/2-domain/2,hipporadius)
   if hippo3==1:
     color("(255,100,0)")
     circle(screen_width/2,screen_height/2+domain/2,hipporadius)
   if hippo4==1:
-    color("(255,100,0)")
+    color("(0,0,255)")
     circle(screen_width/2+domain/2,screen_height/2,hipporadius)
     
  
