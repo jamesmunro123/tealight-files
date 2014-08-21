@@ -41,5 +41,5 @@ for i in range (0,4*n):
   spot(a[7*i],a[7*i+1],10)
 
   
-
+def 
   
