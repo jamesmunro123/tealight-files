@@ -9,7 +9,7 @@ from random import (random, randint)
 from tealight.utils import sleep
 
 a=[]
-n=1
+n=7
 s1=10
 e=0.5
 e2=1
@@ -29,8 +29,6 @@ for i in range (0,4*n):
   a=a+[r1,r2,r3,r4,0,0,255,0]
   while c==1:
     c=0
-    #if (a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)>domain*domain:
-     # c=1
     for j in range (0,i):
       n1=(a[d*i]-a[d*j])
       n2=(a[d*i+1]-a[d*j+1])
