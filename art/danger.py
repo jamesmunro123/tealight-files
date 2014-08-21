@@ -9,7 +9,7 @@ from random import (random, randint)
 a=[]
 
 for i in range (1,3):
-  r=randint(0,6)
+  r=randint(0,6)*100
   a=a+[r,r,1,0,0,0,0]
   
 
