@@ -1,4 +1,4 @@
-from tealight.art import (color, line, spot, circle, box, image, text, background, rgba)
+from tealight.art import (color, line, spot, circle, box, image, text, background)
 
 import math
 
@@ -17,6 +17,6 @@ for i in range (1,n):
 
 print(a) 
 for i in range (0,n-1):
-  color(rgba(a[7*i+4],a[7*i+5],a[7*i+6],1))
+  color("rgba(a[7*i+4],a[7*i+5],a[7*i+6],1)")
   spot(a[7*i],a[7*i+1],10)
   
