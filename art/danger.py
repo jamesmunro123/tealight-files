@@ -1,4 +1,4 @@
-from tealight.art import (color, line, spot, circle, box, image, text, background)
+from tealight.art import (color, line, spot, circle, box, image, text, background, rgba)
 
 import math
 
