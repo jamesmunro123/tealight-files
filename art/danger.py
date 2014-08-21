@@ -34,14 +34,15 @@ def ctorgba(c):
   string_out = string_out + str(c[0]) + "," + str(c[1]) + "," + str(c[2]) + "," + str(c[3]) + ")"
   return string_out
 
-for i in range (0,4*n):
-  c=[a[7*i+4],a[7*i+5],a[7*i+6],1]
-  colstring = ctorgba(c)
-  color(colstring)
-  spot(a[7*i],a[7*i+1],10)
+
 
   
 def handle_frame():
   
   color("white")
   box(0,0,screen_width,screen_height)
+  for i in range (0,4*n):
+    c=[a[7*i+4],a[7*i+5],a[7*i+6],1]
+    colstring = ctorgba(c)
+    color(colstring)
+    spot(a[7*i],a[7*i+1],10)
