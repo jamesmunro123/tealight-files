@@ -14,7 +14,9 @@ n=7
 for i in range (1,n+1):
   r1=randint(10,screen_width-10)
   r2=randint(10,screen_height-10)
-  a=a+[r1,r2,1,0,0,0,255]
+  r3=randint(0,20)/10
+  r4=randint(0,20)/10
+  a=a+[r1,r2,r3,r4,0,0,255]
 
 for i in range (1,n+1):
   r1=randint(5,screen_width-5)
