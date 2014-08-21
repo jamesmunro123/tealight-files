@@ -6,6 +6,8 @@ from tealight.art import screen_width, screen_height
 
 from random import (random, randint)
 
+from tealight.utils import sleep
+
 a=[]
 n=7
 
