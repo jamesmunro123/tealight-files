@@ -107,7 +107,8 @@ def handle_frame():
       a[d*i+7]=a[d*i+7]-1
             
     if (a[7*i]-screen_width/2)*(a[7*i]-screen_width/2)+(a[7*i+1]-screen_height/2)*(a[7*i+1]-screen_height/2)>domain*domain:
-      print(domain*domain,(a[7*i]-screen_width/2)*(a[7*i]-screen_width/2)+(a[7*i+1]-screen_height/2)*(a[7*i+1]-screen_height/2))
+      #print(domain*domain,(a[7*i]-screen_width/2)*(a[7*i]-screen_width/2)+(a[7*i+1]-screen_height/2)*(a[7*i+1]-screen_height/2))
+      print(i)
       n1=-(a[7*i]-screen_width/2)
       n2=-(a[7*i+1]-screen_height/2)
       v1x=a[d*i+2]
