@@ -15,5 +15,5 @@ for i in range (1,3):
 
   
 for i in range (1,3):
-  spot(r*100,r*100,10)
+  spot(a(7*i),a(7*i+1),10)
   
