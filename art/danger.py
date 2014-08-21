@@ -206,4 +206,4 @@ def handle_frame():
     color("rgba(0,0,255,1)")
     spot(screen_width/2+domain/2,screen_height/2,hipporadius)
     
-  text(10,10,scorer)
+  text(10,10,sr)
