@@ -12,7 +12,7 @@ a=[]
 n=5
 s1=10
 e=0.5
-
+domain=min(screen_width,screen_height)/2-10
 #(x,y,u,v,colr,colg,colb,inert)
 d=8
 radius=15
@@ -73,7 +73,7 @@ def handle_frame():
   color("white")
   box(0,0,screen_width,screen_height)
   color("black")
-  circle(screen_width/2,screen_height/2,screen_width/2)
+  circle(screen_width/2,screen_height/2,domain)
   
   for i in range (0,4*n):
     a[d*i]=a[d*i]+a[d*i+2]
@@ -105,5 +105,6 @@ def handle_frame():
             a[d*j+7]=5
     if a[d*i+7]!=0:
       a[d*i+7]=a[d*i+7]-1
-            #if a[7*i]*a[7*i]+a[7*i+1]*a[7*i+1]>10000:
+            
+    if a[7*i]*a[7*i]+a[7*i+1]*a[7*i+1]>10000:
      
