@@ -33,7 +33,7 @@ for i in range (0,4*n):
     a[d*i+6]=255
   if n-1<i and i<2*n:
     #purple
-  if (2*n-1)<i and i<3*n:
+  if ((2*n-1)<i and i<3*n):
     #red
   if 3*n-1<i and i<4*n:
     #orange
