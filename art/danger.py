@@ -118,7 +118,7 @@ def handle_keyup(key):
 
   
 def handle_frame():
-  sleep(20)
+  sleep(10)
   color("white")
   box(0,0,screen_width,screen_height)
   color("black")
