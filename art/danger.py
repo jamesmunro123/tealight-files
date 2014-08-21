@@ -20,7 +20,6 @@ for i in range (1,n):
   a=a+[r1,r2,1,0,255,0,255]
 
 def ctorgba(c):
-  print c
   string_out = "rgba("
   string_out = string_out + str(c[0]) + "," + str(c[1]) + "," + str(c[2]) + "," + str(c[3]) + ")"
   return string_out
