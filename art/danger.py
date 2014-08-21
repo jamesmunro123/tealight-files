@@ -17,7 +17,7 @@ for i in range (1,n):
 def ctorgba(c):
   print c
   string_out = "rgba("
-  string_out = string_out + str(c[0]) + "," + str(c[1]) + "," + str(c[2]) + "," str(c[3])
+  string_out = string_out + str(c[0]) + "," + str(c[1]) + "," + str(c[2]) + "," + str(c[3])
   print string_out
   return string_out
 
