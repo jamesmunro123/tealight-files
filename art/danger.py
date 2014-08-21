@@ -11,7 +11,7 @@ from tealight.utils import sleep
 a=[]
 n=7
 s1=10
-e=1
+e=0.1
 
 #(x,y,u,v,colr,colg,colb,inert)
 d=8
