@@ -14,6 +14,7 @@ s1=2
 e=0.2
 e2=1
 radius=20
+hipporadius=50
 domain=min(screen_width,screen_height)/2-radius-10
 #(x,y,u,v,colr,colg,colb,inert)
 d=8
@@ -168,4 +169,4 @@ def handle_frame():
       a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
       
   if hippo1==1:
-    spot(screen_width/2+domain/2,screen_height/2,100)
+    circle(screen_width/2+domain/2,screen_height/2,hipporadius)
