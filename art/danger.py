@@ -92,7 +92,7 @@ def handle_frame():
       v2y=a[d*j+3]
       if nn<1600:
         if nn !=0:
-          if a[d*i+7]==0
+          if a[d*i+7]==0:
             a[d*i+2]=((n2*n2-n1*n1)*v1x-2*n1*n2*v1y)/nn
             a[d*i+3]=(-2*n1*n2*v1x+(n1*n1-n2*n2)*v1y)/nn
             a[d*j+2]=((n2*n2-n1*n1)*v2x-2*n1*n2*v2y)/nn
