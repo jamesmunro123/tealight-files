@@ -131,8 +131,8 @@ def handle_frame():
   for i in range (0,4*n):
     a[d*i]=a[d*i]+a[d*i+2]
     a[d*i+1]=a[d*i+1]+a[d*i+3]
-    a[d*i+2]=a[d*i+2]*0.999
-    a[d*i+3]=a[d*i+3]*0.999
+    a[d*i+2]=a[d*i+2]*1
+    a[d*i+3]=a[d*i+3]*1
     
   for i in range (0,4*n):
     c=[a[d*i+4],a[d*i+5],a[d*i+6],1]
