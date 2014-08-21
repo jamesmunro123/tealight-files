@@ -11,6 +11,7 @@ a=()
 for i in range (1,3):
   r=randint(0,100)
   a=a+(r,r,1,0,0,0,0)
+  print(r)
 
   
 for i in range (1,3):
