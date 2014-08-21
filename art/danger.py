@@ -26,7 +26,7 @@ for i in range (0,n-1):
   c=[a[7*i+4],a[7*i+5],a[7*i+6],1]
   colstring = ctorgba(c)
   print(c)
-  color("rgba(c)")
+  color(colstring)
   #color("rgba(255,128,0,0.5)")
   spot(a[7*i],a[7*i+1],10)
   line(1,2,3,400)
