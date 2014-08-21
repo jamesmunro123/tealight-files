@@ -62,3 +62,9 @@ def handle_frame():
     colstring = ctorgba(c)
     color(colstring)
     spot(a[7*i],a[7*i+1],10)
+    
+  for i in range (0,4*n):
+    for j in range (4*i,4*n):
+      if a[7*i]^2+a[7*i=1]^2<400
+        print("crash!)
+            
