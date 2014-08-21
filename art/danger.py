@@ -20,7 +20,7 @@ for i in range (0,4*n):
   r3=randint(0,s1*100)/100-s1/2
   r4=randint(0,s1*100)/100-s1/2
   a=a+[r1,r2,r3,r4,0,0,255]
-  print c
+  #print c
   while c==1:
     c=0
     #print i
