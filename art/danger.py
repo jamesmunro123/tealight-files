@@ -7,7 +7,7 @@ from tealight.art import screen_width, screen_height
 from random import (random, randint)
 
 a=[]
-n=100
+n=7
 
 for i in range (1,n):
   r1=randint(5,screen_width-5)
@@ -17,5 +17,6 @@ for i in range (1,n):
 
 print(a) 
 for i in range (0,n-1):
+  color(a[7*i+4],a[7*i+5],a[7*i+6])
   spot(a[7*i],a[7*i+1],10)
   
