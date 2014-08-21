@@ -25,8 +25,7 @@ def ctorgba(c):
   string_out = string_out + str(c[0]) + "," + str(c[1]) + "," + str(c[2]) + "," + str(c[3]) + ")"
   return string_out
 
-print(a) 
-for i in range (0,2*n-1):
+for i in range (0,n-1):
   c=[a[7*i+4],a[7*i+5],a[7*i+6],1]
   colstring = ctorgba(c)
   color(colstring)
