@@ -11,9 +11,10 @@ from tealight.utils import sleep
 a=[]
 n=10
 s1=4
-c=1
+
 
 for i in range (0,4*n):
+  c=1
   r1=randint(10,screen_width-10)
   r2=randint(10,screen_height-10)
   r3=randint(0,s1*100)/100-s1/2
