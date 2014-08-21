@@ -68,7 +68,7 @@ def handle_frame():
       #print a[7*j]
       print (a[7*i]-a[7*j])*(a[7*i]-a[7*j])
       #print((a[7*i+1]-a[7*j+1])^2)
-      if (a[7*i]-a[7*j])*(a[7*i]-a[7*j])+(a[7*i+1]-a[7*j+1])*(a[7*i+1]-a[7*j+1])<800:
+      if (a[7*i]-a[7*j])*(a[7*i]-a[7*j])+(a[7*i+1]-a[7*j+1])*(a[7*i+1]-a[7*j+1])<1000:
         print("crash!")
         a[7*i+2]=0
         a[7*i+3]=0
