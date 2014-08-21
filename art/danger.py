@@ -22,7 +22,7 @@ def ctorgba(c):
 
 print(a) 
 for i in range (0,n-1):
-  c=(a[7*i+4],a[7*i+5],a[7*i+6],1)
+  c=[a[7*i+4],a[7*i+5],a[7*i+6],1]
   colstring = ctorgba(a)
   print(c)
   color("rgba(c)")
