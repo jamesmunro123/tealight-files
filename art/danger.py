@@ -30,7 +30,7 @@ for i in range (0,4*n):
       n2=(a[d*i+1]-a[d*j+1])
       nn=n1*n1+n2*n2
       
-      if nn<4*radius*radius:
+      if nn<1600:
         c=1
         
         r1=randint(10,screen_width-10)
