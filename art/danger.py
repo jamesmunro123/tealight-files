@@ -97,7 +97,7 @@ def handle_frame():
             a[d*i+3]=(-2*n1*n2*v1x+(n1*n1-n2*n2)*v1y)/nn
             a[d*j+2]=((n2*n2-n1*n1)*v2x-2*n1*n2*v2y)/nn
             a[d*j+3]=(-2*n1*n2*v2x+(n1*n1-n2*n2)*v2y)/nn
-            a[d*i+7]==2
+            a[d*i+7]==20
     if a[d*i+7]!=0:
       a[d*i+7]=a[d*i+7]-1
             #if a[7*i]*a[7*i]+a[7*i+1]*a[7*i+1]>10000:
