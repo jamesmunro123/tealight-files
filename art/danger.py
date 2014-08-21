@@ -21,7 +21,7 @@ radius=15
 for i in range (0,4*n):
   c=1
   r5=randint(0,domain)
-  r6=randint(0,100)*(6.28)
+  r6=randint(0,100)*(2*pi)/100
   r1=r5*cos(r6)
   r2=r6*sin(r6)
   r3=randint(0,s1*100)/100-s1/2
@@ -39,7 +39,7 @@ for i in range (0,4*n):
       if nn<4*radius*radius:
         c=1
         r5=randint(0,domain)
-        r6=randint(0,100)*(2*pi)
+        r6=randint(0,100)*(2*pi)/100
         r1=r5*cos(r6)
         r2=r6*sin(r6)
         a[d*i]=r1
