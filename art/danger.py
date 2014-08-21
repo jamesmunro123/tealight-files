@@ -105,12 +105,12 @@ def handle_frame():
             a[d*j+7]=5
     if a[d*i+7]!=0:
       a[d*i+7]=a[d*i+7]-1
-    print(i,domain*domain,(a[7*i]-screen_width/2)*(a[7*i]-screen_width/2)+(a[7*i+1]-screen_height/2)*(a[7*i+1]-screen_height/2))
+    print(i,domain*domain,(a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2))
               
-    if (a[7*i]-screen_width/2)*(a[7*i]-screen_width/2)+(a[7*i+1]-screen_height/2)*(a[7*i+1]-screen_height/2)>domain*domain:
+    if (a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)>domain*domain:
       #print(i)
-      n1=-(a[7*i]-screen_width/2)
-      n2=-(a[7*i+1]-screen_height/2)
+      n1=-(a[d*i]-screen_width/2)
+      n2=-(a[d*i+1]-screen_height/2)
       v1x=a[d*i+2]
       v1y=a[d*i+3]
       nn=n1*n1+n2*n2
