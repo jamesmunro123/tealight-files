@@ -12,6 +12,7 @@ a=[]
 n=10
 s1=10
 e=0.5
+e2=1
 domain=min(screen_width,screen_height)/2-10
 #(x,y,u,v,colr,colg,colb,inert)
 d=8
@@ -116,5 +117,5 @@ def handle_frame():
       v1x=a[d*i+2]
       v1y=a[d*i+3]
       nn=n1*n1+n2*n2
-      a[d*i+2]=((n2*n2-e*n1*n1)*v1x-(1+e)*n1*n2*v1y)/nn
-      a[d*i+3]=(-(1+e)*n1*n2*v1x+(n1*n1-e*n2*n2)*v1y)/nn
+      a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
+      a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
