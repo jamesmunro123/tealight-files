@@ -61,14 +61,14 @@ def handle_frame():
     c=[a[7*i+4],a[7*i+5],a[7*i+6],1]
     colstring = ctorgba(c)
     color(colstring)
-    spot(a[7*i],a[7*i+1],10)
+    spot(a[7*i],a[7*i+1],20)
     
   for i in range (0,4*n):
     for j in range (i+1,4*n):
       #print a[7*j]
       print (a[7*i]-a[7*j])*(a[7*i]-a[7*j])
       #print((a[7*i+1]-a[7*j+1])^2)
-      if (a[7*i]-a[7*j])*(a[7*i]-a[7*j])+(a[7*i+1]-a[7*j+1])*(a[7*i+1]-a[7*j+1])<200:
+      if (a[7*i]-a[7*j])*(a[7*i]-a[7*j])+(a[7*i+1]-a[7*j+1])*(a[7*i+1]-a[7*j+1])<800:
         print("crash!")
         a[7*i+2]=0
         a[7*i+3]=0
