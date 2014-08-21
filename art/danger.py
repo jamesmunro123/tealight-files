@@ -9,8 +9,8 @@ from random import (random, randint)
 a=[]
 
 for i in range (1,3):
-  r1=randint(0,screen_width-5)
-  r2=randint(0,screen_height-5)
+  r1=randint(5,screen_width-5)
+  r2=randint(5,screen_height-5)
   a=a+[r1,r2,1,0,0,0,0]
   
 
