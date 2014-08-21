@@ -87,9 +87,10 @@ def handle_frame():
       v2x=a[7*j+2]
       v2y=a[7*j+3]
       if nn<1600:
-        a[7*i+2]=((n2*n2-n1*n1)*v1x-2*n1*n2*v1y)/nn
-        a[7*i+3]=(-2*n1*n2*v1x+(n1*n1-n2*n2)*v1y)/nn
-        a[7*j+2]=((n2*n2-n1*n1)*v2x-2*n1*n2*v2y)/nn
-        a[7*j+3]=(-2*n1*n2*v2x+(n1*n1-n2*n2)*v2y)/nn
+        if nn !=0:
+          a[7*i+2]=((n2*n2-n1*n1)*v1x-2*n1*n2*v1y)/nn
+          a[7*i+3]=(-2*n1*n2*v1x+(n1*n1-n2*n2)*v1y)/nn
+          a[7*j+2]=((n2*n2-n1*n1)*v2x-2*n1*n2*v2y)/nn
+          a[7*j+3]=(-2*n1*n2*v2x+(n1*n1-n2*n2)*v2y)/nn
     if a[7*i]*a[7*i]+a[7*i+1]*a[7*i+1]>10000:
       print("out")
