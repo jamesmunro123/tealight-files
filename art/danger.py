@@ -171,13 +171,13 @@ def handle_frame():
   if hippo1==1:
     color("(255,100,0)")
     circle(screen_width/2-domain/2,screen_height/2,hipporadius)
-  if hippo1==1:
+  if hippo2==1:
     color("(255,100,0)")
     circle(screen_width/2,screen_height/2-domain/2,hipporadius)
-  if hippo1==1:
+  if hippo3==1:
     color("(255,100,0)")
     circle(screen_width/2,screen_height/2+domain/2,hipporadius)
-  if hippo1==1:
+  if hippo4==1:
     color("(255,100,0)")
     circle(screen_width/2+domain/2,screen_height/2,hipporadius)
     
