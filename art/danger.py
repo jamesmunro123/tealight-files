@@ -24,6 +24,7 @@ hippo3=0
 hippo4=0
 
 sr=0
+sb=0
 
 
 for i in range (0,4*n):
@@ -193,7 +194,7 @@ def handle_frame():
       if team==0:
         sr=sr
       elif team==1:
-        sr=sr+1
+        sb=sb+1
       elif team==2:
         sr=sr
       elif team==3:
