@@ -14,6 +14,6 @@ for i in range (1,3):
   
 
 print(a) 
-for i in range (1,3):
+for i in range (0,2):
   spot(a[7*i],a[7*i+1],10)
   
