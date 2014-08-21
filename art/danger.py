@@ -10,11 +10,11 @@ from tealight.utils import sleep
 
 a=[]
 n=7
-s1=15
+s1=10
 
 #(x,y,u,v,colr,colg,colb,inert)
 d=8
-radius=10
+radius=15
 
 for i in range (0,4*n):
   c=1
