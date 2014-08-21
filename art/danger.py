@@ -183,7 +183,7 @@ def handle_frame():
       elif team==2:
         sr=sr+3
       elif team==3:
-        sr=sr+1
+        sr=sr-1
   
   color("rgba(255,0,0,1)")
   circle(screen_width/2-domain/2,screen_height/2,hipporadius)
