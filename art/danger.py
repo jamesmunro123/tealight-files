@@ -91,7 +91,7 @@ def handle_frame():
       v1y=a[d*i+3]
       v2x=a[d*j+2]
       v2y=a[d*j+3]
-      if nn<4*radius^2:
+      if nn<1600:
         if nn !=0:
           if a[d*i+7]==0 and a[d*i+7]==0:
             a[d*i+2]=((n2*n2-n1*n1)*v1x-2*n1*n2*v1y)/nn
