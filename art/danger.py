@@ -120,6 +120,7 @@ def handle_keyup(key):
 
   
 def handle_frame():
+  global sr
   sleep(20)
   color("white")
   box(0,0,screen_width,screen_height)
