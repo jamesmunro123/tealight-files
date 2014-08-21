@@ -14,6 +14,7 @@ s1=10
 
 #(x,y,u,v,colr,colg,colb,inert)
 d=8
+radius=20
 
 for i in range (0,4*n):
   c=1
@@ -29,7 +30,7 @@ for i in range (0,4*n):
       n2=(a[d*i+1]-a[d*j+1])
       nn=n1*n1+n2*n2
       
-      if nn<1600:
+      if nn<4*radius*radius:
         c=1
         
         r1=randint(10,screen_width-10)
@@ -79,7 +80,7 @@ def handle_frame():
     c=[a[d*i+4],a[d*i+5],a[d*i+6],1]
     colstring = ctorgba(c)
     color(colstring)
-    spot(a[d*i],a[d*i+1],20)
+    spot(a[d*i],a[d*i+1],radius)
     
   for i in range (0,4*n):
     for j in range (i+1,4*n):
@@ -90,7 +91,7 @@ def handle_frame():
       v1y=a[d*i+3]
       v2x=a[d*j+2]
       v2y=a[d*j+3]
-      if nn<1600:
+      if nn<4*radius^2:
         if nn !=0:
           if a[d*i+7]==0 and a[d*i+7]==0:
             a[d*i+2]=((n2*n2-n1*n1)*v1x-2*n1*n2*v1y)/nn
