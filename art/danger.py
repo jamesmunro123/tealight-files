@@ -107,7 +107,7 @@ def handle_frame():
       a[d*i+7]=a[d*i+7]-1
             
     if a[7*i]*a[7*i]+a[7*i+1]*a[7*i+1]>domain*domain:
-      print("out")
+      print(domain,a[7*i]*a[7*i]+a[7*i+1]*a[7*i+1])
       n1=-a[d*i]
       n2=-a[d*i+1]
       v1x=a[d*i+2]
