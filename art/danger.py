@@ -175,7 +175,7 @@ def handle_frame():
       a[d*i+1]=1000000
       a[d*i+2]=0
       a[d*i+3]=0
-      team=i/n-int(i/n)
+      team=int(i/n)
       if team==0:
         sr=sr-1
       elif team==1:
