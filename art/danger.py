@@ -35,7 +35,9 @@ for i in range (0,4*n):
     #purple
   if 2*n-1<i and i<3*n:
     #red
+    pass
   if 3*n-1<i and i<4*n:
+    pass
     #orange
   while c==1:
     c=0
