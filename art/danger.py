@@ -17,6 +17,10 @@ radius=20
 domain=min(screen_width,screen_height)/2-radius-10
 #(x,y,u,v,colr,colg,colb,inert)
 d=8
+hippo1-0
+hippo2=0
+hippo3=0
+hippo4=0
 
 
 for i in range (0,4*n):
@@ -85,6 +89,29 @@ def ctorgba(c):
   string_out = "rgba("
   string_out = string_out + str(c[0]) + "," + str(c[1]) + "," + str(c[2]) + "," + str(c[3]) + ")"
   return string_out
+
+def handle_keydown(key):
+  global hippo1, hippo2, hippo3, hippo4
+  if key == "left":
+    hippo1=1
+  elif key == "up":
+    hippo2=1
+  elif key == "down":
+    hippo3=1
+  elif key == "right":
+    hippo4=1
+
+    
+def handle_keyup(key):
+  global hippo1, hippo2, hippo3, hippo4
+  if key == "left":
+    hippo1=0
+  elif key == "up":
+    hippo2=0
+  elif key == "down":
+    hippo3=0
+  elif key == "right":
+    hippo4=0
 
 
 
