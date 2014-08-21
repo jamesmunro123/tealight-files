@@ -67,4 +67,6 @@ def handle_frame():
     for j in range (4*i,4*n):
       if a[7*i]+a[7*i+1]<400:
         print("crash!")
+        a[7*i+3]=0
+        a[7*i+4]=0
             
