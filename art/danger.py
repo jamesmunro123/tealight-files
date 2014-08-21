@@ -69,4 +69,6 @@ def handle_frame():
         print("crash!")
         a[7*i+3]=0
         a[7*i+4]=0
+        a[7*j+3]=0
+        a[7*j+4]=0
             
