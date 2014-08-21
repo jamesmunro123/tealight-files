@@ -11,6 +11,7 @@ from tealight.utils import sleep
 a=[]
 n=7
 s1=10
+e=1
 
 #(x,y,u,v,colr,colg,colb,inert)
 d=8
@@ -94,8 +95,8 @@ def handle_frame():
       if nn<4*radius*radius:
         if nn !=0:
           if a[d*i+7]==0 and a[d*i+7]==0:
-            a[d*i+2]=((n2*n2-n1*n1)*v1x-2*n1*n2*v1y)/nn
-            a[d*i+3]=(-2*n1*n2*v1x+(n1*n1-n2*n2)*v1y)/nn
+            a[d*i+2]=((n2*n2-e*n1*n1)*v1x-(1+e)*n1*n2*v1y)/nn
+            a[d*i+3]=(-(1+e)*n1*n2*v1x+(n1*n1-e*n2*n2)*v1y)/nn
             a[d*j+2]=((n2*n2-n1*n1)*v2x-2*n1*n2*v2y)/nn
             a[d*j+3]=(-2*n1*n2*v2x+(n1*n1-n2*n2)*v2y)/nn
             a[d*i+7]=10
