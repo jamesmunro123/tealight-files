@@ -20,8 +20,10 @@ radius=15
 
 for i in range (0,4*n):
   c=1
-  r1=randint(10,screen_width-10)
-  r2=randint(10,screen_height-10)
+  r5=randint(0,domain)
+  r6=randint(0,100)*(2*pi)
+  r1=r5*cos(r2)
+  r2=r6*sin(r2)
   r3=randint(0,s1*100)/100-s1/2
   r4=randint(0,s1*100)/100-s1/2
   a=a+[r1,r2,r3,r4,0,0,255,0]
@@ -36,9 +38,10 @@ for i in range (0,4*n):
       
       if nn<4*radius*radius:
         c=1
-        
-        r1=randint(10,screen_width-10)
-        r2=randint(10,screen_height-10)
+        r5=randint(0,domain)
+        r6=randint(0,100)*(2*pi)
+        r1=r5*cos(r2)
+        r2=r6*sin(r2)
         a[d*i]=r1
         a[d*i+1]=r2
 
