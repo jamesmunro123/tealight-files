@@ -27,7 +27,7 @@ def ctorgba(c):
   return string_out
 
 print(a) 
-for i in range (0,n-1):
+for i in range (0,2*n-1):
   c=[a[7*i+4],a[7*i+5],a[7*i+6],1]
   colstring = ctorgba(c)
   print(c)
