@@ -21,17 +21,23 @@ for i in range (1,n+1):
 for i in range (1,n+1):
   r1=randint(5,screen_width-5)
   r2=randint(5,screen_height-5)
-  a=a+[r1,r2,1,0,255,0,255]
+  r3=randint(0,400)/100
+  r4=randint(0,400)/100
+  a=a+[r1,r2,r3,r4,255,0,255]
 
 for i in range (1,n+1):
   r1=randint(10,screen_width-10)
   r2=randint(10,screen_height-10)
-  a=a+[r1,r2,1,0,255,0,0]
+  r3=randint(0,400)/100
+  r4=randint(0,400)/100
+  a=a+[r1,r2,r3,r4,255,0,0]
 
 for i in range (1,n+1):
   r1=randint(5,screen_width-5)
   r2=randint(5,screen_height-5)
-  a=a+[r1,r2,1,0,255,100,0]
+  r3=randint(0,400)/100
+  r4=randint(0,400)/100
+  a=a+[r1,r2,r3,r4,255,100,0]
 
 def ctorgba(c):
   string_out = "rgba("
