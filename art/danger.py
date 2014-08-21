@@ -9,7 +9,7 @@ from random import (random, randint)
 from tealight.utils import sleep
 
 a=[]
-n=1
+n=10
 s1=10
 e=0.5
 domain=min(screen_width,screen_height)/2-10
