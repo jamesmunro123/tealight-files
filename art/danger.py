@@ -75,7 +75,7 @@ def handle_frame():
       v1y=a[7*i+3]
       v2x=a[7*j+2]
       v2y=a[7*j+3]
-      if nn<1600:
+      if nn<1600 & nn!=0:
         print("crash!")
         a[7*i+2]=((n2*n2-n1*n1)*v1x-2*n1*n2*v1y)/nn
         a[7*i+3]=(-2*n1*n2*v1x+(n1*n1-n2*n2)*v1y)/nn
