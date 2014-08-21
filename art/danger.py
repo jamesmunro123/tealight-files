@@ -106,5 +106,10 @@ def handle_frame():
     if a[d*i+7]!=0:
       a[d*i+7]=a[d*i+7]-1
             
-    if a[7*i]*a[7*i]+a[7*i+1]*a[7*i+1]>10000:
+    if a[7*i]*a[7*i]+a[7*i+1]*a[7*i+1]>domain*domain:
       print("out")
+      n1=-a[d*i]
+      n2=-a[d*i+1]
+      nn=n1*n1+n2*n2
+      a[d*i+2]=((n2*n2-e*n1*n1)*v1x-(1+e)*n1*n2*v1y)/nn
+      a[d*i+3]=(-(1+e)*n1*n2*v1x+(n1*n1-e*n2*n2)*v1y)/nn
