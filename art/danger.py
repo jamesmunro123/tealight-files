@@ -72,6 +72,8 @@ def handle_frame():
   sleep(30)
   color("white")
   box(0,0,screen_width,screen_height)
+  color("black")
+  circle(screen_width/2,screen_height/2,screen_width/2)
   
   for i in range (0,4*n):
     a[d*i]=a[d*i]+a[d*i+2]
