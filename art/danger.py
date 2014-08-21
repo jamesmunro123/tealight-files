@@ -166,3 +166,6 @@ def handle_frame():
       nn=n1*n1+n2*n2
       a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
       a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
+      
+  if hippo1=1
+    spot(screen_width/2+domain/2,screen_height/2)
