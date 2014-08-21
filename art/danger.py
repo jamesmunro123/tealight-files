@@ -65,7 +65,7 @@ def handle_frame():
     
   for i in range (0,4*n):
     for j in range (4*i,4*n):
-      if a[7*i]^2+a[7*i+1]^2<100:
+      if (a[7*i]-a[7*j])^2+(a[7*i+1]-a[7*j+1])^2<100:
         print("crash!")
         a[7*i+2]=0
         a[7*i+3]=0
