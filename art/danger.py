@@ -8,11 +8,11 @@ from random import random
 
 a=()
 
-for i in range (1,3)
+for i in range (1,3):
   r=randint(0,100)
   a=a+(r,r,1,0,0,0,0)
 
   
-for i in range (1,3)
+for i in range (1,3):
   spot(r,r,10)
   
