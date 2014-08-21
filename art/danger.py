@@ -253,4 +253,4 @@ def handle_frame():
  
   color("black")
   text(10,10,sr)
-  text(screen_width-10,10,sb)
+  text(screen_width-100,10,sb)
