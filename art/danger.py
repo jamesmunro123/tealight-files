@@ -174,13 +174,13 @@ def handle_frame():
       a[d*i+2]=0
       a[d*i+3]=0
       team=i/n-int(i/n)
-      if team==0
+      if team==0:
         scorer=scorer-1
-      elif team==1
+      elif team==1:
         scorer=scorer-1
-      elif team==2
+      elif team==2:
         scorer=scorer+3
-      elif team==3
+      elif team==3:
         scorer=scorer+1
   
   color("rgba(255,0,0,1)")
