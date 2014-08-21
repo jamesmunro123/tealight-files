@@ -4,7 +4,7 @@ import math
 
 from tealight.art import screen_width, screen_height
 
-from random import random
+from random import (random, randint)
 
 a=()
 
