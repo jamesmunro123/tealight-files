@@ -11,6 +11,7 @@ from tealight.utils import sleep
 a=[]
 n=7
 s1=10
+c=1
 
 for i in range (1,n+1):
   r1=randint(10,screen_width-10)
@@ -18,6 +19,19 @@ for i in range (1,n+1):
   r3=randint(0,s1*100)/100-s1/2
   r4=randint(0,s1*100)/100-s1/2
   a=a+[r1,r2,r3,r4,0,0,255]
+  while c=1
+    c=0
+    for j in range (0,4*n):
+      for k in range (j+1,4*n):
+        n1=(a[7*j]-a[7*k])
+        n2=(a[7*j+1]-a[7*k+1])
+        nn=n1*n1+n2*n2
+        if nn<1600
+          c=1
+          r1=randint(10,screen_width-10)
+          r2=randint(10,screen_height-10)
+          a[7*(i-1)]=r1
+          a[7*(i-1)+1]=r2
 
 for i in range (1,n+1):
   r1=randint(5,screen_width-5)
