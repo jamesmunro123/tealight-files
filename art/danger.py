@@ -22,6 +22,7 @@ hippo1=0
 hippo2=0
 hippo3=0
 hippo4=0
+
 scorer=0
 
 
