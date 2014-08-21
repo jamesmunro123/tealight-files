@@ -13,7 +13,7 @@ n=7
 s1=2
 e=0.2
 e2=1
-domain=min(screen_width,screen_height)/2-10
+domain=min(screen_width,screen_height)/2-radius-10
 #(x,y,u,v,colr,colg,colb,inert)
 d=8
 radius=20
@@ -93,7 +93,7 @@ def handle_frame():
   color("white")
   box(0,0,screen_width,screen_height)
   color("black")
-  circle(screen_width/2,screen_height/2,domain)
+  circle(screen_width/2,screen_height/2,domain+radius)
   
   for i in range (0,4*n):
     a[d*i]=a[d*i]+a[d*i+2]
