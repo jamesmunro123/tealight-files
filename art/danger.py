@@ -184,7 +184,50 @@ def handle_frame():
         sr=sr+3
       elif team==3:
         sr=sr-1
-  
+    if (a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2-domain/2)*(a[d*i+1]-screen_height/2-domain/2)<hipporadius*hipporadius and hippo2==1:
+      a[d*i]=1000000
+      a[d*i+1]=1000000
+      a[d*i+2]=0
+      a[d*i+3]=0
+      team=int(i/n)
+      if team==0:
+        sr=sr
+      elif team==1:
+        sr=sr+1
+      elif team==2:
+        sr=sr
+      elif team==3:
+        sr=sr
+        
+    if (a[d*i]-screen_width/2+domain/2)*(a[d*i]-screen_width/2+domain/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)<hipporadius*hipporadius and hippo1==1:
+      a[d*i]=1000000
+      a[d*i+1]=1000000
+      a[d*i+2]=0
+      a[d*i+3]=0
+      team=int(i/n)
+      if team==0:
+        sr=sr-1
+      elif team==1:
+        sr=sr-1
+      elif team==2:
+        sr=sr+3
+      elif team==3:
+        sr=sr-1
+        
+    if (a[d*i]-screen_width/2+domain/2)*(a[d*i]-screen_width/2+domain/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)<hipporadius*hipporadius and hippo1==1:
+      a[d*i]=1000000
+      a[d*i+1]=1000000
+      a[d*i+2]=0
+      a[d*i+3]=0
+      team=int(i/n)
+      if team==0:
+        sr=sr-1
+      elif team==1:
+        sr=sr-1
+      elif team==2:
+        sr=sr+3
+      elif team==3:
+        sr=sr-1
   color("rgba(255,0,0,1)")
   circle(screen_width/2-domain/2,screen_height/2,hipporadius)
   color("rgba(255,0,255,1)")
