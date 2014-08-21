@@ -20,18 +20,16 @@ for i in range (0,4*n):
   r3=randint(0,s1*100)/100-s1/2
   r4=randint(0,s1*100)/100-s1/2
   a=a+[r1,r2,r3,r4,0,0,255]
-  #print c
   while c==1:
     c=0
-    #print i
     for j in range (0,i):
       n1=(a[7*i]-a[7*j])
       n2=(a[7*i+1]-a[7*j+1])
       nn=n1*n1+n2*n2
-      #print (n1,n2)
+      
       if nn<1600:
         c=1
-        #print c
+        
         r1=randint(10,screen_width-10)
         r2=randint(10,screen_height-10)
         a[7*i]=r1
