@@ -13,11 +13,17 @@ for i in range (1,n):
   r1=randint(5,screen_width-5)
   r2=randint(5,screen_height-5)
   a=a+[r1,r2,1,0,255,128,0]
-  
+
+def ctorgba(c):
+  string_out = "rgba("
+  string_out = string_out + c[1] + "," + c[2]
+  print string_out
+  return string_out
 
 print(a) 
 for i in range (0,n-1):
   c=(a[7*i+4],a[7*i+5],a[7*i+6],1)
+  colstring = ctorgbra(a)
   print(c)
   color("rgba(c)")
   #color("rgba(255,128,0,0.5)")
