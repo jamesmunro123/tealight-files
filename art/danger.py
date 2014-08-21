@@ -16,7 +16,7 @@ e2=1
 domain=min(screen_width,screen_height)/2-10
 #(x,y,u,v,colr,colg,colb,inert)
 d=8
-radius=15
+radius=30
 
 for i in range (0,4*n):
   c=1
