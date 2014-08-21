@@ -184,7 +184,7 @@ def handle_frame():
         sr=sr+3
       elif team==3:
         sr=sr-1
-    if (a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2-domain/2)*(a[d*i+1]-screen_height/2-domain/2)<hipporadius*hipporadius and hippo2==1:
+    if (a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2+domain/2)*(a[d*i+1]-screen_height/2+domain/2)<hipporadius*hipporadius and hippo2==1:
       a[d*i]=1000000
       a[d*i+1]=1000000
       a[d*i+2]=0
