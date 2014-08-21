@@ -250,5 +250,7 @@ def handle_frame():
   if hippo4==1:
     color("rgba(0,0,255,1)")
     spot(screen_width/2+domain/2,screen_height/2,hipporadius)
-    
+ 
+  color("black")
   text(10,10,sr)
+  text(screen_width-10,10,sb)
