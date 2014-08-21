@@ -10,7 +10,7 @@ from tealight.utils import sleep
 
 a=[]
 n=7
-s1=10
+s1=2
 e=0.2
 e2=1
 domain=min(screen_width,screen_height)/2-10
