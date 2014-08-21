@@ -17,7 +17,7 @@ radius=20
 domain=min(screen_width,screen_height)/2-radius-10
 #(x,y,u,v,colr,colg,colb,inert)
 d=8
-hippo1-0
+hippo1=0
 hippo2=0
 hippo3=0
 hippo4=0
