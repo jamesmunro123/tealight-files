@@ -10,7 +10,7 @@ from tealight.utils import sleep
 
 a=[]
 n=10
-s1=4
+s1=10
 
 
 for i in range (0,4*n):
