@@ -44,7 +44,7 @@ def handle_frame():
   color("white")
   box(0,0,screen_width,screen_height)
   
-  for i in range (0,4*n)
+  for i in range (0,4*n):
     a[7*i]=a[7*i]+a[7*i+2]
     a[7*i+1]=a[7*i+1]+a[7*i+3]
   
