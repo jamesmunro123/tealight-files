@@ -14,7 +14,7 @@ s1=10
 
 #(x,y,u,v,colr,colg,colb,inert)
 d=8
-radius=20
+radius=10
 
 for i in range (0,4*n):
   c=1
