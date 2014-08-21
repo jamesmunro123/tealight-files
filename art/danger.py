@@ -9,7 +9,7 @@ from random import (random, randint)
 from tealight.utils import sleep
 
 a=[]
-n=2
+n=1
 s1=5
 
 for i in range (1,n+1):
