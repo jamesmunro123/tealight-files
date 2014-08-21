@@ -32,14 +32,17 @@ for i in range (0,4*n):
     a[d*i+5]=0
     a[d*i+6]=255
   if n-1<i and i<2*n:
-    #purple
-    pass
+    a[d*i+4]=255
+    a[d*i+5]=0
+    a[d*i+6]=255
   if 2*n-1 < i and i < 3*n:
-    #red
-    pass
+    a[d*i+4]=255
+    a[d*i+5]=0
+    a[d*i+6]=0
   if 3*n-1<i and i<4*n:
-    pass
-    #orange
+    a[d*i+4]=255
+    a[d*i+5]=100
+    a[d*i+6]=0
   while c==1:
     c=0
     for j in range (0,i):
