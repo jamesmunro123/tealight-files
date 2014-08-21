@@ -21,7 +21,7 @@ for i in range (0,4*n):
   a=a+[r1,r2,r3,r4,0,0,255]
   while c==1:
     c=0
-    print c
+    print i
     for j in range (0,i):
       n1=(a[7*i]-a[7*j])
       n2=(a[7*i+1]-a[7*j+1])
