@@ -11,9 +11,9 @@ a=()
 for i in range (1,3):
   r=randint(0,6)
   a=a+(r,r,1,0,0,0,0)
-  print(r)
-
   
+
+print(a) 
 for i in range (1,3):
   spot(a(7*i),a(7*i+1),10)
   
