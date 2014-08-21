@@ -9,8 +9,8 @@ from random import (random, randint)
 from tealight.utils import sleep
 
 a=[]
-n=20
-s1=10
+n=7
+s1=15
 
 #(x,y,u,v,colr,colg,colb,inert)
 d=8
