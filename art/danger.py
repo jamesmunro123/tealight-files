@@ -11,12 +11,12 @@ from tealight.utils import sleep
 a=[]
 n=7
 s1=10
-e=0.5
+e=0.2
 e2=1
 domain=min(screen_width,screen_height)/2-10
 #(x,y,u,v,colr,colg,colb,inert)
 d=8
-radius=30
+radius=20
 
 for i in range (0,4*n):
   c=1
