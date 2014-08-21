@@ -89,7 +89,7 @@ def ctorgba(c):
 
   
 def handle_frame():
-  sleep(30)
+  sleep(20)
   color("white")
   box(0,0,screen_width,screen_height)
   color("black")
