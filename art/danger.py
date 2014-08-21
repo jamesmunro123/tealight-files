@@ -23,7 +23,7 @@ hippo2=0
 hippo3=0
 hippo4=0
 
-scorer=0
+sr=0
 
 
 for i in range (0,4*n):
@@ -176,13 +176,13 @@ def handle_frame():
       a[d*i+3]=0
       team=i/n-int(i/n)
       if team==0:
-        scorer=scorer-1
+        sr=sr-1
       elif team==1:
-        scorer=scorer-1
+        sr=sr-1
       elif team==2:
-        scorer=scorer+3
+        sr=sr+3
       elif team==3:
-        scorer=scorer+1
+        sr=sr+1
   
   color("rgba(255,0,0,1)")
   circle(screen_width/2-domain/2,screen_height/2,hipporadius)
