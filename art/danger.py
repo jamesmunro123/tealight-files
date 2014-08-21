@@ -107,4 +107,4 @@ def handle_frame():
       a[d*i+7]=a[d*i+7]-1
             
     if a[7*i]*a[7*i]+a[7*i+1]*a[7*i+1]>10000:
-     
+      print("out")
