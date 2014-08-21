@@ -39,4 +39,6 @@ for i in range (0,4*n):
   colstring = ctorgba(c)
   color(colstring)
   spot(a[7*i],a[7*i+1],10)
+
   
+def handle_frame
