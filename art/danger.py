@@ -13,7 +13,7 @@ n=10
 s1=10
 c=1
 
-for i in range (0,n):
+for i in range (0,4*n):
   r1=randint(10,screen_width-10)
   r2=randint(10,screen_height-10)
   r3=randint(0,s1*100)/100-s1/2
