@@ -12,7 +12,7 @@ n=7
 for i in range (1,n):
   r1=randint(5,screen_width-5)
   r2=randint(5,screen_height-5)
-  a=a+[r1,r2,1,0,0,0,255]
+  a=a+[r1,r2,1,0,100,100,100]
   
 
 print(a) 
