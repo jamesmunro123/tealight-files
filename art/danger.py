@@ -26,7 +26,7 @@ for i in range (1,n+1):
         n1=(a[7*j]-a[7*k])
         n2=(a[7*j+1]-a[7*k+1])
         nn=n1*n1+n2*n2
-        if nn<1600
+        if nn<1600:
           c=1
           r1=randint(10,screen_width-10)
           r2=randint(10,screen_height-10)
