@@ -12,6 +12,8 @@ a=[]
 n=10
 s1=10
 
+#(x,y,u,v,colr,colg,colb,inert)
+d=8
 
 for i in range (0,4*n):
   c=1
@@ -19,12 +21,12 @@ for i in range (0,4*n):
   r2=randint(10,screen_height-10)
   r3=randint(0,s1*100)/100-s1/2
   r4=randint(0,s1*100)/100-s1/2
-  a=a+[r1,r2,r3,r4,0,0,255]
+  a=a+[r1,r2,r3,r4,0,0,255,0]
   while c==1:
     c=0
     for j in range (0,i):
-      n1=(a[7*i]-a[7*j])
-      n2=(a[7*i+1]-a[7*j+1])
+      n1=(a[d*i]-a[d*j])
+      n2=(a[d*i+1]-a[d*j+1])
       nn=n1*n1+n2*n2
       
       if nn<1600:
@@ -32,8 +34,8 @@ for i in range (0,4*n):
         
         r1=randint(10,screen_width-10)
         r2=randint(10,screen_height-10)
-        a[7*i]=r1
-        a[7*i+1]=r2
+        a[d*i]=r1
+        a[d*i+1]=r2
 
 #for i in range (1,n+1):
 #  r1=randint(5,screen_width-5)
@@ -70,29 +72,32 @@ def handle_frame():
   box(0,0,screen_width,screen_height)
   
   for i in range (0,4*n):
-    a[7*i]=a[7*i]+a[7*i+2]
-    a[7*i+1]=a[7*i+1]+a[7*i+3]
+    a[d*i]=a[d*i]+a[d*i+2]
+    a[d*i+1]=a[d*i+1]+a[d*i+3]
   
   for i in range (0,4*n):
-    c=[a[7*i+4],a[7*i+5],a[7*i+6],1]
+    c=[a[d*i+4],a[d*i+5],a[d*i+6],1]
     colstring = ctorgba(c)
     color(colstring)
-    spot(a[7*i],a[7*i+1],20)
+    spot(a[d*i],a[d*i+1],20)
     
   for i in range (0,4*n):
     for j in range (i+1,4*n):
-      n1=(a[7*i]-a[7*j])
-      n2=(a[7*i+1]-a[7*j+1])
+      n1=(a[d*i]-a[d*j])
+      n2=(a[d*i+1]-a[d*j+1])
       nn=n1*n1+n2*n2
-      v1x=a[7*i+2]
-      v1y=a[7*i+3]
-      v2x=a[7*j+2]
-      v2y=a[7*j+3]
+      v1x=a[d*i+2]
+      v1y=a[d*i+3]
+      v2x=a[d*j+2]
+      v2y=a[d*j+3]
       if nn<1600:
         if nn !=0:
-          a[7*i+2]=((n2*n2-n1*n1)*v1x-2*n1*n2*v1y)/nn
-          a[7*i+3]=(-2*n1*n2*v1x+(n1*n1-n2*n2)*v1y)/nn
-          a[7*j+2]=((n2*n2-n1*n1)*v2x-2*n1*n2*v2y)/nn
-          a[7*j+3]=(-2*n1*n2*v2x+(n1*n1-n2*n2)*v2y)/nn
-    #if a[7*i]*a[7*i]+a[7*i+1]*a[7*i+1]>10000:
+          if a[d*i+7]==0
+            a[d*i+2]=((n2*n2-n1*n1)*v1x-2*n1*n2*v1y)/nn
+            a[d*i+3]=(-2*n1*n2*v1x+(n1*n1-n2*n2)*v1y)/nn
+            a[d*j+2]=((n2*n2-n1*n1)*v2x-2*n1*n2*v2y)/nn
+            a[d*j+3]=(-2*n1*n2*v2x+(n1*n1-n2*n2)*v2y)/nn
+            
+            
+            #if a[7*i]*a[7*i]+a[7*i+1]*a[7*i+1]>10000:
      
