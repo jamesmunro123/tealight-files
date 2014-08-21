@@ -9,7 +9,7 @@ from random import (random, randint)
 from tealight.utils import sleep
 
 a=[]
-n=1
+n=7
 s1=5
 
 for i in range (1,n+1):
@@ -68,8 +68,8 @@ def handle_frame():
       #print (a[7*i]-a[7*j])^2+(a[7*i+1]-a[7*j+1])^2
       if (a[7*i]-a[7*j])^2+(a[7*i+1]-a[7*j+1])^2<1:
         print("crash!")
-        #a[7*i+2]=0
-        #a[7*i+3]=0
-        #a[7*j+2]=0
-        #a[7*j+3]=0
+        a[7*i+2]=0
+        a[7*i+3]=0
+        a[7*j+2]=0
+        a[7*j+3]=0
             
