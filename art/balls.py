@@ -43,7 +43,7 @@ for i in range (0,n):
   r2=r5*sin(r6)+screen_height/2
   r3=randint(0,s1*100)/100-s1/2
   r4=randint(0,s1*100)/100-s1/2
-  a=a+[r1,r2,r3,r4,0,0,0,0,0,1]
+  a=a+[r1,r2,r3,r4,0,0,0,0,0,0.1]
  
   
   while c==1:
