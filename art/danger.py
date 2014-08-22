@@ -121,157 +121,158 @@ def handle_keyup(key):
 
   
 def handle_frame():
-  global sr, sb
-  sleep(20)
-  color("white")
-  box(0,0,screen_width,screen_height)
-  color("black")
-  circle(screen_width/2,screen_height/2,domain+radius)
-  
-  for i in range (0,4*n+1):
-    a[d*i]=a[d*i]+a[d*i+2]
-    a[d*i+1]=a[d*i+1]+a[d*i+3]
-    a[d*i+2]=a[d*i+2]*1
-    a[d*i+3]=a[d*i+3]*1
+  if gameend==0:
+    global sr, sb
+    sleep(20)
+    color("white")
+    box(0,0,screen_width,screen_height)
+    color("black")
+    circle(screen_width/2,screen_height/2,domain+radius)
     
-  for i in range (0,4*n+1):
-    c=[a[d*i+4],a[d*i+5],a[d*i+6],1]
-    colstring = ctorgba(c)
-    color(colstring)
-    spot(a[d*i],a[d*i+1],radius)
+    for i in range (0,4*n+1):
+      a[d*i]=a[d*i]+a[d*i+2]
+      a[d*i+1]=a[d*i+1]+a[d*i+3]
+      a[d*i+2]=a[d*i+2]*1
+      a[d*i+3]=a[d*i+3]*1
     
-  for i in range (0,4*n+1):
-    for j in range (i+1,4*n+1):
-      n1=(a[d*i]-a[d*j])
-      n2=(a[d*i+1]-a[d*j+1])
-      nn=n1*n1+n2*n2
-      v1x=a[d*i+2]
-      v1y=a[d*i+3]
-      v2x=a[d*j+2]
-      v2y=a[d*j+3]
-      if nn<4*radius*radius:
-        if nn !=0:
-          if a[d*i+7]==0 and a[d*i+7]==0:
-            a[d*i+2]=((n2*n2-e*n1*n1)*v1x-(1+e)*n1*n2*v1y)/nn
-            a[d*i+3]=(-(1+e)*n1*n2*v1x+(n1*n1-e*n2*n2)*v1y)/nn
-            a[d*j+2]=((n2*n2-n1*n1)*v2x-2*n1*n2*v2y)/nn
-            a[d*j+3]=(-2*n1*n2*v2x+(n1*n1-n2*n2)*v2y)/nn
-            a[d*i]=a[d*i]+(0+radius-sqrt(nn)/2)*n1/sqrt(nn)
-            a[d*i+1]=a[d*i+1]+(0+radius-sqrt(nn)/2)*n2/sqrt(nn)
-            a[d*j]=a[d*j]-(0+radius-sqrt(nn)/2)*n1/sqrt(nn)
-            a[d*j+1]=a[d*j+1]-(0+radius-sqrt(nn)/2)*n2/sqrt(nn)
-            a[d*i+7]=0
-            a[d*j+7]=0
-    if a[d*i+7]!=0:
-      a[d*i+7]=a[d*i+7]-1
+    for i in range (0,4*n+1):
+      c=[a[d*i+4],a[d*i+5],a[d*i+6],1]
+      colstring = ctorgba(c)
+      color(colstring)
+      spot(a[d*i],a[d*i+1],radius)
+    
+    for i in range (0,4*n+1):
+      for j in range (i+1,4*n+1):
+        n1=(a[d*i]-a[d*j])
+        n2=(a[d*i+1]-a[d*j+1])
+        nn=n1*n1+n2*n2
+        v1x=a[d*i+2]
+        v1y=a[d*i+3]
+        v2x=a[d*j+2]
+        v2y=a[d*j+3]
+        if nn<4*radius*radius:
+          if nn !=0:
+            if a[d*i+7]==0 and a[d*i+7]==0:
+              a[d*i+2]=((n2*n2-e*n1*n1)*v1x-(1+e)*n1*n2*v1y)/nn
+              a[d*i+3]=(-(1+e)*n1*n2*v1x+(n1*n1-e*n2*n2)*v1y)/nn
+              a[d*j+2]=((n2*n2-n1*n1)*v2x-2*n1*n2*v2y)/nn
+              a[d*j+3]=(-2*n1*n2*v2x+(n1*n1-n2*n2)*v2y)/nn
+              a[d*i]=a[d*i]+(0+radius-sqrt(nn)/2)*n1/sqrt(nn)
+              a[d*i+1]=a[d*i+1]+(0+radius-sqrt(nn)/2)*n2/sqrt(nn)
+              a[d*j]=a[d*j]-(0+radius-sqrt(nn)/2)*n1/sqrt(nn)
+              a[d*j+1]=a[d*j+1]-(0+radius-sqrt(nn)/2)*n2/sqrt(nn)
+              a[d*i+7]=0
+              a[d*j+7]=0
+      if a[d*i+7]!=0:
+        a[d*i+7]=a[d*i+7]-1
     #print(i,domain*domain,(a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2))
               
-    if (a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)>domain*domain:
-      #print(i)
-      n1=-(a[d*i]-screen_width/2)
-      n2=-(a[d*i+1]-screen_height/2)
-      v1x=a[d*i+2]
-      v1y=a[d*i+3]
-      nn=n1*n1+n2*n2
-      a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
-      a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
+      if (a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)>domain*domain:
+        #print(i)
+        n1=-(a[d*i]-screen_width/2)
+        n2=-(a[d*i+1]-screen_height/2)
+        v1x=a[d*i+2]
+        v1y=a[d*i+3]
+        nn=n1*n1+n2*n2
+        a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
+        a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
      
-    if (a[d*i]-screen_width/2+domain/2)*(a[d*i]-screen_width/2+domain/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)<hipporadius*hipporadius and hippo1==1:
-      a[d*i]=1000000
-      a[d*i+1]=1000000
-      a[d*i+2]=0
-      a[d*i+3]=0
-      team=int(i/n)
-      if team==0:
-        sr=sr-1
-      elif team==1:
-        sr=sr-1
-      elif team==2:
-        sr=sr+3
-      elif team==3:
-        sr=sr-1
-      elif team==4:
-        sr=-100
-        gameend=1
-        print("Blue team wins!")
-    if (a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2+domain/2)*(a[d*i+1]-screen_height/2+domain/2)<hipporadius*hipporadius and hippo2==1:
-      a[d*i]=1000000
-      a[d*i+1]=1000000
-      a[d*i+2]=0
-      a[d*i+3]=0
-      team=int(i/n)
-      if team==0:
-        sr=sr
-      elif team==1:
-        sb=sb+1
-      elif team==2:
-        sr=sr
-      elif team==3:
-        sr=sr
-      elif team==4:
-        sb=-100
-        gameend=1
-        print("Red team wins!")
+      if (a[d*i]-screen_width/2+domain/2)*(a[d*i]-screen_width/2+domain/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)<hipporadius*hipporadius and hippo1==1:
+        a[d*i]=1000000
+        a[d*i+1]=1000000
+        a[d*i+2]=0
+        a[d*i+3]=0
+        team=int(i/n)
+        if team==0:
+          sr=sr-1
+        elif team==1:
+          sr=sr-1
+        elif team==2:
+          sr=sr+3
+        elif team==3:
+          sr=sr-1
+        elif team==4:
+          sr=-100
+          gameend=1
+          print("Blue team wins!")
+      if (a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2+domain/2)*(a[d*i+1]-screen_height/2+domain/2)<hipporadius*hipporadius and hippo2==1:
+        a[d*i]=1000000
+        a[d*i+1]=1000000
+        a[d*i+2]=0
+        a[d*i+3]=0
+        team=int(i/n)
+        if team==0:
+          sr=sr
+        elif team==1:
+          sb=sb+1
+        elif team==2:
+          sr=sr
+        elif team==3:
+          sr=sr
+        elif team==4:
+          sb=-100
+          gameend=1
+          print("Red team wins!")
+          
+      if (a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2-domain/2)*(a[d*i+1]-screen_height/2-domain/2)<hipporadius*hipporadius and hippo3==1:
+        a[d*i]=1000000
+        a[d*i+1]=1000000
+        a[d*i+2]=0
+        a[d*i+3]=0
+        team=int(i/n)
+        if team==0:
+          sr=sr
+        elif team==1:
+          sr=sr
+        elif team==2:
+          sr=sr
+        elif team==3:
+          sr=sr+1
+        elif team==4:
+          sr=-100
+          gameend=1
+          print("Blue team wins!")
         
-    if (a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2-domain/2)*(a[d*i+1]-screen_height/2-domain/2)<hipporadius*hipporadius and hippo3==1:
-      a[d*i]=1000000
-      a[d*i+1]=1000000
-      a[d*i+2]=0
-      a[d*i+3]=0
-      team=int(i/n)
-      if team==0:
-        sr=sr
-      elif team==1:
-        sr=sr
-      elif team==2:
-        sr=sr
-      elif team==3:
-        sr=sr+1
-      elif team==4:
-        sr=-100
-        gameend=1
-        print("Blue team wins!")
-        
-    if (a[d*i]-screen_width/2-domain/2)*(a[d*i]-screen_width/2-domain/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)<hipporadius*hipporadius and hippo4==1:
-      a[d*i]=1000000
-      a[d*i+1]=1000000
-      a[d*i+2]=0
-      a[d*i+3]=0
-      team=int(i/n)
-      if team==0:
-        sb=sb+3
-      elif team==1:
-        sb=sb-1
-      elif team==2:
-        sb=sb-1
-      elif team==3:
-        sb=sb-1
-      elif team==4:
-        sb=-100
-        gameend=1
-        print("Red team wins!")
-  color("rgba(255,0,0,1)")
-  circle(screen_width/2-domain/2,screen_height/2,hipporadius)
-  color("rgba(255,0,255,1)")
-  circle(screen_width/2,screen_height/2-domain/2,hipporadius)
-  color("rgba(255,100,0,1)")
-  circle(screen_width/2,screen_height/2+domain/2,hipporadius)
-  color("rgba(0,0,255,1)")
-  circle(screen_width/2+domain/2,screen_height/2,hipporadius)
-  
-  if hippo1==1:
+      if (a[d*i]-screen_width/2-domain/2)*(a[d*i]-screen_width/2-domain/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)<hipporadius*hipporadius and hippo4==1:
+        a[d*i]=1000000
+        a[d*i+1]=1000000
+        a[d*i+2]=0
+        a[d*i+3]=0
+        team=int(i/n)
+        if team==0:
+          sb=sb+3
+        elif team==1:
+          sb=sb-1
+        elif team==2:
+          sb=sb-1
+        elif team==3:
+          sb=sb-1
+        elif team==4:
+          sb=-100
+          gameend=1
+          print("Red team wins!")
     color("rgba(255,0,0,1)")
-    spot(screen_width/2-domain/2,screen_height/2,hipporadius)
-  if hippo2==1:
+    circle(screen_width/2-domain/2,screen_height/2,hipporadius)
     color("rgba(255,0,255,1)")
-    spot(screen_width/2,screen_height/2-domain/2,hipporadius)
-  if hippo3==1:
+    circle(screen_width/2,screen_height/2-domain/2,hipporadius)
     color("rgba(255,100,0,1)")
-    spot(screen_width/2,screen_height/2+domain/2,hipporadius)
-  if hippo4==1:
+    circle(screen_width/2,screen_height/2+domain/2,hipporadius)
     color("rgba(0,0,255,1)")
-    spot(screen_width/2+domain/2,screen_height/2,hipporadius)
+    circle(screen_width/2+domain/2,screen_height/2,hipporadius)
+    
+    if hippo1==1:
+      color("rgba(255,0,0,1)")
+      spot(screen_width/2-domain/2,screen_height/2,hipporadius)
+    if hippo2==1:
+      color("rgba(255,0,255,1)")
+      spot(screen_width/2,screen_height/2-domain/2,hipporadius)
+    if hippo3==1:
+      color("rgba(255,100,0,1)")
+      spot(screen_width/2,screen_height/2+domain/2,hipporadius)
+    if hippo4==1:
+      color("rgba(0,0,255,1)")
+      spot(screen_width/2+domain/2,screen_height/2,hipporadius)
  
-  color("black")
-  text(10,10,sr)
-  text(screen_width-100,10,sb)
+    color("black")  
+    text(10,10,sr)
+    text(screen_width-100,10,sb)
