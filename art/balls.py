@@ -16,7 +16,7 @@ s1=15
 e=1
 e2=1
 mu=0.01
-g=0.1
+g=0.2
 
 redcount=2*n
 bluecount=2*n
