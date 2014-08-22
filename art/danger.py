@@ -333,6 +333,12 @@ def handle_frame():
     if hippo3==1:
       color("rgba(255,100,0,1)")
       spot(screen_width/2,screen_height/2+domain/2,hipporadius)
+      color("white")
+      spot(screen_width/2-hipporadius/3,screen_height/2+domain/2-hipporadius/3,hipporadius/5)
+      spot(screen_width/2+hipporadius/3,screen_height/2+domain/2-hipporadius/3,hipporadius/5)
+      color("black")
+      spot(screen_width/2-hipporadius/3,screen_height/2+domain/2-1.2*hipporadius/3,hipporadius/10)
+      spot(screen_width/2+hipporadius/3,screen_height/2+domain/2-1.2*hipporadius/3,hipporadius/10)
     if hippo4==1:
       color("rgba(0,0,255,1)")
       spot(screen_width/2+domain/2,screen_height/2,hipporadius)
