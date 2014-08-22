@@ -23,8 +23,8 @@ domain=min(screen_width,screen_height)/2-10
 radius=domain/12
 domain=domain-radius
 hipporadius=domain/4
-#(x,y,u,v,colr,colg,colb,inert)
-d=8
+#(x,y,u,v,ax,ay,colr,colg,colb,inert)
+d=10
 hippo1=0
 hippo2=0
 hippo3=0
