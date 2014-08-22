@@ -377,5 +377,5 @@ def handle_frame():
         print("Red team wins!")
       elif sb>sr:
         print("Blue team wins!")
-      else
+      else:
         print("Draw!)
