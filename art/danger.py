@@ -22,7 +22,8 @@ hippo1=0
 hippo2=0
 hippo3=0
 hippo4=0
-
+a=min(3,4)
+print(a)
 sr=0
 sb=0
 
