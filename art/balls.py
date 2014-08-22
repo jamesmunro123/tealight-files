@@ -84,7 +84,7 @@ def handle_frame():
     a[d*i+1]=a[d*i+1]+a[d*i+3]
     
     a[d*i+8]=-mu*a[d*i+2]
-    a[d*i+9]=-mu*a[d*i+3]
+    a[d*i+9]=-mu*a[d*i+3]+0.1
     
     a[d*i+2]=a[d*i+2]*1+a[d*i+8]
     a[d*i+3]=a[d*i+3]*1+a[d*i+9]
