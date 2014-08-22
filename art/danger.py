@@ -156,8 +156,8 @@ def handle_frame():
             a[d*i+3]=(-(1+e)*n1*n2*v1x+(n1*n1-e*n2*n2)*v1y)/nn
             a[d*j+2]=((n2*n2-n1*n1)*v2x-2*n1*n2*v2y)/nn
             a[d*j+3]=(-2*n1*n2*v2x+(n1*n1-n2*n2)*v2y)/nn
-            a[d*i+7]=20
-            a[d*j+7]=20
+            a[d*i+7]=10
+            a[d*j+7]=10
     if a[d*i+7]!=0:
       a[d*i+7]=a[d*i+7]-1
     #print(i,domain*domain,(a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2))
