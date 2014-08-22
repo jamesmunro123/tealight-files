@@ -9,7 +9,7 @@ from random import (random, randint)
 from tealight.utils import sleep
 
 a=[]
-n=7
+n=10
 s1=10
 e=0.9
 e2=1
