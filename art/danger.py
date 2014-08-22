@@ -189,7 +189,7 @@ def handle_frame():
         nn=n1*n1+n2*n2
         v1x=a[d*i+2]
         v1y=a[d*i+3]
-        a[d*i+2]=((n2*n2-e*n1*n1)*v1x-(1+e3)*n1*n2*v1y)/nn
+        a[d*i+2]=((n2*n2-e3*n1*n1)*v1x-(1+e3)*n1*n2*v1y)/nn
         a[d*i+3]=(-(1+e3)*n1*n2*v1x+(n1*n1-e3*n2*n2)*v1y)/nn
         a[d*i]=a[d*i]+(0+radius+hipporadius-sqrt(nn))*n1/sqrt(nn)
         a[d*i+1]=a[d*i+1]+(0+radius+hipporadius-sqrt(nn))*n2/sqrt(nn)
