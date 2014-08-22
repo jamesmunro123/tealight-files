@@ -132,7 +132,7 @@ def handle_frame():
     color("white")
     box(0,0,screen_width,screen_height)
     color("black")
-    circle(screen_width/2,screen_height/2,domain)
+    circle(screen_width/2,screen_height/2,domain+radius)
     
     for i in range (0,4*n+1):
       a[d*i]=a[d*i]+a[d*i+2]
@@ -181,8 +181,8 @@ def handle_frame():
         nn=n1*n1+n2*n2
         a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
         a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
-        a[d*i]=a[d*i]+(0+radius-domain+sqrt(nn))*n1/sqrt(nn)
-        a[d*i+1]=a[d*i+1]+(0+radius-domain+sqrt(nn))*n2/sqrt(nn)
+        a[d*i]=a[d*i]+(0-domain+sqrt(nn))*n1/sqrt(nn)
+        a[d*i+1]=a[d*i+1]+(0-domain+sqrt(nn))*n2/sqrt(nn)
       hcx=a[d*i]-screen_width/2+domain/2
       hcy=a[d*i+1]-screen_height/2
       if hcx*hcx+hcy*hcy>hipporadius*hipporadius and hcx*hcx+hcy*hcy<(hipporadius+radius)*(hipporadius+radius) and hippo1==1:
