@@ -178,7 +178,17 @@ def handle_frame():
         nn=n1*n1+n2*n2
         a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
         a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
-     
+        a[d*i]=a[d*i]+(0+radius-sqrt(nn)/2)*n1/sqrt(nn)
+        a[d*i+1]=a[d*i+1]+(0+radius-sqrt(nn)/2)*n2/sqrt(nn)
+      hcx=a[d*i]-screen_width/2+domain/2
+      hcy=a[d*i+1]-screen_height/2
+      if hcx*hcx+hcy*hcy > hipporadius*hipporadius and hcx*hcx+hcy*hcy > (hipporadius+radius)*(hipporadius+radius) and hippo1==1
+        n1=hcx
+        n2=hcy
+        v1x=a[d*i+2]
+        v1y=a[d*i+3]
+        a[d*i+2]=((n2*n2-e*n1*n1)*v1x-(1+e)*n1*n2*v1y)/nn
+        a[d*i+3]=(-(1+e)*n1*n2*v1x+(n1*n1-e*n2*n2)*v1y)/nn
       if (a[d*i]-screen_width/2+domain/2)*(a[d*i]-screen_width/2+domain/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)<hipporadius*hipporadius and hippo1==1:
         a[d*i]=1000000
         a[d*i+1]=1000000
