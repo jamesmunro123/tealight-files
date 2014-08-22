@@ -16,6 +16,8 @@ e2=1
 e3=1.5
 radius=20
 hipporadius=70
+redcount=2*n
+bluecount=2*n
 domain=min(screen_width,screen_height)/2-radius-10
 #(x,y,u,v,colr,colg,colb,inert)
 d=8
@@ -123,7 +125,7 @@ def handle_keyup(key):
 
   
 def handle_frame():
-  global sr, sb, gameend, e3
+  global sr, sb, gameend, e3, redcount, bluecount
   if gameend==0:
     
     sleep(20)
@@ -201,12 +203,16 @@ def handle_frame():
         team=int(i/n)
         if team==0:
           sr=sr-1
+          bluecount=bluecount-1
         elif team==1:
           sr=sr-1
+          bluecount=bluecount-1
         elif team==2:
           sr=sr+3
+          redcount=redcount-1
         elif team==3:
           sr=sr-1
+          redcount=redcount-1
         elif team==4:
           sr=-100
           gameend=1
@@ -231,12 +237,16 @@ def handle_frame():
         team=int(i/n)
         if team==0:
           sr=sr
+          bluecount=bluecount-1
         elif team==1:
           sb=sb+1
+          bluecount-bluecount-1
         elif team==2:
           sr=sr
+          redcount=redcount-1
         elif team==3:
           sr=sr
+          redcount=redcount-1
         elif team==4:
           sb=-100
           gameend=1
@@ -262,12 +272,16 @@ def handle_frame():
         team=int(i/n)
         if team==0:
           sr=sr
+          bluecount=bluecount-1
         elif team==1:
           sr=sr
+          bluecount=bluecount-1
         elif team==2:
           sr=sr
+          redcount=redcount-1
         elif team==3:
           sr=sr+1
+          redcount=redcount-1
         elif team==4:
           sr=-100
           gameend=1
@@ -293,12 +307,16 @@ def handle_frame():
         team=int(i/n)
         if team==0:
           sb=sb+3
+          bluecount=bluecount-1
         elif team==1:
           sb=sb-1
+          bluecount=bluecount-1
         elif team==2:
           sb=sb-1
+          redcount=redcount-1
         elif team==3:
           sb=sb-1
+          redcount=redcount-1
         elif team==4:
           sb=-100
           gameend=1
@@ -352,3 +370,12 @@ def handle_frame():
     color("black")  
     text(10,10,sr)
     text(screen_width-100,10,sb)
+    
+    if redcount==0 or bluecount==0:
+      gameend=1
+      if sr>sb
+        print("Red team wins!")
+      elif sb>sr:
+        print("Blue team wins!")
+      else
+      print("Draw!)
