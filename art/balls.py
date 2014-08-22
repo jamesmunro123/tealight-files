@@ -83,9 +83,12 @@ def handle_frame():
     #a[d*i+9]=-a[d*i+1]/1000
     a[d*i]=a[d*i]+a[d*i+2]
     a[d*i+1]=a[d*i+1]+a[d*i+3]
-    aa=sqrt(a[d*i]*a[d*i]+a[d*i+1]*a[d*i+1])
-    a[d*i+8]=-mu*a[d*i+2]-g*a[d*i]/aa
-    a[d*i+9]=-mu*a[d*i+3]-g*a[d*i+1]/aa
+    
+    a1=a[d*i]-screen_width/2
+    a2=a[d*i+1]-screen_height/2
+    aa=sqrt(a1*a1+a2*a2)
+    a[d*i+8]=-mu*a[d*i+2]-g*a1/aa
+    a[d*i+9]=-mu*a[d*i+3]-g*a2/aa
     
     a[d*i+2]=a[d*i+2]*1+a[d*i+8]
     a[d*i+3]=a[d*i+3]*1+a[d*i+9]
