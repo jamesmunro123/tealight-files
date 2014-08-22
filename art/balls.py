@@ -17,6 +17,7 @@ e=0.5
 e2=0.5
 e3=1.5
 mu=0.01
+g=0.1
 
 redcount=2*n
 bluecount=2*n
@@ -44,7 +45,7 @@ for i in range (0,n):
   r2=r5*sin(r6)+screen_height/2
   r3=randint(0,s1*100)/100-s1/2
   r4=randint(0,s1*100)/100-s1/2
-  a=a+[r1,r2,r3,r4,0,0,0,0,0,0.1]
+  a=a+[r1,r2,r3,r4,0,0,0,0,0,g]
  
   
   while c==1:
@@ -84,7 +85,7 @@ def handle_frame():
     a[d*i+1]=a[d*i+1]+a[d*i+3]
     
     a[d*i+8]=-mu*a[d*i+2]
-    a[d*i+9]=-mu*a[d*i+3]+0.1
+    a[d*i+9]=-mu*a[d*i+3]+g
     
     a[d*i+2]=a[d*i+2]*1+a[d*i+8]
     a[d*i+3]=a[d*i+3]*1+a[d*i+9]
