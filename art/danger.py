@@ -156,10 +156,10 @@ def handle_frame():
             a[d*i+3]=(-(1+e)*n1*n2*v1x+(n1*n1-e*n2*n2)*v1y)/nn
             a[d*j+2]=((n2*n2-n1*n1)*v2x-2*n1*n2*v2y)/nn
             a[d*j+3]=(-2*n1*n2*v2x+(n1*n1-n2*n2)*v2y)/nn
-            a[d*i]=a[d*i]+(2+radius-sqrt(nn)/2)*n1/sqrt(nn)
-            a[d*i+1]=a[d*i+1]+(2+radius-sqrt(nn)/2)*n2/sqrt(nn)
-            a[d*j]=a[d*j]-(2+radius-sqrt(nn)/2)*n1/sqrt(nn)
-            a[d*j+1]=a[d*j+1]-(2+radius-sqrt(nn)/2)*n2/sqrt(nn)
+            a[d*i]=a[d*i]+(0+radius-sqrt(nn)/2)*n1/sqrt(nn)
+            a[d*i+1]=a[d*i+1]+(0+radius-sqrt(nn)/2)*n2/sqrt(nn)
+            a[d*j]=a[d*j]-(0+radius-sqrt(nn)/2)*n1/sqrt(nn)
+            a[d*j+1]=a[d*j+1]-(0+radius-sqrt(nn)/2)*n2/sqrt(nn)
             a[d*i+7]=0
             a[d*j+7]=0
     if a[d*i+7]!=0:
