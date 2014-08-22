@@ -35,7 +35,7 @@ sb=0
 gameend=0
 
 
-for i in range (0,4*n+1):
+for i in range (0,n):
   c=1
   r5=randint(0,domain)
   r6=randint(0,100)*(360)/100
@@ -44,22 +44,8 @@ for i in range (0,4*n+1):
   r3=randint(0,s1*100)/100-s1/2
   r4=randint(0,s1*100)/100-s1/2
   a=a+[r1,r2,r3,r4,0,0,0,0,0,1]
-  if i<n:
-    a[d*i+4]=0
-    a[d*i+5]=0
-    a[d*i+6]=255
-  if n-1<i and i<2*n:
-    a[d*i+4]=255
-    a[d*i+5]=0
-    a[d*i+6]=255
-  if 2*n-1 < i and i < 3*n:
-    a[d*i+4]=255
-    a[d*i+5]=0
-    a[d*i+6]=0
-  if 3*n-1<i and i<4*n:
-    a[d*i+4]=255
-    a[d*i+5]=100
-    a[d*i+6]=0
+ 
+  
   while c==1:
     c=0
     for j in range (0,i):
