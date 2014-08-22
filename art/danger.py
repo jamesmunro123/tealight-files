@@ -147,8 +147,8 @@ def handle_frame():
     circle(screen_width/2+domain/2,screen_height/2,hipporadius)
     
     for i in range (0,4*n+1):
-      a[d*i+8]=-a[d*i]/100
-      a[d*i+9]=-a[d*i+1]/100
+      a[d*i+8]=-a[d*i]/1000
+      a[d*i+9]=-a[d*i+1]/1000
       a[d*i]=a[d*i]+a[d*i+2]
       a[d*i+1]=a[d*i+1]+a[d*i+3]
       a[d*i+2]=a[d*i+2]*1+a[d*i+8]
