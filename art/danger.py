@@ -182,7 +182,7 @@ def handle_frame():
         a[d*i+1]=a[d*i+1]+(0+radius-sqrt(nn)/2)*n2/sqrt(nn)
       hcx=a[d*i]-screen_width/2+domain/2
       hcy=a[d*i+1]-screen_height/2
-      if hcx*hcx+hcy*hcy > hipporadius*hipporadius and hcx*hcx+hcy*hcy > (hipporadius+radius)*(hipporadius+radius) and hippo1==1
+      if hcx*hcx+hcy*hcy>hipporadius*hipporadius and hcx*hcx+hcy*hcy>(hipporadius+radius)*(hipporadius+radius) and hippo1==1:
         n1=hcx
         n2=hcy
         v1x=a[d*i+2]
