@@ -23,7 +23,7 @@ domain=min(screen_width,screen_height)/2-10
 radius=domain/12
 domain=domain-radius
 hipporadius=domain/4
-#(x,y,u,v,ax,ay,colr,colg,colb,inert)
+#(x,y,u,v,colr,colg,colb,inert,ax,ay)
 d=10
 hippo1=0
 hippo2=0
@@ -147,10 +147,13 @@ def handle_frame():
     circle(screen_width/2+domain/2,screen_height/2,hipporadius)
     
     for i in range (0,4*n+1):
+      a[d*i+8]=-a[d*i]/100
+      a[d*i+9]=-a[d*i=1]/100
       a[d*i]=a[d*i]+a[d*i+2]
       a[d*i+1]=a[d*i+1]+a[d*i+3]
-      a[d*i+2]=a[d*i+2]*1
-      a[d*i+3]=a[d*i+3]*1
+      a[d*i+2]=a[d*i+2]*1+a[d*i+8]
+      a[d*i+3]=a[d*i+3]*1+a[d*i+9]
+     
     
     for i in range (0,4*n+1):
       c=[a[d*i+4],a[d*i+5],a[d*i+6],1]
