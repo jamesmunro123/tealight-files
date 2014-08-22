@@ -147,7 +147,7 @@ def handle_frame():
       spot(a[d*i],a[d*i+1],radius)
     if i==4*n:
       color("white")
-      text(a[d*i]-4,a[d*i+1]-4,"!")
+      text(a[d*i]-4,a[d*i+1]-6,"!")
     for i in range (0,4*n+1):
       for j in range (i+1,4*n+1):
         n1=(a[d*i]-a[d*j])
