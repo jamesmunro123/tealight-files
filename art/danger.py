@@ -240,7 +240,7 @@ def handle_frame():
           bluecount=bluecount-1
         elif team==1:
           sb=sb+1
-          bluecount-bluecount-1
+          bluecount=bluecount-1
         elif team==2:
           sr=sr
           redcount=redcount-1
