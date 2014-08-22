@@ -19,8 +19,9 @@ e3=1.5
 
 redcount=2*n
 bluecount=2*n
-domain=min(screen_width,screen_height)/2-radius-10
+domain=min(screen_width,screen_height)/2-10
 radius=domain/12
+domain=domain-radius
 hipporadius=domain/4
 #(x,y,u,v,colr,colg,colb,inert)
 d=8
