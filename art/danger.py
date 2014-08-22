@@ -1,6 +1,6 @@
 from tealight.art import (color, line, spot, circle, box, image, text, background)
 
-from math import (sin, cos, pi)
+from math import (sin, cos, pi, sqrt)
 
 from tealight.art import screen_width, screen_height
 
@@ -156,6 +156,7 @@ def handle_frame():
             a[d*i+3]=(-(1+e)*n1*n2*v1x+(n1*n1-e*n2*n2)*v1y)/nn
             a[d*j+2]=((n2*n2-n1*n1)*v2x-2*n1*n2*v2y)/nn
             a[d*j+3]=(-2*n1*n2*v2x+(n1*n1-n2*n2)*v2y)/nn
+            a[d*i]=a[d*i]+(radius-sqrt(nn)/2)*n1/sqrt(nn)
             a[d*i+7]=10
             a[d*j+7]=10
     if a[d*i+7]!=0:
@@ -171,6 +172,7 @@ def handle_frame():
       nn=n1*n1+n2*n2
       a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
       a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
+     
     if (a[d*i]-screen_width/2+domain/2)*(a[d*i]-screen_width/2+domain/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)<hipporadius*hipporadius and hippo1==1:
       a[d*i]=1000000
       a[d*i+1]=1000000
