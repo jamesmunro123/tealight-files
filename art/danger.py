@@ -160,8 +160,8 @@ def handle_frame():
             a[d*i+1]=a[d*i+1]+(radius-sqrt(nn)/2)*n2/sqrt(nn)
             a[d*j]=a[d*j]+(radius-sqrt(nn)/2)*n1/sqrt(nn)
             a[d*j+1]=a[d*j+1]+(radius-sqrt(nn)/2)*n2/sqrt(nn)
-            a[d*i+7]=10
-            a[d*j+7]=10
+            a[d*i+7]=0
+            a[d*j+7]=0
     if a[d*i+7]!=0:
       a[d*i+7]=a[d*i+7]-1
     #print(i,domain*domain,(a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2))
