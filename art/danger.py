@@ -191,8 +191,8 @@ def handle_frame():
         v1y=a[d*i+3]
         a[d*i+2]=((n2*n2-e*n1*n1)*v1x-(1+e3)*n1*n2*v1y)/nn
         a[d*i+3]=(-(1+e3)*n1*n2*v1x+(n1*n1-e3*n2*n2)*v1y)/nn
-        a[d*i]=a[d*i]-(0+radius+hipporadius-sqrt(nn))*n1/sqrt(nn)
-        a[d*i+1]=a[d*i+1]-(0+radius+hipporadius-sqrt(nn))*n2/sqrt(nn)
+        a[d*i]=a[d*i]+(0+radius+hipporadius-sqrt(nn))*n1/sqrt(nn)
+        a[d*i+1]=a[d*i+1]+(0+radius+hipporadius-sqrt(nn))*n2/sqrt(nn)
       if (a[d*i]-screen_width/2+domain/2)*(a[d*i]-screen_width/2+domain/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)<hipporadius*hipporadius and hippo1==1:
         a[d*i]=1000000
         a[d*i+1]=1000000
