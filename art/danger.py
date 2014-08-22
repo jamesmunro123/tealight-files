@@ -316,7 +316,7 @@ def handle_frame():
       color("rgba(255,0,0,1)")
       spot(screen_width/2-domain/2,screen_height/2,hipporadius)
       color("white")
-      spot(screen_width/2-domain/2+hipporadius/2,screen_height/2+hipporadius/4,hipporadius/5)
+      spot(screen_width/2-domain/2+hipporadius/3,screen_height/2+hipporadius/4,hipporadius/5)
     if hippo2==1:
       color("rgba(255,0,255,1)")
       spot(screen_width/2,screen_height/2-domain/2,hipporadius)
