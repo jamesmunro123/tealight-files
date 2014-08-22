@@ -190,6 +190,10 @@ def handle_frame():
         sr=sr+3
       elif team==3:
         sr=sr-1
+      elif team==4:
+        sr=-100
+        gameend=1
+        print("Blue team wins!")
     if (a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2+domain/2)*(a[d*i+1]-screen_height/2+domain/2)<hipporadius*hipporadius and hippo2==1:
       a[d*i]=1000000
       a[d*i+1]=1000000
@@ -204,6 +208,10 @@ def handle_frame():
         sr=sr
       elif team==3:
         sr=sr
+      elif team==4:
+        sb=-100
+        gameend=1
+        print("Red team wins!")
         
     if (a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2-domain/2)*(a[d*i+1]-screen_height/2-domain/2)<hipporadius*hipporadius and hippo3==1:
       a[d*i]=1000000
@@ -219,6 +227,10 @@ def handle_frame():
         sr=sr
       elif team==3:
         sr=sr+1
+      elif team==4:
+        sr=-100
+        gameend=1
+        print("Blue team wins!")
         
     if (a[d*i]-screen_width/2-domain/2)*(a[d*i]-screen_width/2-domain/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)<hipporadius*hipporadius and hippo4==1:
       a[d*i]=1000000
@@ -234,6 +246,10 @@ def handle_frame():
         sb=sb-1
       elif team==3:
         sb=sb-1
+      elif team==4:
+        sb=-100
+        gameend=1
+        print("Red team wins!")
   color("rgba(255,0,0,1)")
   circle(screen_width/2-domain/2,screen_height/2,hipporadius)
   color("rgba(255,0,255,1)")
