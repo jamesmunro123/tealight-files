@@ -1,3 +1,5 @@
+# By CAMbassador James
+
 from tealight.art import (color, line, spot, circle, box, image, text, background)
 
 from math import (sin, cos, pi, sqrt)
