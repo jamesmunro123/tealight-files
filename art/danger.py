@@ -137,6 +137,14 @@ def handle_frame():
     box(0,0,screen_width,screen_height)
     color("black")
     circle(screen_width/2,screen_height/2,domain+radius)
+    color("rgba(255,0,0,1)")
+    circle(screen_width/2-domain/2,screen_height/2,hipporadius)
+    color("rgba(255,0,255,1)")
+    circle(screen_width/2,screen_height/2-domain/2,hipporadius)
+    color("rgba(255,100,0,1)")
+    circle(screen_width/2,screen_height/2+domain/2,hipporadius)
+    color("rgba(0,0,255,1)")
+    circle(screen_width/2+domain/2,screen_height/2,hipporadius)
     
     for i in range (0,4*n+1):
       a[d*i]=a[d*i]+a[d*i+2]
@@ -327,14 +335,6 @@ def handle_frame():
           sb=-100
           gameend=1
           print("Red team wins!")
-    color("rgba(255,0,0,1)")
-    circle(screen_width/2-domain/2,screen_height/2,hipporadius)
-    color("rgba(255,0,255,1)")
-    circle(screen_width/2,screen_height/2-domain/2,hipporadius)
-    color("rgba(255,100,0,1)")
-    circle(screen_width/2,screen_height/2+domain/2,hipporadius)
-    color("rgba(0,0,255,1)")
-    circle(screen_width/2+domain/2,screen_height/2,hipporadius)
     
     if hippo1==1:
       color("rgba(255,0,0,1)")
