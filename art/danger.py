@@ -198,8 +198,8 @@ def handle_frame():
         a[d*i]=a[d*i]+(0+radius+hipporadius-sqrt(nn))*n1/sqrt(nn)
         a[d*i+1]=a[d*i+1]+(0+radius+hipporadius-sqrt(nn))*n2/sqrt(nn)
       if (a[d*i]-screen_width/2+domain/2)*(a[d*i]-screen_width/2+domain/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)<hipporadius*hipporadius and hippo1==1:
-        a[d*i]=1000000
-        a[d*i+1]=1000000
+        a[d*i]=screen_width+100
+        a[d*i+1]=screen_height+100
         a[d*i+2]=0
         a[d*i+3]=0
         team=int(i/n)
