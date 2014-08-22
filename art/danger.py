@@ -186,6 +186,7 @@ def handle_frame():
       if hcx*hcx+hcy*hcy>hipporadius*hipporadius and hcx*hcx+hcy*hcy<(hipporadius+radius)*(hipporadius+radius) and hippo1==1:
         n1=hcx
         n2=hcy
+        nn=n1*n1+n2*n2
         v1x=a[d*i+2]
         v1y=a[d*i+3]
         a[d*i+2]=((n2*n2-e*n1*n1)*v1x-(1+e3)*n1*n2*v1y)/nn
