@@ -373,7 +373,7 @@ def handle_frame():
     
     if redcount==0 or bluecount==0:
       gameend=1
-      if sr>sb
+      if sr>sb:
         print("Red team wins!")
       elif sb>sr:
         print("Blue team wins!")
