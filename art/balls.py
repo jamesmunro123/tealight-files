@@ -96,7 +96,7 @@ def handle_frame():
   box(0,0,screen_width,screen_height)
   color("black")
   circle(screen_width/2,screen_height/2,domain+radius)
-  for i in range (0,4*n+1):
+  for i in range (0,n):
     #a[d*i+8]=-a[d*i]/1000
     #a[d*i+9]=-a[d*i+1]/1000
     a[d*i]=a[d*i]+a[d*i+2]
@@ -105,13 +105,13 @@ def handle_frame():
     a[d*i+3]=a[d*i+3]*1+a[d*i+9]
    
  
-  for i in range (0,4*n+1):
+  for i in range (0,n):
     c=[a[d*i+4],a[d*i+5],a[d*i+6],1]
     colstring = ctorgba(c)
     color(colstring)
     spot(a[d*i],a[d*i+1],radius)
-  for i in range (0,4*n+1):
-    for j in range (i+1,4*n+1):
+  for i in range (0,n):
+    for j in range (i+1,n):
       n1=(a[d*i]-a[d*j])
       n2=(a[d*i+1]-a[d*j+1])
       nn=n1*n1+n2*n2
