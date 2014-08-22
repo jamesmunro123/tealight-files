@@ -16,6 +16,7 @@ s1=15
 e=0.5
 e2=0.5
 e3=1.5
+mu=0.1
 
 redcount=2*n
 bluecount=2*n
@@ -81,6 +82,10 @@ def handle_frame():
     #a[d*i+9]=-a[d*i+1]/1000
     a[d*i]=a[d*i]+a[d*i+2]
     a[d*i+1]=a[d*i+1]+a[d*i+3]
+    
+    a[d*i+8]=-mu*a[d*i+2]
+    a[d*i+9]=-mu*a[d*i+3]
+    
     a[d*i+2]=a[d*i+2]*1+a[d*i+8]
     a[d*i+3]=a[d*i+3]*1+a[d*i+9]
    
