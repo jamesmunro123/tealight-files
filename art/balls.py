@@ -129,77 +129,60 @@ def handle_keyup(key):
 
   
 def handle_frame():
-  global sr, sb, gameend, e3, redcount, bluecount
-  if gameend==0:
     
-    sleep(20)
-    color("white")
-    box(0,0,screen_width,screen_height)
-    color("black")
-    circle(screen_width/2,screen_height/2,domain+radius)
-    color("rgba(255,0,0,1)")
-    circle(screen_width/2-domain/2,screen_height/2,hipporadius)
-    color("rgba(255,0,255,1)")
-    circle(screen_width/2,screen_height/2-domain/2,hipporadius)
-    color("rgba(255,100,0,1)")
-    circle(screen_width/2,screen_height/2+domain/2,hipporadius)
-    color("rgba(0,0,255,1)")
-    circle(screen_width/2+domain/2,screen_height/2,hipporadius)
-    
-    for i in range (0,4*n+1):
-      #a[d*i+8]=-a[d*i]/1000
-      #a[d*i+9]=-a[d*i+1]/1000
-      a[d*i]=a[d*i]+a[d*i+2]
-      a[d*i+1]=a[d*i+1]+a[d*i+3]
-      a[d*i+2]=a[d*i+2]*1+a[d*i+8]
-      a[d*i+3]=a[d*i+3]*1+a[d*i+9]
-     
-    
-    for i in range (0,4*n+1):
-      c=[a[d*i+4],a[d*i+5],a[d*i+6],1]
-      colstring = ctorgba(c)
-      color(colstring)
-      spot(a[d*i],a[d*i+1],radius)
-    if i==4*n:
-      color("white")
-      text(a[d*i]-3,a[d*i+1]-11,"!")
-    for i in range (0,4*n+1):
-      for j in range (i+1,4*n+1):
-        n1=(a[d*i]-a[d*j])
-        n2=(a[d*i+1]-a[d*j+1])
-        nn=n1*n1+n2*n2
-        v1x=a[d*i+2]
-        v1y=a[d*i+3]
-        v2x=a[d*j+2]
-        v2y=a[d*j+3]
-        if nn<4*radius*radius:
-          if nn !=0:
-            if a[d*i+7]==0 and a[d*i+7]==0:
-              a[d*i+2]=((n2*n2-e*n1*n1)*v1x-(1+e)*n1*n2*v1y)/nn
-              a[d*i+3]=(-(1+e)*n1*n2*v1x+(n1*n1-e*n2*n2)*v1y)/nn
-              a[d*j+2]=((n2*n2-n1*n1)*v2x-2*n1*n2*v2y)/nn
-              a[d*j+3]=(-2*n1*n2*v2x+(n1*n1-n2*n2)*v2y)/nn
-              a[d*i]=a[d*i]+(0+radius-sqrt(nn)/2)*n1/sqrt(nn)
-              a[d*i+1]=a[d*i+1]+(0+radius-sqrt(nn)/2)*n2/sqrt(nn)
-              a[d*j]=a[d*j]-(0+radius-sqrt(nn)/2)*n1/sqrt(nn)
-              a[d*j+1]=a[d*j+1]-(0+radius-sqrt(nn)/2)*n2/sqrt(nn)
-              a[d*i+7]=0
-              a[d*j+7]=0
-      if a[d*i+7]!=0:
-        a[d*i+7]=a[d*i+7]-1
-    #print(i,domain*domain,(a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2))
-              
-      if (a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)>domain*domain and a[d*i]<screen_width:
-        #print(i)
-        n1=-(a[d*i]-screen_width/2)
-        n2=-(a[d*i+1]-screen_height/2)
-        v1x=a[d*i+2]
-        v1y=a[d*i+3]
-        nn=n1*n1+n2*n2
-        a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
-        a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
-        a[d*i]=a[d*i]+(0-domain+sqrt(nn))*n1/sqrt(nn)
-        a[d*i+1]=a[d*i+1]+(0-domain+sqrt(nn))*n2/sqrt(nn)
-      hcx=a[d*i]-screen_width/2+domain/2
-      hcy=a[d*i+1]-screen_height/2
+  sleep(20)
+  color("white")
+  box(0,0,screen_width,screen_height)
+  color("black")
+  circle(screen_width/2,screen_height/2,domain+radius)
+  for i in range (0,4*n+1):
+    #a[d*i+8]=-a[d*i]/1000
+    #a[d*i+9]=-a[d*i+1]/1000
+    a[d*i]=a[d*i]+a[d*i+2]
+    a[d*i+1]=a[d*i+1]+a[d*i+3]
+    a[d*i+2]=a[d*i+2]*1+a[d*i+8]
+    a[d*i+3]=a[d*i+3]*1+a[d*i+9]
    
+ 
+  for i in range (0,4*n+1):
+    c=[a[d*i+4],a[d*i+5],a[d*i+6],1]
+    colstring = ctorgba(c)
+    color(colstring)
+    spot(a[d*i],a[d*i+1],radius)
+  for i in range (0,4*n+1):
+    for j in range (i+1,4*n+1):
+      n1=(a[d*i]-a[d*j])
+      n2=(a[d*i+1]-a[d*j+1])
+      nn=n1*n1+n2*n2
+      v1x=a[d*i+2]
+      v1y=a[d*i+3]
+      v2x=a[d*j+2]
+      v2y=a[d*j+3]
+      if nn<4*radius*radius:
+        if nn !=0:
+          if a[d*i+7]==0 and a[d*i+7]==0:
+            a[d*i+2]=((n2*n2-e*n1*n1)*v1x-(1+e)*n1*n2*v1y)/nn
+            a[d*i+3]=(-(1+e)*n1*n2*v1x+(n1*n1-e*n2*n2)*v1y)/nn
+            a[d*j+2]=((n2*n2-n1*n1)*v2x-2*n1*n2*v2y)/nn
+            a[d*j+3]=(-2*n1*n2*v2x+(n1*n1-n2*n2)*v2y)/nn
+            a[d*i]=a[d*i]+(0+radius-sqrt(nn)/2)*n1/sqrt(nn)
+            a[d*i+1]=a[d*i+1]+(0+radius-sqrt(nn)/2)*n2/sqrt(nn)
+            a[d*j]=a[d*j]-(0+radius-sqrt(nn)/2)*n1/sqrt(nn)
+            a[d*j+1]=a[d*j+1]-(0+radius-sqrt(nn)/2)*n2/sqrt(nn)
+            a[d*i+7]=0
+            a[d*j+7]=0
+    if a[d*i+7]!=0:
+      a[d*i+7]=a[d*i+7]-1
+  #print(i,domain*domain,(a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2))
+            
+    if (a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)>domain*domain and a[d*i]<screen_width:
+      #print(i)
+      n1=-(a[d*i]-screen_width/2)
+      n2=-(a[d*i+1]-screen_height/2)
+      v1x=a[d*i+2]
+      v1y=a[d*i+3]
+      nn=n1*n1+n2*n2
+      a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
+      a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
+      a[d*i]=a[d*i]+(0-domain+sqrt(nn))*n1/sqrt(nn)
+      a[d*i+1]=a[d*i+1]+(0-domain+sqrt(nn))*n2/sqrt(nn)
