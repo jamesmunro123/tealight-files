@@ -32,7 +32,7 @@ for i in range (0,4*n+1):
   r5=randint(0,domain)
   r6=randint(0,100)*(360)/100
   r1=r5*cos(r6)+screen_width/2
-  r2=r6*sin(r6)+screen_height/2
+  r2=r5*sin(r6)+screen_height/2
   r3=randint(0,s1*100)/100-s1/2
   r4=randint(0,s1*100)/100-s1/2
   a=a+[r1,r2,r3,r4,0,0,0,0]
