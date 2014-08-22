@@ -25,6 +25,7 @@ hippo4=0
 
 sr=0
 sb=0
+gameend=0
 
 
 for i in range (0,4*n+1):
@@ -122,7 +123,7 @@ def handle_keyup(key):
   
 def handle_frame():
   if gameend==0:
-    global sr, sb
+    global sr, sb, gameend
     sleep(20)
     color("white")
     box(0,0,screen_width,screen_height)
