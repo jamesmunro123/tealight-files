@@ -43,7 +43,7 @@ for i in range (0,4*n+1):
   r2=r5*sin(r6)+screen_height/2
   r3=randint(0,s1*100)/100-s1/2
   r4=randint(0,s1*100)/100-s1/2
-  a=a+[r1,r2,r3,r4,0,0,0,0,0,0]
+  a=a+[r1,r2,r3,r4,0,0,0,0,0,1]
   if i<n:
     a[d*i+4]=0
     a[d*i+5]=0
@@ -101,31 +101,6 @@ def ctorgba(c):
   string_out = "rgba("
   string_out = string_out + str(c[0]) + "," + str(c[1]) + "," + str(c[2]) + "," + str(c[3]) + ")"
   return string_out
-
-def handle_keydown(key):
-  global hippo1, hippo2, hippo3, hippo4
-  if key == "left":
-    hippo1=1
-  elif key == "up":
-    hippo2=1
-  elif key == "down":
-    hippo3=1
-  elif key == "right":
-    hippo4=1
-
-    
-def handle_keyup(key):
-  global hippo1, hippo2, hippo3, hippo4
-  if key == "left":
-    hippo1=0
-  elif key == "up":
-    hippo2=0
-  elif key == "down":
-    hippo3=0
-  elif key == "right":
-    hippo4=0
-
-
 
   
 def handle_frame():
