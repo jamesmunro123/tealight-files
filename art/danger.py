@@ -27,7 +27,7 @@ sr=0
 sb=0
 
 
-for i in range (0,4*n):
+for i in range (0,4*n+1):
   c=1
   r5=randint(0,domain)
   r6=randint(0,100)*(360)/100
