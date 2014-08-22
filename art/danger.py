@@ -326,7 +326,7 @@ def handle_frame():
       spot(screen_width/2,screen_height/2-domain/2,hipporadius)
       color("white")
       spot(screen_width/2+hipporadius/3,screen_height/2-domain/2+hipporadius/3,hipporadius/5)
-      spot(screen_width/2+hipporadius/3,screen_height/2-domain/2+hipporadius/3,hipporadius/5)
+      spot(screen_width/2-hipporadius/3,screen_height/2-domain/2+hipporadius/3,hipporadius/5)
       color("black")
       spot(screen_width/2+1.2*hipporadius/3,screen_height/2-domain/2+hipporadius/3,hipporadius/10)
       spot(screen_width/2+1.2*hipporadius/3,screen_height/2-domain/2-hipporadius/3,hipporadius/10)
