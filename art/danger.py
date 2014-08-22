@@ -9,12 +9,12 @@ from random import (random, randint)
 from tealight.utils import sleep
 
 a=[]
-n=20
+n=10
 s1=20
 e=0.99
 e2=1
 e3=1.5
-radius=20
+radius=50
 hipporadius=100
 redcount=2*n
 bluecount=2*n
