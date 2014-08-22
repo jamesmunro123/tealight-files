@@ -145,7 +145,9 @@ def handle_frame():
       colstring = ctorgba(c)
       color(colstring)
       spot(a[d*i],a[d*i+1],radius)
-    
+    if i==4*n+1:
+      color("white")
+      text("!")
     for i in range (0,4*n+1):
       for j in range (i+1,4*n+1):
         n1=(a[d*i]-a[d*j])
