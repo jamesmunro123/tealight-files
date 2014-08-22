@@ -15,14 +15,13 @@ n=20
 s1=15
 e=1
 e2=1
-#e3=1.5
 mu=0.01
 g=0.1
 
 redcount=2*n
 bluecount=2*n
 domain=min(screen_width,screen_height)/2-10
-radius=20
+radius=10
 domain=domain-radius
 hipporadius=domain/4
 #(x,y,u,v,colr,colg,colb,inert,ax,ay)
