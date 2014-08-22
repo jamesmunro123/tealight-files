@@ -13,6 +13,7 @@ n=7
 s1=10
 e=0.9
 e2=1
+e3=1
 radius=20
 hipporadius=70
 domain=min(screen_width,screen_height)/2-radius-10
@@ -122,7 +123,7 @@ def handle_keyup(key):
 
   
 def handle_frame():
-  global sr, sb, gameend
+  global sr, sb, gameend, e3
   if gameend==0:
     
     sleep(20)
