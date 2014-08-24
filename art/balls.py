@@ -72,7 +72,8 @@ def ctorgba(c):
   string_out = string_out + str(c[0]) + "," + str(c[1]) + "," + str(c[2]) + "," + str(c[3]) + ")"
   return string_out
 
-  
+def handle_mouse
+
 def handle_frame():
     
   sleep(20)
