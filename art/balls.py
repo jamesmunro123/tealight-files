@@ -73,6 +73,7 @@ def ctorgba(c):
   return string_out
 
 def handle_mousedown(x,y):
+  global n, a
   n=n+1
   r7=randint(0,256)
   r8=randint(0,256)
