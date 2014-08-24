@@ -358,7 +358,7 @@ def handle_frame():
           sb=-100
           gameend=1
           print("Red team wins!")
-      for i in range (0,4*n+1):
+    for i in range (0,4*n+1):
       c=[a[d*i+4],a[d*i+5],a[d*i+6],1]
       colstring = ctorgba(c)
       color(colstring)
