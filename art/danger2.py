@@ -11,7 +11,7 @@ from random import (random, randint)
 from tealight.utils import sleep
 
 a=[]
-n=10
+n=30
 s1=15
 e=1
 e2=0.9
