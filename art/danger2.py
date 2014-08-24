@@ -178,6 +178,7 @@ def handle_frame():
         n1=(a[d*i]-a[d*j])
         n2=(a[d*i+1]-a[d*j+1])
         nn=n1*n1+n2*n2
+        
         v1x=a[d*i+2]
         v1y=a[d*i+3]
         v2x=a[d*j+2]
@@ -199,10 +200,10 @@ def handle_frame():
         if nn<4*radius*radius:
           if nn !=0:
             if a[d*i+7]==0 and a[d*i+7]==0:
-              a[d*i+2]=v8x
-              a[d*i+3]=v8y
-              a[d*j+2]=v7x
-              a[d*j+3]=v7y
+              a[d*i+2]=v7x
+              a[d*i+3]=v7y
+              a[d*j+2]=v8x
+              a[d*j+3]=v8y
               
               a[d*i]=a[d*i]+(0+radius-sqrt(nn)/2)*n1/sqrt(nn)
               a[d*i+1]=a[d*i+1]+(0+radius-sqrt(nn)/2)*n2/sqrt(nn)
