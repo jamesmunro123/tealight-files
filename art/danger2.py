@@ -165,14 +165,7 @@ def handle_frame():
       a[d*i+3]=a[d*i+3]*1+a[d*i+9]
      
     
-    for i in range (0,4*n+1):
-      c=[a[d*i+4],a[d*i+5],a[d*i+6],1]
-      colstring = ctorgba(c)
-      color(colstring)
-      spot(a[d*i],a[d*i+1],radius)
-    if i==4*n:
-      color("white")
-      text(a[d*i]-3,a[d*i+1]-11,"!")
+    
     for i in range (0,4*n+1):
       for j in range (i+1,4*n+1):
         n1=(a[d*i]-a[d*j])
@@ -365,7 +358,14 @@ def handle_frame():
           sb=-100
           gameend=1
           print("Red team wins!")
-    
+      for i in range (0,4*n+1):
+      c=[a[d*i+4],a[d*i+5],a[d*i+6],1]
+      colstring = ctorgba(c)
+      color(colstring)
+      spot(a[d*i],a[d*i+1],radius)
+    if i==4*n:
+      color("white")
+      text(a[d*i]-3,a[d*i+1]-11,"!")
     if hippo1==1:
       color("rgba(255,0,0,1)")
       spot(screen_width/2-domain/2,screen_height/2,hipporadius)
