@@ -13,7 +13,7 @@ from tealight.utils import sleep
 a=[]
 n=37
 s1=15
-e=0.9
+e=0.7
 e2=1
 mu=0
 g=0.5
@@ -93,7 +93,7 @@ def handle_frame():
     #a[d*i+9]=-mu*a[d*i+3]-g*a2/aa
     
     a[d*i+8]=-mu*a[d*i+2]
-    a[d*i+9]=-mu*a[d*i+3]-g
+    a[d*i+9]=-mu*a[d*i+3]+g
    
     
     a[d*i+2]=a[d*i+2]*1+a[d*i+8]
