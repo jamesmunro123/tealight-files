@@ -220,7 +220,7 @@ def handle_frame():
         a[d*i]=a[d*i]+(1-domain+sqrt(nn))*n1/sqrt(nn)
         a[d*i+1]=a[d*i+1]+(1-domain+sqrt(nn))*n2/sqrt(nn)
       
-      if (a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)<domain*domain/4:
+      if (a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)<domain*domain/9:
         #print(i)
         n1=(a[d*i]-screen_width/2)
         n2=(a[d*i+1]-screen_height/2)
