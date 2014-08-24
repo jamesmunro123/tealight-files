@@ -77,6 +77,7 @@ for i in range (0,4*n+1):
         r2=r6*sin(r6)+screen_height/2
         a[d*i]=r1
         a[d*i+1]=r2
+        
 
 #for i in range (1,n+1):
 #  r1=randint(5,screen_width-5)
@@ -172,8 +173,6 @@ def handle_frame():
         n2=(a[d*i+1]-a[d*j+1])
         nn=n1*n1+n2*n2
         
-        
-        
         if nn<4*radius*radius:
           if nn !=0:
             if a[d*i+7]==0 and a[d*i+7]==0:
@@ -220,6 +219,20 @@ def handle_frame():
         a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
         a[d*i]=a[d*i]+(1-domain+sqrt(nn))*n1/sqrt(nn)
         a[d*i+1]=a[d*i+1]+(1-domain+sqrt(nn))*n2/sqrt(nn)
+      
+      if (a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)<domain*domain/16:
+        #print(i)
+        n1=(a[d*i]-screen_width/2)
+        n2=(a[d*i+1]-screen_height/2)
+        v1x=a[d*i+2]
+        v1y=a[d*i+3]
+        nn=n1*n1+n2*n2
+        a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
+        a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
+        #a[d*i]=a[d*i]+(1-domain+sqrt(nn))*n1/sqrt(nn)
+        #a[d*i+1]=a[d*i+1]+(1-domain+sqrt(nn))*n2/sqrt(nn)
+      
+      
       hcx=a[d*i]-screen_width/2+domain/2
       hcy=a[d*i+1]-screen_height/2
       if hcx*hcx+hcy*hcy>hipporadius*hipporadius and hcx*hcx+hcy*hcy<(hipporadius+radius)*(hipporadius+radius) and hippo1==1:
