@@ -72,7 +72,7 @@ def ctorgba(c):
   string_out = string_out + str(c[0]) + "," + str(c[1]) + "," + str(c[2]) + "," + str(c[3]) + ")"
   return string_out
 
-def handle_mousemove(x,y)
+def handle_mousedown(x,y):
   n=n+1
   r7=randint(0,256)
   r8=randint(0,256)
