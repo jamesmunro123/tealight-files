@@ -189,8 +189,8 @@ def handle_frame():
         v4x=n1*v2x+n2*v2y
         v4y=-n2*v2x+n1*v2y
         
-        v5x=0.5*((1+e)*v3x+(1-e)*v4x)
-        v6x=0.5*((1+e)*v4x+(1-e)*v3x)
+        v5x=0.5*((1-e)*v3x+(1+e)*v4x)
+        v6x=0.5*((1-e)*v4x+(1+e)*v3x)
         
         v7x=(n1*v5x-n2*v3y)/nn
         v7y=(n2*v5x+n1*v3y)/nn
