@@ -160,9 +160,9 @@ def handle_frame():
       aa=sqrt(a1*a1+a2*a2)
       a[d*i+8]=-mu*a[d*i+2]-g*a1/aa
       a[d*i+9]=-mu*a[d*i+3]-g*a2/aa
-    
-      a[d*i+2]=a[d*i+2]*1+a[d*i+8]
-      a[d*i+3]=a[d*i+3]*1+a[d*i+9]
+      if a[d*i]<screen_width:
+        a[d*i+2]=a[d*i+2]*1+a[d*i+8]
+        a[d*i+3]=a[d*i+3]*1+a[d*i+9]
      
     
     
