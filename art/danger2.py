@@ -70,7 +70,7 @@ for i in range (0,4*n+1):
       nn=n1*n1+n2*n2
       
       if nn<4*radius*radius:
-        c=1
+        c=0
         r5=randint(0,domain)
         r6=randint(0,100)*(360)/100
         r1=r5*cos(r6)+screen_width/2
