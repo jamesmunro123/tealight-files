@@ -163,55 +163,55 @@ def handle_frame():
     if a[d*i+7]!=0:
       a[d*i+7]=a[d*i+7]-1
   #print(i,domain*domain,(a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2))
-  if 0==1:        
-    if a[d*i]<radius:
-      #print(i)
-      n1=1
-      n2=0
-      v1x=a[d*i+2]
-      v1y=a[d*i+3]
-      nn=n1*n1+n2*n2
-      a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
-      a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
-      a[d*i]=radius
-      a[d*i+1]=a[d*i+1]
+    if 0==1:        
+      if a[d*i]<radius:
+        #print(i)
+        n1=1
+        n2=0
+        v1x=a[d*i+2]
+        v1y=a[d*i+3]
+        nn=n1*n1+n2*n2
+        a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
+        a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
+        a[d*i]=radius
+        a[d*i+1]=a[d*i+1]
+        
+      if a[d*i]>screen_width-radius:
+        #print(i)
+        n1=-1
+        n2=0
+        v1x=a[d*i+2]
+        v1y=a[d*i+3]
+        nn=n1*n1+n2*n2
+        a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
+        a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
+        a[d*i]=screen_width-radius
+        a[d*i+1]=a[d*i+1]
       
-    if a[d*i]>screen_width-radius:
-      #print(i)
-      n1=-1
-      n2=0
-      v1x=a[d*i+2]
-      v1y=a[d*i+3]
-      nn=n1*n1+n2*n2
-      a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
-      a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
-      a[d*i]=screen_width-radius
-      a[d*i+1]=a[d*i+1]
-    
-    if a[d*i+1]<radius:
-      #print(i)r
-      n1=0
-      n2=1
-      v1x=a[d*i+2]
-      v1y=a[d*i+3]
-      nn=n1*n1+n2*n2
-      a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
-      a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
-      a[d*i]=a[d*i]
-      a[d*i+1]=radius
+      if a[d*i+1]<radius:
+        #print(i)r
+        n1=0
+        n2=1
+        v1x=a[d*i+2]
+        v1y=a[d*i+3]
+        nn=n1*n1+n2*n2
+        a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
+        a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
+        a[d*i]=a[d*i]
+        a[d*i+1]=radius
+        
+      if a[d*i+1]>screen_height-radius:
+        #print(i)r
+        n1=0
+        n2=-1
+        v1x=a[d*i+2]
+        v1y=a[d*i+3]
+        nn=n1*n1+n2*n2
+        a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
+        a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
+        a[d*i]=a[d*i]
+        a[d*i+1]=screen_height-radius
       
-    if a[d*i+1]>screen_height-radius:
-      #print(i)r
-      n1=0
-      n2=-1
-      v1x=a[d*i+2]
-      v1y=a[d*i+3]
-      nn=n1*n1+n2*n2
-      a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
-      a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
-      a[d*i]=a[d*i]
-      a[d*i+1]=screen_height-radius
-    
     
     v=min(100*int(sqrt(a[d*i+2]**2+a[d*i+3]**2)),255)
     c=[v,256-v,0,1]
