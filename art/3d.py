@@ -2,8 +2,6 @@ from tealight.art import (color, line, spot, circle, box, image, text, backgroun
 
 import math
 
-import numpy
-
 from tealight.art import screen_width, screen_height
 
 from tealight.utils import sleep
@@ -14,6 +12,11 @@ alpha=0
 dphi=0
 dtheta=0
 dalpha=0
+
+class Matrix:
+  def __init__():
+    
+
 
 def linethree(x1,y1,z1,x2,y2,z2):
 
