@@ -17,7 +17,8 @@ e=0.7
 e2=0.5
 mu=0.02
 g=0
-
+mx=0
+my=0
 redcount=2*n
 bluecount=2*n
 domain=min(screen_width,screen_height)/2-10
@@ -89,7 +90,7 @@ def handle_mousemove(x,y):
   my=y
   
 def handle_frame():
-    
+  global mx,my 
   sleep(20)
   color("white")
   box(0,0,screen_width,screen_height)
