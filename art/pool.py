@@ -145,17 +145,17 @@ def handle_frame():
       a[d*i+7]=a[d*i+7]-1
   #print(i,domain*domain,(a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2))
             
-    if a[d*i]<0:
+    if a[d*i]<radius:
       #print(i)
-      n1=-1
+      n1=1
       n2=0
       v1x=a[d*i+2]
       v1y=a[d*i+3]
       nn=n1*n1+n2*n2
       a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
       a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
-      a[d*i]=a[d*i]+(1-domain+sqrt(nn))*n1/sqrt(nn)
-      a[d*i+1]=a[d*i+1]+(1-domain+sqrt(nn))*n2/sqrt(nn)
+      a[d*i]=radius
+      a[d*i+1]=a[d*i+1]
     
     c=[a[d*i+4],a[d*i+5],a[d*i+6],1]
     colstring = ctorgba(c)
