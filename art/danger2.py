@@ -108,13 +108,13 @@ def ctorgba(c):
 def handle_keydown(key):
   global hippo1, hippo2, hippo3, hippo4
   if key == "left":
-    hippo1=1
+    hippo1=2
   elif key == "up":
-    hippo2=1
+    hippo2=2
   elif key == "down":
-    hippo3=1
+    hippo3=2
   elif key == "right":
-    hippo4=1
+    hippo4=2
 
     
 def handle_keyup(key):
@@ -235,6 +235,18 @@ def handle_frame():
       
       hcx=a[d*i]-screen_width/2+domain/2
       hcy=a[d*i+1]-screen_height/2
+      if hcx*hcx+hcy*hcy>hipporadius*hipporadius and hcx*hcx+hcy*hcy<(hipporadius+radius)*(hipporadius+radius) and hippo1==2:
+        a[d*i+2]=2*a[d*i+2]
+        a[d*i+3]=2*a[d*i+3]
+        
+      if hippo1==2:
+        hippo1=1
+      if hippo2==2:
+        hippo2=1
+      if hippo3==2:
+        hippo3=1
+      if hippo4==2:
+        hippo4=1
       if hcx*hcx+hcy*hcy>hipporadius*hipporadius and hcx*hcx+hcy*hcy<(hipporadius+radius)*(hipporadius+radius) and hippo1==1:
         n1=hcx
         n2=hcy
