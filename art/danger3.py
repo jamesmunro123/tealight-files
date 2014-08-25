@@ -179,10 +179,10 @@ def handle_frame():
             
             tangent=Vector(-normal.y,normal.x)
             
-            v3 = Vector(normal * ball[i].velocity,
-                        tangent * ball[i].velocity)
-            v4 = Vector(normal * ball[j].velocity,
-                        tangent * ball[j].velocity)
+            v3 = Vector(normal * balls[i].velocity,
+                        tangent * balls[i].velocity)
+            v4 = Vector(normal * balls[j].velocity,
+                        tangent * balls[j].velocity)
             
             
             
