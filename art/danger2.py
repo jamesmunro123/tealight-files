@@ -17,7 +17,7 @@ e=0.1
 e2=1
 e3=1
 g=0.5
-mu=0.01
+mu=0.05
 
 redcount=2*n
 bluecount=2*n
