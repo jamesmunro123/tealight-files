@@ -220,15 +220,15 @@ def handle_frame():
         a[d*i]=a[d*i]+(1-domain+sqrt(nn))*n1/sqrt(nn)
         a[d*i+1]=a[d*i+1]+(1-domain+sqrt(nn))*n2/sqrt(nn)
       
-      if (a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)<domain*domain/9:
+      #if (a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)<domain*domain/9:
         #print(i)
-        n1=(a[d*i]-screen_width/2)
-        n2=(a[d*i+1]-screen_height/2)
-        v1x=a[d*i+2]
-        v1y=a[d*i+3]
-        nn=n1*n1+n2*n2
-        a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
-        a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
+       # n1=(a[d*i]-screen_width/2)
+        #n2=(a[d*i+1]-screen_height/2)
+        #v1x=a[d*i+2]
+        #v1y=a[d*i+3]
+        #nn=n1*n1+n2*n2
+        #a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
+        #a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
         #a[d*i]=a[d*i]+(1-domain+sqrt(nn))*n1/sqrt(nn)
         #a[d*i+1]=a[d*i+1]+(1-domain+sqrt(nn))*n2/sqrt(nn)
       
