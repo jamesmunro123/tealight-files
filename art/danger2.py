@@ -18,6 +18,7 @@ e2=1
 e3=1
 g=0
 mu=0
+nom=10
 
 redcount=2*n
 bluecount=2*n
@@ -236,8 +237,8 @@ def handle_frame():
       hcx=a[d*i]-screen_width/2+domain/2
       hcy=a[d*i+1]-screen_height/2
       if hcx*hcx+hcy*hcy>hipporadius*hipporadius and hcx*hcx+hcy*hcy<(hipporadius+radius)*(hipporadius+radius) and hippo1==2:
-        a[d*i+2]=2*a[d*i+2]
-        a[d*i+3]=2*a[d*i+3]
+        a[d*i+2]=nom*a[d*i+2]
+        a[d*i+3]=nom*a[d*i+3]
         
       if hippo1==2:
         hippo1=1
