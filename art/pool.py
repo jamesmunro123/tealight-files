@@ -11,7 +11,7 @@ from random import (random, randint)
 from tealight.utils import sleep
 
 a=[]
-n=30
+n=50
 s1=15
 e=0.7
 e2=0.5
@@ -21,7 +21,7 @@ g=0
 redcount=2*n
 bluecount=2*n
 domain=min(screen_width,screen_height)/2-10
-radius=10
+radius=20
 domain=domain-radius
 hipporadius=domain/4
 #(x,y,u,v,colr,colg,colb,inert,ax,ay)
