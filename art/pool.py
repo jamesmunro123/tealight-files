@@ -42,12 +42,12 @@ for i in range (0,n):
   r6=randint(0,100)*(360)/100
   r1=r5*cos(r6)+screen_width/2
   r2=r5*sin(r6)+screen_height/2
-  r3=randint(0,s1*100)/100-s1/2
-  r4=randint(0,s1*100)/100-s1/2
+  #r3=randint(0,s1*100)/100-s1/2
+  #r4=randint(0,s1*100)/100-s1/2
   r7=randint(0,256)
   r8=randint(0,256)
   r9=randint(0,256)
-  a=a+[r1,r2,r3,r4,r7,r8,r9,0,0,g]
+  a=a+[r1,r2,0,0,r7,r8,r9,0,0,g]
  
   
   while c==1:
