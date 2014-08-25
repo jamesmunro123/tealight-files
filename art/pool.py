@@ -11,7 +11,7 @@ from random import (random, randint)
 from tealight.utils import sleep
 
 a=[]
-n=3
+n=30
 s1=15
 e=0.7
 e2=0.5
@@ -156,6 +156,42 @@ def handle_frame():
       a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
       a[d*i]=radius
       a[d*i+1]=a[d*i+1]
+      
+    if a[d*i]>screen_width-radius:
+      #print(i)
+      n1=-1
+      n2=0
+      v1x=a[d*i+2]
+      v1y=a[d*i+3]
+      nn=n1*n1+n2*n2
+      a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
+      a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
+      a[d*i]=screen_width-radius
+      a[d*i+1]=a[d*i+1]
+    
+    if a[d*i+1]<radius:
+      #print(i)r
+      n1=1
+      n2=0
+      v1x=a[d*i+2]
+      v1y=a[d*i+3]
+      nn=n1*n1+n2*n2
+      a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
+      a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
+      a[d*i]=a[d*i]
+      a[d*i+1]=radius
+      
+    if a[d*i+1]>screen_height-radius:
+      #print(i)r
+      n1=-1
+      n2=0
+      v1x=a[d*i+2]
+      v1y=a[d*i+3]
+      nn=n1*n1+n2*n2
+      a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
+      a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
+      a[d*i]=a[d*i]
+      a[d*i+1]=screen_height-radius
     
     c=[a[d*i+4],a[d*i+5],a[d*i+6],1]
     colstring = ctorgba(c)
