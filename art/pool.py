@@ -217,7 +217,8 @@ def handle_frame():
       
     
     v=min(100*int(sqrt(a[d*i+2]**2+a[d*i+3]**2)),255)
-    c=[v,256-v,0,1]
+    #c=[v,256-v,0,1]
+    c=[a[d*i+4],a[d*i+5],a[d*i+6],1]
     colstring = ctorgba(c)
     color(colstring)
     spot(a[d*i],a[d*i+1],radius)
