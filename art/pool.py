@@ -222,5 +222,6 @@ def handle_frame():
     colstring = ctorgba(c)
     color(colstring)
     spot(a[d*i],a[d*i+1],radius)
-    color("rbga(0,0,0,0)")
+  color("rbga(0,0,0,0)")
   line(a[d*(n-1)],a[d*(n-1)+1],mx,my)
+  circle(cx,cy,radius)
