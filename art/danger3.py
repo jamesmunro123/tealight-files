@@ -94,7 +94,7 @@ for i in range (0,4*n+1):
   if 3*n-1<i and i<4*n:
     balls[i].colour = (255,100,0)
 
-  print balls[-1].position
+  print balls[-1]
 
 
 def ctorgba(c):
