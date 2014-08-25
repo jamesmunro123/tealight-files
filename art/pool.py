@@ -147,7 +147,7 @@ def handle_frame():
             
     if a[d*i]<0:
       #print(i)
-      n1=1
+      n1=-1
       n2=0
       v1x=a[d*i+2]
       v1y=a[d*i+3]
