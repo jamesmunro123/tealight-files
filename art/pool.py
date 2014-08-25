@@ -12,7 +12,7 @@ from tealight.utils import sleep
 
 a=[]
 n=3
-s1=1
+s1=15
 e=0.7
 e2=0.5
 mu=0
