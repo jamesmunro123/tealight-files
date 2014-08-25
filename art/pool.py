@@ -101,6 +101,7 @@ def handle_frame():
     a[d*i+1]=a[d*i+1]+a[d*i+3]
     
     a[d*i]=a[d*i]%screen_width
+    a[d*i+1]=a[d*i+1]%screen_height
     
     a1=a[d*i]-screen_width/2
     a2=a[d*i+1]-screen_height/2
