@@ -39,6 +39,8 @@ gameend=0
 
 class Ball:
   position = None
+  velocty = None
+  colour = None
   def __init__(self,position,velocity,colour):
     self.position == position
     self.velocity == velocity
