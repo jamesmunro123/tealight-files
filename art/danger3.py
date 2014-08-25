@@ -189,17 +189,18 @@ def handle_frame():
             v5x=0.5*((1-e)*v3.x+(1+e)*v4.x)
             v6x=0.5*((1-e)*v4.x+(1+e)*v3.x)
             
-            ball[i].velocity = \
-                  Vector((n1*v5x-n2*v3.y)/nn**2,
-                         (n2*v5x+n1*v3.y)/nn**2)
-            ball[j].velocity = \
-                  Vector((n1*v6x-n2*v4.y)/nn**2,
-                         (n2*v6x+n1*v4.y)/nn**2)
+            balls[i].velocity = \
+                  Vector((normal.x*v5x-normal.y*v3.y)/nn**2,
+                         (normal.x*v5x+normal.y*v3.y)/nn**2)
+            balls[j].velocity = \
+                  Vector((normal.x*v6x-normal.y*v4.y)/nn**2,
+                         (normal.x*v6x+normal.y*v4.y)/nn**2)
+           
             
              
             
-            ball[i].position += normal.scale((radius-nn) / (2 * nn**2))
-            ball[j].position += normal.scale(-(radius-nn) / (2 * nn**2))
+            balls[i].position += normal.scale((radius-nn) / (2 * nn**2))
+            balls[j].position += normal.scale(-(radius-nn) / (2 * nn**2))
             
             
       
