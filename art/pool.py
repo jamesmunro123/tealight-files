@@ -83,6 +83,11 @@ def handle_mousedown(x,y):
   a[d*(n-1)+2]=s1*a1/sqrt(aa)
   a[d*(n-1)+3]=s1*a2/sqrt(aa)
 
+def handle_mousemove(x,y):
+  global n, a
+  color("rbga(0,0,0,0)")
+  line(a[d*(n-1)],a[d*(n-1)+1],x,y)
+  
 def handle_frame():
     
   sleep(20)
