@@ -12,7 +12,7 @@ from tealight.utils import sleep
 
 a=[]
 n=3
-s1=0
+s1=1
 e=0.7
 e2=0.5
 mu=0
@@ -85,8 +85,6 @@ def handle_frame():
   sleep(20)
   color("white")
   box(0,0,screen_width,screen_height)
-  color("black")
-  circle(screen_width/2,screen_height/2,domain+radius)
   for i in range (0,n):
     #a[d*i+8]=-a[d*i]/1000
     #a[d*i+9]=-a[d*i+1]/1000
@@ -147,10 +145,10 @@ def handle_frame():
       a[d*i+7]=a[d*i+7]-1
   #print(i,domain*domain,(a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2))
             
-    if (a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)>domain*domain and a[d*i]<screen_width:
+    if a[d*i]<0:
       #print(i)
-      n1=-(a[d*i]-screen_width/2)
-      n2=-(a[d*i+1]-screen_height/2)
+      n1=1
+      n2=0
       v1x=a[d*i+2]
       v1y=a[d*i+3]
       nn=n1*n1+n2*n2
