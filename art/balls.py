@@ -107,12 +107,6 @@ def handle_frame():
     a[d*i+3]=a[d*i+3]*1+a[d*i+9]
    
  
-  for i in range (0,n):
-    c=[a[d*i+4],a[d*i+5],a[d*i+6],1]
-    colstring = ctorgba(c)
-    color(colstring)
-    spot(a[d*i],a[d*i+1],radius)
-  for i in range (0,n):
     for j in range (i+1,n):
       n1=(a[d*i]-a[d*j])
       n2=(a[d*i+1]-a[d*j+1])
@@ -164,3 +158,8 @@ def handle_frame():
       a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
       a[d*i]=a[d*i]+(1-domain+sqrt(nn))*n1/sqrt(nn)
       a[d*i+1]=a[d*i+1]+(1-domain+sqrt(nn))*n2/sqrt(nn)
+    
+    c=[a[d*i+4],a[d*i+5],a[d*i+6],1]
+    colstring = ctorgba(c)
+    color(colstring)
+    spot(a[d*i],a[d*i+1],radius)
