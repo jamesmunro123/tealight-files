@@ -72,7 +72,7 @@ class Ball:
     self.colour = colour
     
   def __str__(self):
-    return "Ball at %s, velocity %s, color%s" % self.position, self.velocity, self.colour
+    return "Ball at %s, velocity %s, color%s" % (self.position, self.velocity, self.colour)
     
 
 
