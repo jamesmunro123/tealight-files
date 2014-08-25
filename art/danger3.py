@@ -71,7 +71,7 @@ class Ball:
     self.velocity == velocity
     self.colour = colour
     
-  def __repr__(self):
+  def __str__(self):
     return "Ball at %s, velocity %s, color%s" % self.position, self.velocity, self.colour
     
 
