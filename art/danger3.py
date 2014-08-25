@@ -92,12 +92,15 @@ for i in range (0,4*n+1):
   balls.append(Ball(Vector(r1,r2),Vector(r3,r4),None))
   if i<n:
     balls[i].colour = (0,0,255,1)
-  if n-1<i and i<2*n:
+  elif  i<2*n:
     balls[i].colour = (255,0,255,1)
-  if 2*n-1 < i and i < 3*n:
+  elif i < 3*n:
     balls[i].colour = (255,0,0,1)
-  if 3*n-1<i and i<4*n:
+  elif i<4*n:
     balls[i].colour = (255,100,0,1)
+  else: # Danger Ball
+    balls[i].colour = (0,0,0,1)
+  
 
   print balls[-1]
 
