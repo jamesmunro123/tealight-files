@@ -387,7 +387,7 @@ def handle_frame():
       spot(ball.position.x, ball.position.y, radius)
     if i==4*n:
       color("white")
-      text(a[d*i]-3,a[d*i+1]-11,"!")
+      text(ball.position.x-3, ball.position.y-12,"!")
     if hippo1==1:
       color("rgba(255,0,0,1)")
       spot(screen_width/2-domain/2,screen_height/2,hipporadius)
