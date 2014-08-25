@@ -50,6 +50,7 @@ class Vector:
   def __iadd__(self, other):
     self.x += other.x
     self.y += other.y
+    return self
   
   def __sub__(self, other):
     return Vector(self.x - other.x, self.y - other.y)
@@ -173,7 +174,7 @@ def handle_frame():
       for j in range (i+1,len(balls)):
         print "Check Collide: %s - %s" % (balls[i],balls[j])
         
-        normal = balls[i].position-balls[j].position
+        normal = balls[i].position - balls[j].position
         
         nn=normal.mod()
         
