@@ -237,6 +237,7 @@ def handle_frame():
       hcx=a[d*i]-screen_width/2+domain/2
       hcy=a[d*i+1]-screen_height/2
       if hcx*hcx+hcy*hcy>hipporadius*hipporadius and hcx*hcx+hcy*hcy<(hipporadius+radius)*(hipporadius+radius) and hippo1==2:
+        print(i)
         a[d*i+2]=nom*a[d*i+2]
         a[d*i+3]=nom*a[d*i+3]
         
