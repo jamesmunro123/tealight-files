@@ -103,8 +103,8 @@ def handle_frame():
     a1=a[d*i]-screen_width/2
     a2=a[d*i+1]-screen_height/2
     aa=sqrt(a1*a1+a2*a2)
-    a[d*i+8]=-mu*a[d*i+2]-g*a1/aa
-    a[d*i+9]=-mu*a[d*i+3]-g*a2/aa
+    #a[d*i+8]=-mu*a[d*i+2]-g*a1/aa
+    #a[d*i+9]=-mu*a[d*i+3]-g*a2/aa
     
     #a[d*i+8]=-mu*a[d*i+2]
     #a[d*i+9]=-mu*a[d*i+3]+g
