@@ -10,6 +10,8 @@ from random import (random, randint)
 
 from tealight.utils import sleep
 
+from collections import NamedTuple
+
 a=[]
 n=5
 s1=15
