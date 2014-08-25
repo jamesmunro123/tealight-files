@@ -105,7 +105,7 @@ for i in range (0,4*n+1):
 def ctorgba(c):
   r,g,b,a = c
   string_out = "rgba("
-  string_out = string_out + r + "," + g + "," + b + "," + a + ")"
+  string_out = string_out + str(r) + "," + str(g) + "," + str(b) + "," + str(a) + ")"
   return string_out
 
 def handle_keydown(key):
