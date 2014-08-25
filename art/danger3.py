@@ -58,6 +58,8 @@ class Vector:
   
   def mod(self):
     return sqrt(self.x**2 + self.y**2)
+  def __str__(self):
+    return "{},{}".format(self.x, self.y)
   
   
 class Ball:
@@ -68,6 +70,12 @@ class Ball:
     self.position == position
     self.velocity == velocity
     self.colour = colour
+    
+  def __str__(self):
+    return "Ball at {pos}, velocity {v}, color{c}".format(
+                   pos=position,
+                   v=velocity,
+                   c=colour)
     
 
 
