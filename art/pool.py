@@ -151,15 +151,15 @@ def handle_frame():
             a[d*i+7]=0
             a[d*j+7]=0
             
-            c1=int((a[d*i+4]+a[d*j+4])/2)
-            c2=int((a[d*i+5]+a[d*j+5])/2)
-            c3=int((a[d*i+6]+a[d*j+6])/2)
-            a[d*i+4]=c1
-            a[d*i+5]=c2
-            a[d*i+6]=c3
-            a[d*j+4]=c1
-            a[d*j+5]=c2
-            a[d*j+6]=c3
+            #c1=int((a[d*i+4]+a[d*j+4])/2)
+            #c2=int((a[d*i+5]+a[d*j+5])/2)
+            #c3=int((a[d*i+6]+a[d*j+6])/2)
+            #a[d*i+4]=c1
+            #a[d*i+5]=c2
+            #a[d*i+6]=c3
+            #a[d*j+4]=c1
+            #a[d*j+5]=c2
+            #a[d*j+6]=c3
     if a[d*i+7]!=0:
       a[d*i+7]=a[d*i+7]-1
   #print(i,domain*domain,(a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2))
