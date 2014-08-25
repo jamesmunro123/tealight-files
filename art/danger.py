@@ -387,7 +387,7 @@ def handle_frame():
       spot(screen_width/2+domain/2-1.2*hipporadius/3,screen_height/2-hipporadius/3,hipporadius/10)
  
     color("red")  
-    text(10,10,sr)
+    text(10,screen_height-100,sr)
     color("blue")
     text(screen_width-100,10,sb)
     
