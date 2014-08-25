@@ -10,7 +10,7 @@ from random import (random, randint)
 
 from tealight.utils import sleep
 
-a=[]
+balls=[]
 n=5
 s1=15
 e=0.9
@@ -37,6 +37,14 @@ sr=0
 sb=0
 gameend=0
 
+class Ball:
+  
+  def __init__(self,position,velocity,colour):
+    self.position == position
+    self.velocity == velocity
+    self.colour = colour
+    
+
 
 for i in range (0,4*n+1):
   c=1
@@ -46,64 +54,23 @@ for i in range (0,4*n+1):
   r2=r5*sin(r6)+screen_height/2
   r3=randint(0,s1*100)/100-s1/2
   r4=randint(0,s1*100)/100-s1/2
-  a=a+[r1,r2,r3,r4,0,0,0,0,0,0]
+  balls += Ball((r1,r2),(r3,r4),(0,0,0)]
   if i<n:
-    a[d*i+4]=0
-    a[d*i+5]=0
-    a[d*i+6]=255
+    balls[i].colour = (0,0,255)
   if n-1<i and i<2*n:
-    a[d*i+4]=255
-    a[d*i+5]=0
-    a[d*i+6]=255
+    balls[i].colour = (255,0,255)
   if 2*n-1 < i and i < 3*n:
-    a[d*i+4]=255
-    a[d*i+5]=0
-    a[d*i+6]=0
+    balls[i].colour = (255,0,0)
   if 3*n-1<i and i<4*n:
-    a[d*i+4]=255
-    a[d*i+5]=100
-    a[d*i+6]=0
-  while c==1:
-    c=0
-    for j in range (0,i):
-      n1=(a[d*i]-a[d*j])
-      n2=(a[d*i+1]-a[d*j+1])
-      nn=n1*n1+n2*n2
-      
-      if nn<4*radius*radius:
-        c=0
-        r5=randint(0,domain)
-        r6=randint(0,100)*(360)/100
-        r1=r5*cos(r6)+screen_width/2
-        r2=r6*sin(r6)+screen_height/2
-        a[d*i]=r1
-        a[d*i+1]=r2
-        
+    balls[i].colour = (255,100,0)
 
-#for i in range (1,n+1):
-#  r1=randint(5,screen_width-5)
-#  r2=randint(5,screen_height-5)
-#  r3=randint(0,s1*100)/100-s1/2
-#  r4=randint(0,s1*100)/100-s1/2
-#  a=a+[r1,r2,r3,r4,255,0,255]
+       
 
-#for i in range (1,n+1):
-#  r1=randint(10,screen_width-10)
-#  r2=randint(10,screen_height-10)
-#  r3=randint(0,s1*100)/100-s1/2
-#  r4=randint(0,s1*100)/100-s1/2
-#  a=a+[r1,r2,r3,r4,255,0,0]
-
-#for i in range (1,n+1):
-#  r1=randint(5,screen_width-5)
-#  r2=randint(5,screen_height-5)
-#  r3=randint(0,s1*100)/100-s1/2
-#  r4=randint(0,s1*100)/100-s1/2
-#  a=a+[r1,r2,r3,r4,255,100,0]
 
 def ctorgba(c):
+  r,g,b,a = c
   string_out = "rgba("
-  string_out = string_out + str(c[0]) + "," + str(c[1]) + "," + str(c[2]) + "," + str(c[3]) + ")"
+  string_out = string_out + r + "," + g + "," + b + "," + a + ")"
   return string_out
 
 def handle_keydown(key):
