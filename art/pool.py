@@ -163,7 +163,7 @@ def handle_frame():
     if a[d*i+7]!=0:
       a[d*i+7]=a[d*i+7]-1
   #print(i,domain*domain,(a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2))
-  if false          
+  if false:        
     if a[d*i]<radius:
       #print(i)
       n1=1
