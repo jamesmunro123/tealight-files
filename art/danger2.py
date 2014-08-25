@@ -132,7 +132,7 @@ def handle_keyup(key):
 
   
 def handle_frame():
-  global sr, sb, gameend, e3, redcount, bluecount
+  global sr, sb, gameend, e3, redcount, bluecount, hippo1, hippo2, hippo3, hippo4
   if gameend==0:
     
     sleep(20)
