@@ -381,8 +381,7 @@ def handle_frame():
       #    print("Red team wins!")
     for i, ball in enumerate(balls):
       color(ctorgba(ball.colour))
-      x, y = ball.position
-      spot(x, y, radius)
+      spot(ball.position.x, ball.position.y, radius)
     if i==4*n:
       color("white")
       text(a[d*i]-3,a[d*i+1]-11,"!")
