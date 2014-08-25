@@ -74,11 +74,11 @@ def ctorgba(c):
 
 def handle_mousedown(x,y):
   global n, a
-  n=n+1
-  r7=randint(0,256)
-  r8=randint(0,256)
-  r9=randint(0,256)
-  a=a+[x,y,0,0,r7,r8,r9,0,0,g]
+  a1=x-a[d*n]
+  a2=y-a[d*n+1]
+  aa=a1*a1+a2*a2
+  a[d*n+2]=s1*a1/sqrt(aa)
+  a[d*n+3]=s1*a2/sqrt(aa)
 
 def handle_frame():
     
