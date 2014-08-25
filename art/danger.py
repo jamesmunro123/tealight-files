@@ -106,25 +106,25 @@ def ctorgba(c):
 
 def handle_keydown(key):
   global hippo1, hippo2, hippo3, hippo4
-  if key == "left":
+  if key in ["left","a"]:
     hippo1=1
-  elif key == "up":
+  elif key in ["up","w"]:
     hippo2=1
-  elif key == "down":
+  elif key in ["down","s"]:
     hippo3=1
-  elif key == "right":
+  elif key in ["right","d"]:
     hippo4=1
 
     
 def handle_keyup(key):
   global hippo1, hippo2, hippo3, hippo4
-  if key == "left":
+  if key in ["left","a"]:
     hippo1=0
-  elif key == "up":
+  elif key in ["up","w"]:
     hippo2=0
-  elif key == "down":
+  elif key in ["down","s"]:
     hippo3=0
-  elif key == "right":
+  elif key in ["right","d"]:
     hippo4=0
 
 
