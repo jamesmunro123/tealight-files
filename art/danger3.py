@@ -56,7 +56,7 @@ for i in range (0,4*n+1):
   r2=r5*sin(r6)+screen_height/2
   r3=randint(0,s1*100)/100-s1/2
   r4=randint(0,s1*100)/100-s1/2
-  balls += Ball((r1,r2),(r3,r4),(0,0,0))
+  balls.append(Ball((r1,r2),(r3,r4),(0,0,0)))
   if i<n:
     balls[i].colour = (0,0,255)
   if n-1<i and i<2*n:
