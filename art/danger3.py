@@ -214,182 +214,171 @@ def handle_frame():
             
       
               
-      if (a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)>domain*domain and a[d*i]<screen_width:
+      #if (a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)>domain*domain and a[d*i]<screen_width:
         #print(i)
-        n1=-(a[d*i]-screen_width/2)
-        n2=-(a[d*i+1]-screen_height/2)
-        v1x=a[d*i+2]
-        v1y=a[d*i+3]
-        nn=n1*n1+n2*n2
-        a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
-        a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
-        a[d*i]=a[d*i]+(1-domain+sqrt(nn))*n1/sqrt(nn)
-        a[d*i+1]=a[d*i+1]+(1-domain+sqrt(nn))*n2/sqrt(nn)
-      
-      #if (a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)<domain*domain/9:
-        #print(i)
-       # n1=(a[d*i]-screen_width/2)
-        #n2=(a[d*i+1]-screen_height/2)
-        #v1x=a[d*i+2]
-        #v1y=a[d*i+3]
-        #nn=n1*n1+n2*n2
-        #a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
-        #a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
-        #a[d*i]=a[d*i]+(1-domain+sqrt(nn))*n1/sqrt(nn)
-        #a[d*i+1]=a[d*i+1]+(1-domain+sqrt(nn))*n2/sqrt(nn)
+      #  n1=-(a[d*i]-screen_width/2)
+      #  n2=-(a[d*i+1]-screen_height/2)
+      #  v1x=a[d*i+2]
+      #  v1y=a[d*i+3]
+      #  nn=n1*n1+n2*n2
+      #  a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
+      #  a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
+      #  a[d*i]=a[d*i]+(1-domain+sqrt(nn))*n1/sqrt(nn)
+      #  a[d*i+1]=a[d*i+1]+(1-domain+sqrt(nn))*n2/sqrt(nn)
       
       
-      hcx=a[d*i]-screen_width/2+domain/2
-      hcy=a[d*i+1]-screen_height/2
-      if hcx*hcx+hcy*hcy>hipporadius*hipporadius and hcx*hcx+hcy*hcy<(hipporadius+radius)*(hipporadius+radius) and hippo1>1:
-        print(i)
-        a[d*i+2]=nom*a[d*i+2]
-        a[d*i+3]=nom*a[d*i+3]
+      
+      #hcx=a[d*i]-screen_width/2+domain/2
+      #hcy=a[d*i+1]-screen_height/2
+      #if hcx*hcx+hcy*hcy>hipporadius*hipporadius and hcx*hcx+hcy*hcy<(hipporadius+radius)*(hipporadius+radius) and hippo1>1:
+      #  print(i)
+      #  a[d*i+2]=nom*a[d*i+2]
+      #  a[d*i+3]=nom*a[d*i+3]
         
-      if hippo1>1:
-        hippo1=hippo1-1
-      if hippo2==2:
-        hippo2=1
-      if hippo3==2:
-        hippo3=1
-      if hippo4==2:
-        hippo4=1
-      if hcx*hcx+hcy*hcy>hipporadius*hipporadius and hcx*hcx+hcy*hcy<(hipporadius+radius)*(hipporadius+radius) and hippo1>0:
-        n1=hcx
-        n2=hcy
-        nn=n1*n1+n2*n2
-        v1x=a[d*i+2]
-        v1y=a[d*i+3]
-        a[d*i+2]=((n2*n2-e3*n1*n1)*v1x-(1+e3)*n1*n2*v1y)/nn
-        a[d*i+3]=(-(1+e3)*n1*n2*v1x+(n1*n1-e3*n2*n2)*v1y)/nn
-        a[d*i]=a[d*i]+(0+radius+hipporadius-sqrt(nn))*n1/sqrt(nn)
-        a[d*i+1]=a[d*i+1]+(0+radius+hipporadius-sqrt(nn))*n2/sqrt(nn)
-      if (a[d*i]-screen_width/2+domain/2)*(a[d*i]-screen_width/2+domain/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)<hipporadius*hipporadius and hippo1==1:
-        a[d*i]=screen_width+100
-        a[d*i+1]=screen_height+100
-        a[d*i+2]=0
-        a[d*i+3]=0
-        team=int(i/n)
-        if team==0:
-          sr=sr-1
-          bluecount=bluecount-1
-        elif team==1:
-          sr=sr-1
-          bluecount=bluecount-1
-        elif team==2:
-          sr=sr+3
-          redcount=redcount-1
-        elif team==3:
-          sr=sr-1
-          redcount=redcount-1
-        elif team==4:
-          sr=-100
-          gameend=1
-          print("Blue team wins!")
-      hcx=a[d*i]-screen_width/2
-      hcy=a[d*i+1]-screen_height/2+domain/2
-      if hcx*hcx+hcy*hcy>hipporadius*hipporadius and hcx*hcx+hcy*hcy<(hipporadius+radius)*(hipporadius+radius) and hippo2==1:
-        n1=hcx
-        n2=hcy
-        nn=n1*n1+n2*n2
-        v1x=a[d*i+2]
-        v1y=a[d*i+3]
-        a[d*i+2]=((n2*n2-e3*n1*n1)*v1x-(1+e3)*n1*n2*v1y)/nn
-        a[d*i+3]=(-(1+e3)*n1*n2*v1x+(n1*n1-e3*n2*n2)*v1y)/nn
-        a[d*i]=a[d*i]+(0+radius+hipporadius-sqrt(nn))*n1/sqrt(nn)
-        a[d*i+1]=a[d*i+1]+(0+radius+hipporadius-sqrt(nn))*n2/sqrt(nn)
-      if (a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2+domain/2)*(a[d*i+1]-screen_height/2+domain/2)<hipporadius*hipporadius and hippo2==1:
-        a[d*i]=1000000
-        a[d*i+1]=1000000
-        a[d*i+2]=0
-        a[d*i+3]=0
-        team=int(i/n)
-        if team==0:
-          sr=sr
-          bluecount=bluecount-1
-        elif team==1:
-          sb=sb+1
-          bluecount=bluecount-1
-        elif team==2:
-          sr=sr
-          redcount=redcount-1
-        elif team==3:
-          sr=sr
-          redcount=redcount-1
-        elif team==4:
-          sb=-100
-          gameend=1
-          print("Red team wins!")
-          
-      hcx=a[d*i]-screen_width/2
-      hcy=a[d*i+1]-screen_height/2-domain/2
-      if hcx*hcx+hcy*hcy>hipporadius*hipporadius and hcx*hcx+hcy*hcy<(hipporadius+radius)*(hipporadius+radius) and hippo3==1:
-        n1=hcx
-        n2=hcy
-        nn=n1*n1+n2*n2
-        v1x=a[d*i+2]
-        v1y=a[d*i+3]
-        a[d*i+2]=((n2*n2-e3*n1*n1)*v1x-(1+e3)*n1*n2*v1y)/nn
-        a[d*i+3]=(-(1+e3)*n1*n2*v1x+(n1*n1-e3*n2*n2)*v1y)/nn
-        a[d*i]=a[d*i]+(0+radius+hipporadius-sqrt(nn))*n1/sqrt(nn)
-        a[d*i+1]=a[d*i+1]+(0+radius+hipporadius-sqrt(nn))*n2/sqrt(nn)
-      if (a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2-domain/2)*(a[d*i+1]-screen_height/2-domain/2)<hipporadius*hipporadius and hippo3==1:
-        a[d*i]=1000000
-        a[d*i+1]=1000000
-        a[d*i+2]=0
-        a[d*i+3]=0
-        team=int(i/n)
-        if team==0:
-          sr=sr
-          bluecount=bluecount-1
-        elif team==1:
-          sr=sr
-          bluecount=bluecount-1
-        elif team==2:
-          sr=sr
-          redcount=redcount-1
-        elif team==3:
-          sr=sr+1
-          redcount=redcount-1
-        elif team==4:
-          sr=-100
-          gameend=1
-          print("Blue team wins!")
-      hcx=a[d*i]-screen_width/2-domain/2
-      hcy=a[d*i+1]-screen_height/2
-      if hcx*hcx+hcy*hcy>hipporadius*hipporadius and hcx*hcx+hcy*hcy<(hipporadius+radius)*(hipporadius+radius) and hippo4==1:
-        n1=hcx
-        n2=hcy
-        nn=n1*n1+n2*n2
-        v1x=a[d*i+2]
-        v1y=a[d*i+3]
-        a[d*i+2]=((n2*n2-e3*n1*n1)*v1x-(1+e3)*n1*n2*v1y)/nn
-        a[d*i+3]=(-(1+e3)*n1*n2*v1x+(n1*n1-e3*n2*n2)*v1y)/nn
-        a[d*i]=a[d*i]+(0+radius+hipporadius-sqrt(nn))*n1/sqrt(nn)
-        a[d*i+1]=a[d*i+1]+(0+radius+hipporadius-sqrt(nn))*n2/sqrt(nn)
-        
-      if (a[d*i]-screen_width/2-domain/2)*(a[d*i]-screen_width/2-domain/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)<hipporadius*hipporadius and hippo4==1:
-        a[d*i]=1000000
-        a[d*i+1]=1000000
-        a[d*i+2]=0
-        a[d*i+3]=0
-        team=int(i/n)
-        if team==0:
-          sb=sb+3
-          bluecount=bluecount-1
-        elif team==1:
-          sb=sb-1
-          bluecount=bluecount-1
-        elif team==2:
-          sb=sb-1
-          redcount=redcount-1
-        elif team==3:
-          sb=sb-1
-          redcount=redcount-1
-        elif team==4:
-          sb=-100
-          gameend=1
-          print("Red team wins!")
+      #if hippo1>1:
+      #  hippo1=hippo1-1
+      #if hippo2==2:
+      #  hippo2=1
+      #if hippo3==2:
+      #  hippo3=1
+      #if hippo4==2:
+      #  hippo4=1
+      #if hcx*hcx+hcy*hcy>hipporadius*hipporadius and hcx*hcx+hcy*hcy<(hipporadius+radius)*(hipporadius+radius) and hippo1>0:
+      #  n1=hcx
+      #  n2=hcy
+      #  nn=n1*n1+n2*n2
+      #  v1x=a[d*i+2]
+      #  v1y=a[d*i+3]
+      #  a[d*i+2]=((n2*n2-e3*n1*n1)*v1x-(1+e3)*n1*n2*v1y)/nn
+      #  a[d*i+3]=(-(1+e3)*n1*n2*v1x+(n1*n1-e3*n2*n2)*v1y)/nn
+      #  a[d*i]=a[d*i]+(0+radius+hipporadius-sqrt(nn))*n1/sqrt(nn)
+      #  a[d*i+1]=a[d*i+1]+(0+radius+hipporadius-sqrt(nn))*n2/sqrt(nn)
+      #if (a[d*i]-screen_width/2+domain/2)*(a[d*i]-screen_width/2+domain/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)<hipporadius*hipporadius and hippo1==1:
+      #  a[d*i]=screen_width+100
+      #  a[d*i+1]=screen_height+100
+      #  a[d*i+2]=0
+      #  a[d*i+3]=0
+      #  team=int(i/n)
+      #  if team==0:
+      #    sr=sr-1
+      #    bluecount=bluecount-1
+      #  elif team==1:
+      #    sr=sr-1
+      #    bluecount=bluecount-1
+      #  elif team==2:
+      #    sr=sr+3
+      #    redcount=redcount-1
+      #  elif team==3:
+      #    sr=sr-1
+      #    redcount=redcount-1
+      #  elif team==4:
+      #    sr=-100
+      #    gameend=1
+      #    print("Blue team wins!")
+      #hcx=a[d*i]-screen_width/2
+      #hcy=a[d*i+1]-screen_height/2+domain/2
+      #if hcx*hcx+hcy*hcy>hipporadius*hipporadius and hcx*hcx+hcy*hcy<(hipporadius+radius)*(hipporadius+radius) and hippo2==1:
+      #  n1=hcx
+      #  n2=hcy
+      #  nn=n1*n1+n2*n2
+      #  v1x=a[d*i+2]
+      #  v1y=a[d*i+3]
+      #  a[d*i+2]=((n2*n2-e3*n1*n1)*v1x-(1+e3)*n1*n2*v1y)/nn
+      #  a[d*i+3]=(-(1+e3)*n1*n2*v1x+(n1*n1-e3*n2*n2)*v1y)/nn
+      #  a[d*i]=a[d*i]+(0+radius+hipporadius-sqrt(nn))*n1/sqrt(nn)
+      #  a[d*i+1]=a[d*i+1]+(0+radius+hipporadius-sqrt(nn))*n2/sqrt(nn)
+      #if (a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2+domain/2)*(a[d*i+1]-screen_height/2+domain/2)<hipporadius*hipporadius and hippo2==1:
+      #  a[d*i]=1000000
+      #  a[d*i+1]=1000000
+      #  a[d*i+2]=0
+      #  a[d*i+3]=0
+      #  team=int(i/n)
+      #  if team==0:
+      #    sr=sr
+      #    bluecount=bluecount-1
+      #  elif team==1:
+      #    sb=sb+1
+      #    bluecount=bluecount-1
+      #  elif team==2:
+      #    sr=sr
+      #    redcount=redcount-1
+      #  elif team==3:
+      #    sr=sr
+      #    redcount=redcount-1
+      #  elif team==4:
+      #    sb=-100
+      #    gameend=1
+      #    print("Red team wins!")
+      #    
+      #hcx=a[d*i]-screen_width/2
+      #hcy=a[d*i+1]-screen_height/2-domain/2
+      #if hcx*hcx+hcy*hcy>hipporadius*hipporadius and hcx*hcx+hcy*hcy<(hipporadius+radius)*(hipporadius+radius) and hippo3==1:
+      #  n1=hcx
+      #  n2=hcy
+      #  nn=n1*n1+n2*n2
+      #  v1x=a[d*i+2]
+      #  v1y=a[d*i+3]
+      #  a[d*i+2]=((n2*n2-e3*n1*n1)*v1x-(1+e3)*n1*n2*v1y)/nn
+      #  a[d*i+3]=(-(1+e3)*n1*n2*v1x+(n1*n1-e3*n2*n2)*v1y)/nn
+      #  a[d*i]=a[d*i]+(0+radius+hipporadius-sqrt(nn))*n1/sqrt(nn)
+      #  a[d*i+1]=a[d*i+1]+(0+radius+hipporadius-sqrt(nn))*n2/sqrt(nn)
+      #if (a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2-domain/2)*(a[d*i+1]-screen_height/2-domain/2)<hipporadius*hipporadius and hippo3==1:
+      #  a[d*i]=1000000
+      #  a[d*i+1]=1000000
+      #  a[d*i+2]=0
+      #  a[d*i+3]=0
+      #  team=int(i/n)
+      #  if team==0:
+      #    sr=sr
+      #    bluecount=bluecount-1
+      #  elif team==1:
+      #    sr=sr
+      #    bluecount=bluecount-1
+      #  elif team==2:
+      #    sr=sr
+      #    redcount=redcount-1
+      #  elif team==3:
+      #    sr=sr+1
+      #    redcount=redcount-1
+      #  elif team==4:
+      #    sr=-100
+      #    gameend=1
+      #    print("Blue team wins!")
+      #hcx=a[d*i]-screen_width/2-domain/2
+      #hcy=a[d*i+1]-screen_height/2
+      #if hcx*hcx+hcy*hcy>hipporadius*hipporadius and hcx*hcx+hcy*hcy<(hipporadius+radius)*(hipporadius+radius) and hippo4==1:
+      #  n1=hcx
+      #  n2=hcy
+      #  nn=n1*n1+n2*n2
+      #  v1x=a[d*i+2]
+      #  v1y=a[d*i+3]
+      #  a[d*i+2]=((n2*n2-e3*n1*n1)*v1x-(1+e3)*n1*n2*v1y)/nn
+      #  a[d*i+3]=(-(1+e3)*n1*n2*v1x+(n1*n1-e3*n2*n2)*v1y)/nn
+      #  a[d*i]=a[d*i]+(0+radius+hipporadius-sqrt(nn))*n1/sqrt(nn)
+      #  a[d*i+1]=a[d*i+1]+(0+radius+hipporadius-sqrt(nn))*n2/sqrt(nn)
+      #  
+      #if (a[d*i]-screen_width/2-domain/2)*(a[d*i]-screen_width/2-domain/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)<hipporadius*hipporadius and hippo4==1:
+      #  a[d*i]=1000000
+      #  a[d*i+1]=1000000
+      #  a[d*i+2]=0
+      #  a[d*i+3]=0
+      #  team=int(i/n)
+      #  if team==0:
+      #    sb=sb+3
+      #    bluecount=bluecount-1
+      #  elif team==1:
+      #    sb=sb-1
+      #    bluecount=bluecount-1
+      #  elif team==2:
+      #    sb=sb-1
+      #    redcount=redcount-1
+      #  elif team==3:
+      #    sb=sb-1
+      #    redcount=redcount-1
+      #  elif team==4:
+      #    sb=-100
+      #    gameend=1
+      #    print("Red team wins!")
     for i in range (0,4*n+1):
       c=[a[d*i+4],a[d*i+5],a[d*i+6],1]
       colstring = ctorgba(c)
