@@ -206,8 +206,8 @@ def handle_frame():
             
              
             
-            balls[i].position += normal.scale((2*radius-nn) / (2 * nn**2))
-            balls[j].position += normal.scale(-(2*radius-nn) / (2 * nn**2))
+            balls[i].position += normal.scale(1.1*(2*radius-nn) / (2 * nn**2))
+            balls[j].position += normal.scale(-1.1*(2*radius-nn) / (2 * nn**2))
             
             
       
