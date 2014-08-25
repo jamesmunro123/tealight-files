@@ -171,7 +171,7 @@ def handle_frame():
     
     for i in range (0,len(balls)):
       for j in range (i+1,len(balls)):
-        print "Collide: %s - %s" % (balls[i],balls[j])
+        print "Check Collide: %s - %s" % (balls[i],balls[j])
         
         normal = balls[i].position-balls[j].position
         
@@ -179,6 +179,8 @@ def handle_frame():
         
         if nn<2*radius:
           if nn !=0:
+            print "Collide: %s - %s" % (balls[i],balls[j])
+        
             # rotate so colission along x
             
             
