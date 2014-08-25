@@ -49,11 +49,9 @@ for i in range (0,n):
   r9=randint(0,256)
   a=a+[r1,r2,0,0,r7,r8,r9,0,0,g]
  
-a[d*(n-1)+4]=0
-a[d*(n-1)+5]=0
-a[d*(n-1)+6]=0
 
-while c==1:
+
+  while c==1:
     c=0
     for j in range (0,i):
       n1=(a[d*i]-a[d*j])
@@ -68,7 +66,9 @@ while c==1:
         r2=r6*sin(r6)+screen_height/2
         a[d*i]=r1
         a[d*i+1]=r2
-
+a[d*(n-1)+4]=0
+a[d*(n-1)+5]=0
+a[d*(n-1)+6]=0
 
 def ctorgba(c):
   string_out = "rgba("
