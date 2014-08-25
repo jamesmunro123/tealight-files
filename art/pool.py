@@ -53,7 +53,7 @@ a[d*(n-1)+4]=0
 a[d*(n-1)+5]=0
 a[d*(n-1)+6]=0
 
-  while c==1:
+ while c==1:
     c=0
     for j in range (0,i):
       n1=(a[d*i]-a[d*j])
