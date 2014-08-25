@@ -37,6 +37,29 @@ sr=0
 sb=0
 gameend=0
 
+class Vector:
+  x = None
+  y = None
+  def __init__(self, x, y):
+    self.x = x
+    self.y = y
+    
+  def __add__(self, other):
+    return Vector(self.x + other.x, self.y + other.y)
+  
+  def __sub__(self, other):
+    return Vector(self.x - other.x, self.y - other.y)
+  
+  def __mul__(self,other):
+    return self.x*other.x + self.y*other.y
+  
+  def scale(self,factor):
+    return Vector(self.x*factor,self.y*factor)
+  
+  def mod(self):
+    return sqrt(self.x**2 + self.y**2)
+  
+  
 class Ball:
   position = None
   velocity = None
@@ -56,7 +79,7 @@ for i in range (0,4*n+1):
   r2=r5*sin(r6)+screen_height/2
   r3=randint(0,s1*100)/100-s1/2
   r4=randint(0,s1*100)/100-s1/2
-  balls.append(Ball((r1,r2),(r3,r4),(0,0,0)))
+  balls.append(Ball(Vector(r1,r2),Vector(r3,r4),(0,0,0)))
   if i<n:
     balls[i].colour = (0,0,255)
   if n-1<i and i<2*n:
@@ -119,64 +142,70 @@ def handle_frame():
     color("rgba(0,0,255,1)")
     circle(screen_width/2+domain/2,screen_height/2,hipporadius)
     
-    for i in range (0,4*n+1):
+    for ball in balls:
       #a[d*i+8]=-a[d*i]/1000
       #a[d*i+9]=-a[d*i+1]/1000
-      a[d*i]=a[d*i]+a[d*i+2]
-      a[d*i+1]=a[d*i+1]+a[d*i+3]
+      ball.position = ball.position + ball.velocity
+    
       
-      
-      a1=a[d*i]-screen_width/2
-      a2=a[d*i+1]-screen_height/2
-      aa=sqrt(a1*a1+a2*a2)
-      a[d*i+8]=-mu*a[d*i+2]-g*a1/aa
-      a[d*i+9]=-mu*a[d*i+3]-g*a2/aa
-      if a[d*i]<screen_width:
-        a[d*i+2]=a[d*i+2]*1+a[d*i+8]
-        a[d*i+3]=a[d*i+3]*1+a[d*i+9]
+      # TODO: Acceleration
+      #a1=a[d*i]-screen_width/2
+      #a2=a[d*i+1]-screen_height/2
+      #aa=sqrt(a1*a1+a2*a2)
+      #a[d*i+8]=-mu*a[d*i+2]-g*a1/aa
+      #a[d*i+9]=-mu*a[d*i+3]-g*a2/aa
+      #if a[d*i]<screen_width:
+      #  a[d*i+2]=a[d*i+2]*1+a[d*i+8]
+      #  a[d*i+3]=a[d*i+3]*1+a[d*i+9]
      
     
     
-    for i in range (0,4*n+1):
-      for j in range (i+1,4*n+1):
-        n1=(a[d*i]-a[d*j])
-        n2=(a[d*i+1]-a[d*j+1])
-        nn=n1*n1+n2*n2
+    for i in range (0,len(balls)):
+      for j in range (i+1,len(balls)):
+        normal = balls[i].position-balls[j].position
         
-        if nn<4*radius*radius:
+        nn=normal.mod()
+        
+        if nn<2*radius:
           if nn !=0:
-            if a[d*i+7]==0 and a[d*i+7]==0:
-              v1x=a[d*i+2]
-              v1y=a[d*i+3]
-              v2x=a[d*j+2]
-              v2y=a[d*j+3]
-        
-              v3x=n1*v1x+n2*v1y
-              v3y=-n2*v1x+n1*v1y
-              v4x=n1*v2x+n2*v2y
-              v4y=-n2*v2x+n1*v2y
-              
-              v5x=0.5*((1-e)*v3x+(1+e)*v4x)
-              v6x=0.5*((1-e)*v4x+(1+e)*v3x)
-              
-              v7x=(n1*v5x-n2*v3y)/nn
-              v7y=(n2*v5x+n1*v3y)/nn
-              v8x=(n1*v6x-n2*v4y)/nn
-              v8y=(n2*v6x+n1*v4y)/nn
-              a[d*i+2]=v7x
-              a[d*i+3]=v7y
-              a[d*j+2]=v8x
-              a[d*j+3]=v8y
-              
-              a[d*i]=a[d*i]+(0+radius-sqrt(nn)/2)*n1/sqrt(nn)
-              a[d*i+1]=a[d*i+1]+(0+radius-sqrt(nn)/2)*n2/sqrt(nn)
-              a[d*j]=a[d*j]-(0+radius-sqrt(nn)/2)*n1/sqrt(nn)
-              a[d*j+1]=a[d*j+1]-(0+radius-sqrt(nn)/2)*n2/sqrt(nn)
-              a[d*i+7]=0
-              a[d*j+7]=0
-      if a[d*i+7]!=0:
-        a[d*i+7]=a[d*i+7]-1
-    #print(i,domain*domain,(a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2))
+            # rotate so colission along x
+            
+            v1x=a[d*i+2]
+            v1y=a[d*i+3]
+            v2x=a[d*j+2]
+            v2y=a[d*j+3]
+      
+            v3x=n1*v1x+n2*v1y
+            v3y=-n2*v1x+n1*v1y
+            v4x=n1*v2x+n2*v2y
+            v4y=-n2*v2x+n1*v2y
+            
+            tangent=Vector(-normal.y,normal.x)
+            
+            v3 = Vector(normal * ball[i].velocity,
+                        tangent * ball[i].velocity)
+            v4 = Vector(normal * ball[j].velocity,
+                        tangent * ball[j].velocity)
+            
+            
+            
+            v5x=0.5*((1-e)*v3.x+(1+e)*v4.x)
+            v6x=0.5*((1-e)*v4.x+(1+e)*v3.x)
+            
+            ball[i].velocity = \
+                  Vector((n1*v5x-n2*v3.y)/nn**2,
+                         (n2*v5x+n1*v3.y)/nn**2)
+            ball[j].velocity = \
+                  Vector((n1*v6x-n2*v4.y)/nn**2,
+                         (n2*v6x+n1*v4.y)/nn**2)
+            
+             
+            
+            ball[i].position += normal.scale((radius-nn) / (2 * nn**2))
+            ball[j].position += normal.scale(-(radius-nn) / (2 * nn**2))
+            
+            
+      
               
       if (a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2)>domain*domain and a[d*i]<screen_width:
         #print(i)
