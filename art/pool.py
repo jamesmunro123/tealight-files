@@ -213,7 +213,7 @@ def handle_frame():
       a[d*i+1]=screen_height-radius
     
     
-    v=min(10*int(sqrt(a[d*i+2]**2+a[d*i+3}**2)),255)
+    v=min(10*int(sqrt(a[d*i+2]**2+a[d*i+3]**2)),255)
     c=[v,256-v,0,1]
     colstring = ctorgba(c)
     color(colstring)
