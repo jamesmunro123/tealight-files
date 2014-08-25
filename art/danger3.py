@@ -175,15 +175,7 @@ def handle_frame():
           if nn !=0:
             # rotate so colission along x
             
-            v1x=a[d*i+2]
-            v1y=a[d*i+3]
-            v2x=a[d*j+2]
-            v2y=a[d*j+3]
-      
-            v3x=n1*v1x+n2*v1y
-            v3y=-n2*v1x+n1*v1y
-            v4x=n1*v2x+n2*v2y
-            v4y=-n2*v2x+n1*v2y
+            
             
             tangent=Vector(-normal.y,normal.x)
             
