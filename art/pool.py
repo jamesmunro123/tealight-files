@@ -171,8 +171,8 @@ def handle_frame():
     
     if a[d*i+1]<radius:
       #print(i)r
-      n1=1
-      n2=0
+      n1=0
+      n2=1
       v1x=a[d*i+2]
       v1y=a[d*i+3]
       nn=n1*n1+n2*n2
@@ -183,8 +183,8 @@ def handle_frame():
       
     if a[d*i+1]>screen_height-radius:
       #print(i)r
-      n1=-1
-      n2=0
+      n1=0
+      n2=-1
       v1x=a[d*i+2]
       v1y=a[d*i+3]
       nn=n1*n1+n2*n2
