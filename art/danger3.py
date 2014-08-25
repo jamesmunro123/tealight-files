@@ -71,7 +71,7 @@ class Ball:
     self.velocity == velocity
     self.colour = colour
     
-  def __str__(self):
+  def __repr__(self):
     return "Ball at {pos}, velocity {v}, color{c}".format(
                    pos=position,
                    v=velocity,
