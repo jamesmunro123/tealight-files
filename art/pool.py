@@ -74,8 +74,8 @@ def ctorgba(c):
 
 def handle_mousedown(x,y):
   global n, a
-  a1=x-a[d*n]
-  a2=y-a[d*n+1]
+  a1=x-a[d*(n-1)]
+  a2=y-a[d*(n-1)+1]
   aa=a1*a1+a2*a2
   a[d*n+2]=s1*a1/sqrt(aa)
   a[d*n+3]=s1*a2/sqrt(aa)
