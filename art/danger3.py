@@ -171,6 +171,9 @@ def handle_frame():
     
     for i in range (0,len(balls)):
       for j in range (i+1,len(balls)):
+        print balls[i]
+        print balls[j]
+        
         normal = balls[i].position-balls[j].position
         
         nn=normal.mod()
