@@ -2,6 +2,8 @@ from tealight.art import (color, line, spot, circle, box, image, text, backgroun
 
 import math
 
+import numpy
+
 from tealight.art import screen_width, screen_height
 
 from tealight.utils import sleep
