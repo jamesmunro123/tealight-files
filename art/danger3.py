@@ -67,8 +67,8 @@ class Ball:
   velocity = None
   colour = None
   def __init__(self,position,velocity,colour):
-    self.position == position
-    self.velocity == velocity
+    self.position = position
+    self.velocity = velocity
     self.colour = colour
     
   def __str__(self):
