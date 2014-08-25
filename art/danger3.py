@@ -182,12 +182,8 @@ def handle_frame():
         
         if nn<2*radius:
           if nn !=0:
-            print "Collide: %s - %s" % (balls[i],balls[j])
-        
+            
             # rotate so colission along x
-            
-            
-            
             tangent=Vector(-normal.y,normal.x)
             
             v3 = Vector(normal * balls[i].velocity,
@@ -202,10 +198,10 @@ def handle_frame():
             
             balls[i].velocity = \
                   Vector((normal.x*v5x-normal.y*v3.y)/nn**2,
-                         (normal.x*v5x+normal.y*v3.y)/nn**2)
+                         (normal.y*v5x+normal.x*v3.y)/nn**2)
             balls[j].velocity = \
                   Vector((normal.x*v6x-normal.y*v4.y)/nn**2,
-                         (normal.x*v6x+normal.y*v4.y)/nn**2)
+                         (normal.y*v6x+normal.x*v4.y)/nn**2)
            
             
              
