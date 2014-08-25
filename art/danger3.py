@@ -91,13 +91,13 @@ for i in range (0,4*n+1):
   r4=randint(0,s1*100)/100-s1/2
   balls.append(Ball(Vector(r1,r2),Vector(r3,r4),(0,0,0)))
   if i<n:
-    balls[i].colour = (0,0,255)
+    balls[i].colour = (0,0,255,1)
   if n-1<i and i<2*n:
-    balls[i].colour = (255,0,255)
+    balls[i].colour = (255,0,255,1)
   if 2*n-1 < i and i < 3*n:
-    balls[i].colour = (255,0,0)
+    balls[i].colour = (255,0,0,1)
   if 3*n-1<i and i<4*n:
-    balls[i].colour = (255,100,0)
+    balls[i].colour = (255,100,0,1)
 
   print balls[-1]
 
@@ -379,11 +379,10 @@ def handle_frame():
       #    sb=-100
       #    gameend=1
       #    print("Red team wins!")
-    for i in range (0,4*n+1):
-      c=[a[d*i+4],a[d*i+5],a[d*i+6],1]
-      colstring = ctorgba(c)
-      color(colstring)
-      spot(a[d*i],a[d*i+1],radius)
+    for i, ball in enumerate(balls):
+      color(ctorgba(ball.colour))
+      x, y = ball.position
+      spot(x, y, radius)
     if i==4*n:
       color("white")
       text(a[d*i]-3,a[d*i+1]-11,"!")
