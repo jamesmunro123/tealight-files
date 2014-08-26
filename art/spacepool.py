@@ -45,13 +45,11 @@ for i in range (0,n):
   r2=r5*sin(r6)+screen_height/2
   #r3=randint(0,s1*100)/100-s1/2
   #r4=randint(0,s1*100)/100-s1/2
-  r7=randint(0,256)
-  r8=randint(0,256)
-  r9=randint(0,256)
-  a=a+[r1,r2,0,0,r7,r8,r9]
- 
-
-
+  
+  if i<int(n/2)
+    a=a+[r1,r2,0,0,255,0,0]
+  else
+    a=a+[r1,r2,0,0,0,0,255]
   while c==1:
     c=0
     for j in range (0,i):
