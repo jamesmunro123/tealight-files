@@ -86,7 +86,7 @@ def handle_mousedown(x,y):
     a[d*(n-1)+3]=s1*a2/sqrt(aa)
 
 def handle_mousemove(x,y):
-  global mx, my
+  global mx, my, gamestate
   mx=x
   my=y
   
