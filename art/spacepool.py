@@ -162,7 +162,7 @@ def handle_frame():
       color(colstring)
       spot(a[d*i],a[d*i+1],radius)
   
-  if vsum>0:
+  if vsum>0.1:
     gamestate=1
   else:
     gamestate=0
