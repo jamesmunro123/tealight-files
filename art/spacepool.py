@@ -33,7 +33,7 @@ d=8
 
 sr=0
 sb=0
-gameend=0
+gamestate=0
 player=0
 
 
