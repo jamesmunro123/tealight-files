@@ -220,7 +220,9 @@ def handle_frame():
         a[d*i]=a[d*i]
         a[d*i+1]=screen_height-radius
       
-    
+    if (a[d*i]-cx)**2+(a[d*i+1]-cy)**2<4*radius**2
+      print("Ding!)
+            
     v=min(100*int(sqrt(a[d*i+2]**2+a[d*i+3]**2)),255)
     #c=[v,256-v,0,1]
     c=[a[d*i+4],a[d*i+5],a[d*i+6],1]
