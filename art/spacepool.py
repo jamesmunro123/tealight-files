@@ -91,11 +91,14 @@ def handle_mousemove(x,y):
   
 def handle_frame():
   global mx,my 
+  
   sleep(20)
   color("white")
   box(0,0,screen_width,screen_height)
   color("black")
   circle(cx,cy,2*radius)
+  
+  vsum=0
   
   for i in range (0,n):
     if a[d*i+7]!=1:
@@ -152,11 +155,18 @@ def handle_frame():
         
               
       v=min(100*int(sqrt(a[d*i+2]**2+a[d*i+3]**2)),255)
+      vsum=vsum+v
       #c=[v,256-v,0,1]
       c=[a[d*i+4],a[d*i+5],a[d*i+6],1]
       colstring = ctorgba(c)
       color(colstring)
       spot(a[d*i],a[d*i+1],radius)
-  color("rbga(0,0,0,0)")
-  line(a[d*(n-1)],a[d*(n-1)+1],mx,my)
+  
+  if vsum>0:
+    gamestate=1
+  else:
+    gamestate=0
+  if gamestate=0
+    color("rbga(0,0,0,0)")
+    line(a[d*(n-1)],a[d*(n-1)+1],mx,my)
   
