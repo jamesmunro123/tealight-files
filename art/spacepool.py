@@ -106,7 +106,7 @@ def handle_frame():
       
       #Collisions   
       for j in range (i+1,n):
-        if a[d*j+7]!=1
+        if a[d*j+7]!=1:
           n1=(a[d*i]-a[d*j])
           n2=(a[d*i+1]-a[d*j+1])
           nn=n1*n1+n2*n2
