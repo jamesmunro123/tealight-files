@@ -76,7 +76,7 @@ def ctorgba(c):
   return string_out
 
 def handle_mousedown(x,y):
-  global n, a
+  global n, a, gamestate
   print(gamestate)
   if gamestate==0:
     a1=x-a[d*(n-1)]
