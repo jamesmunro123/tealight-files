@@ -96,6 +96,9 @@ def handle_frame():
   sleep(20)
   color("white")
   box(0,0,screen_width,screen_height)
+  color("black")
+  circle(cx,cy,2*radius)
+  
   for i in range (0,n):
     #a[d*i+8]=-a[d*i]/1000
     #a[d*i+9]=-a[d*i+1]/1000
@@ -226,4 +229,4 @@ def handle_frame():
     spot(a[d*i],a[d*i+1],radius)
   color("rbga(0,0,0,0)")
   line(a[d*(n-1)],a[d*(n-1)+1],mx,my)
-  circle(cx,cy,radius)
+  
