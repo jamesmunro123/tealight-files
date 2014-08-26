@@ -167,6 +167,9 @@ def handle_frame():
     gamestate=1
   else:
     gamestate=0
+    for i in range(0,n):
+      a[d*i+2]=0
+      a[d*i+3]=0
   if gamestate==0:
     color("rbga(0,0,0,0)")
     line(a[d*(n-1)],a[d*(n-1)+1],mx,my)
