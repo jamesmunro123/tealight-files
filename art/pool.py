@@ -41,7 +41,7 @@ gameend=0
 
 for i in range (0,n):
   c=1
-  r5=randint(0,domain)
+  r5=sqrt(randint(4*radius**2,domain**2))
   r6=randint(0,100)*(360)/100
   r1=r5*cos(r6)+screen_width/2
   r2=r5*sin(r6)+screen_height/2
