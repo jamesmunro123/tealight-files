@@ -142,8 +142,8 @@ def handle_frame():
     #Pocket
     if (a[d*i]-cx)**2+(a[d*i+1]-cy)**2<4*radius**2 and i!=n-1:
       print("Ding!")
-      a[d*i]=1000000
-      a[d*i+1]=1000000
+      a[d*i]=None
+      a[d*i+1]=None
       a[d*i+2]=0
       a[d*i+3]=0
       
