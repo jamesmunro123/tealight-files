@@ -112,6 +112,8 @@ def handle_frame():
       a[d*i]=a[d*i]%screen_width
       a[d*i+1]=a[d*i+1]%screen_height
       
+      vsum=vsum+vv
+      
       #Collisions   
       for j in range (i+1,n):
         if a[d*j+7]!=1:
@@ -154,9 +156,7 @@ def handle_frame():
         a[d*i+7]=1
         
               
-      v=sqrt(a[d*i+2]**2+a[d*i+3]**2)
-      vsum=vsum+v
-      #c=[v,256-v,0,1]
+      
       c=[a[d*i+4],a[d*i+5],a[d*i+6],1]
       colstring = ctorgba(c)
       color(colstring)
