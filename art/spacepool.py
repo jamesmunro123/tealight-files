@@ -11,7 +11,7 @@ from random import (random, randint)
 from tealight.utils import sleep
 
 a=[]
-n=2
+n=4
 s1=5
 e=0.5
 e2=1
@@ -46,7 +46,7 @@ for i in range (0,n):
   #r3=randint(0,s1*100)/100-s1/2
   #r4=randint(0,s1*100)/100-s1/2
   
-  if i<int(n/2)
+  if i<int(n/2):
     a=a+[r1,r2,0,0,255,0,0]
   else
     a=a+[r1,r2,0,0,0,0,255]
