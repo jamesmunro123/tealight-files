@@ -169,4 +169,4 @@ def handle_frame():
   if gamestate==0:
     color("rbga(0,0,0,0)")
     line(a[d*(n-1)],a[d*(n-1)+1],mx,my)
-  
+  text(10,10,gamestate)
