@@ -100,6 +100,9 @@ def handle_frame():
     if a[d*i+7]!=1:
       a[d*i]=a[d*i]+a[d*i+2]
       a[d*i+1]=a[d*i+1]+a[d*i+3]
+      vv=sqrt(a[d*i+2]**2+a[d*i+3]**2)
+      a[d*i+2]=a[d*i+2]*(1-mu/vv)
+      a[d*i+3]=a[d*i+3]*(1-mu/vv)
       
       a[d*i]=a[d*i]%screen_width
       a[d*i+1]=a[d*i+1]%screen_height
