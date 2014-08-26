@@ -28,7 +28,7 @@ hipporadius=domain/4
 cx=screen_width/2
 cy=screen_height/2
 #(x,y,u,v,colr,colg,colb,out)
-d=7
+d=8
 
 
 sr=0
