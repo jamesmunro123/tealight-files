@@ -48,7 +48,7 @@ for i in range (0,n):
   
   if i<int(n/2):
     a=a+[r1,r2,0,0,255,0,0]
-  else
+  else:
     a=a+[r1,r2,0,0,0,0,255]
   while c==1:
     c=0
