@@ -60,7 +60,7 @@ for i in range (0,n):
       nn=n1*n1+n2*n2
       
       if nn<4*radius*radius:
-        c=0
+        c=1
         r5=randint(0,domain)
         r6=randint(0,100)*(360)/100
         r1=r5*cos(r6)+screen_width/2
@@ -98,28 +98,14 @@ def handle_frame():
   circle(cx,cy,2*radius)
   
   for i in range (0,n):
-    #a[d*i+8]=-a[d*i]/1000
-    #a[d*i+9]=-a[d*i+1]/1000
+
     a[d*i]=a[d*i]+a[d*i+2]
     a[d*i+1]=a[d*i+1]+a[d*i+3]
     
     a[d*i]=a[d*i]%screen_width
     a[d*i+1]=a[d*i+1]%screen_height
     
-    a1=a[d*i]-screen_width/2
-    a2=a[d*i+1]-screen_height/2
-    aa=sqrt(a1*a1+a2*a2)
-    #a[d*i+8]=-mu*a[d*i+2]-g*a1/aa
-    #a[d*i+9]=-mu*a[d*i+3]-g*a2/aa
-    
-    #a[d*i+8]=-mu*a[d*i+2]
-    #a[d*i+9]=-mu*a[d*i+3]+g
-   
-    
-    a[d*i+2]=a[d*i+2]*1+a[d*i+8]
-    a[d*i+3]=a[d*i+3]*1+a[d*i+9]
-   
- 
+    #Collisions   
     for j in range (i+1,n):
       n1=(a[d*i]-a[d*j])
       n2=(a[d*i+1]-a[d*j+1])
@@ -154,60 +140,8 @@ def handle_frame():
             a[d*i+1]=a[d*i+1]+(0+radius-sqrt(nn)/2)*n2/sqrt(nn)
             a[d*j]=a[d*j]-(0+radius-sqrt(nn)/2)*n1/sqrt(nn)
             a[d*j+1]=a[d*j+1]-(0+radius-sqrt(nn)/2)*n2/sqrt(nn)
-
-
-    if a[d*i+7]!=0:
-      a[d*i+7]=a[d*i+7]-1
-  #print(i,domain*domain,(a[d*i]-screen_width/2)*(a[d*i]-screen_width/2)+(a[d*i+1]-screen_height/2)*(a[d*i+1]-screen_height/2))
-    if 0==1:        
-      if a[d*i]<radius:
-        #print(i)
-        n1=1
-        n2=0
-        v1x=a[d*i+2]
-        v1y=a[d*i+3]
-        nn=n1*n1+n2*n2
-        a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
-        a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
-        a[d*i]=radius
-        a[d*i+1]=a[d*i+1]
-        
-      if a[d*i]>screen_width-radius:
-        #print(i)
-        n1=-1
-        n2=0
-        v1x=a[d*i+2]
-        v1y=a[d*i+3]
-        nn=n1*n1+n2*n2
-        a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
-        a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
-        a[d*i]=screen_width-radius
-        a[d*i+1]=a[d*i+1]
-      
-      if a[d*i+1]<radius:
-        #print(i)r
-        n1=0
-        n2=1
-        v1x=a[d*i+2]
-        v1y=a[d*i+3]
-        nn=n1*n1+n2*n2
-        a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
-        a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
-        a[d*i]=a[d*i]
-        a[d*i+1]=radius
-        
-      if a[d*i+1]>screen_height-radius:
-        #print(i)r
-        n1=0
-        n2=-1
-        v1x=a[d*i+2]
-        v1y=a[d*i+3]
-        nn=n1*n1+n2*n2
-        a[d*i+2]=((n2*n2-e2*n1*n1)*v1x-(1+e2)*n1*n2*v1y)/nn
-        a[d*i+3]=(-(1+e2)*n1*n2*v1x+(n1*n1-e2*n2*n2)*v1y)/nn
-        a[d*i]=a[d*i]
-        a[d*i+1]=screen_height-radius
-      
+    
+    #Pocket
     if (a[d*i]-cx)**2+(a[d*i+1]-cy)**2<4*radius**2 and i!=n-1:
       print("Ding!")
             
