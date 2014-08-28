@@ -113,13 +113,13 @@ def handle_mousemove(x,y):
 def handle_keydown(key):
   global dshiftx, dshifty
   if key == "left":
-    dshiftx=-0.1
+    dshiftx=-5
   elif key == "up":
-    dshifty=-0.1
+    dshifty=-5
   elif key == "right":
-    dshiftx=0.1
+    dshiftx=5
   elif key == "down":
-    dshifty=0.1
+    dshifty=5
     
 def handle_keyup(key):
   global dshiftx, dshifty
