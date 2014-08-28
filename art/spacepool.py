@@ -195,8 +195,8 @@ def handle_frame():
     print(player)
     if player==0:
       color("rbga(255,0,0,1)")
-    elif player==1:
-      color("rbga(0,0,255,1)")
+    #elif player==1:
+    #  color("rbga(0,0,255,1)")
     line(a[d*(n-1)]+shiftx,a[d*(n-1)+1]+shifty,a[d*(n-1)]+shiftx+a1,a[d*(n-1)+1]+shifty+a2)
     line(a[d*(n-1)]+shiftx+screen_width,a[d*(n-1)+1]+shifty,a[d*(n-1)]+shiftx+screen_width+a1,a[d*(n-1)+1]+shifty+a2)
     line(a[d*(n-1)]+shiftx-screen_width,a[d*(n-1)+1]+shifty,a[d*(n-1)]+shiftx-screen_width+a1,a[d*(n-1)+1]+shifty+a2)
