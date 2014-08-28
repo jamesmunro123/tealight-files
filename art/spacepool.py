@@ -89,7 +89,6 @@ def sphere(x,y,rad,colr,colg,colb):
     colstring = ctorgba(c)
     color(colstring)
     spot(int((x+i)/sqrt(2),(y+i)/sqrt(2),r)
-    
   
 
 def handle_mousedown(x,y):
