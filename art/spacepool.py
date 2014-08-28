@@ -33,6 +33,8 @@ cy=screen_height/2
 #(x,y,u,v,colr,colg,colb,out)
 d=8
 
+shiftx=0
+shifty=0
 
 sr=0
 sb=0
