@@ -12,7 +12,7 @@ from tealight.utils import sleep
 
 a=[]
 n=15
-# n odd, total number of balls
+# n even, total number of balls
 
 radius=15
 s1=7
@@ -79,6 +79,11 @@ for i in range (0,n):
         r2=randint(0,screen_height)
         a[d*i]=r1
         a[d*i+1]=r2
+
+a[d*(n-2)+4]=70
+a[d*(n-2)+5]=70
+a[d*(n-2)+6]=70
+
         
 a[d*(n-1)+4]=255
 a[d*(n-1)+5]=255
