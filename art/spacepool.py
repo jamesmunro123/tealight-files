@@ -301,4 +301,8 @@ def handle_frame():
   if gamestate==0:
     color("rbga(0,0,0,0)")
     line(a[d*(n-1)],a[d*(n-1)+1],a[d*(n-1)]+a1,a[d*(n-1)+1]+a2)
+    line(a[d*(n-1)]+screen_width,a[d*(n-1)+1],a[d*(n-1)]+screen_width+a1,a[d*(n-1)+1]+a2)
+    line(a[d*(n-1)]-screen_width,a[d*(n-1)+1],a[d*(n-1)]-screen_width+a1,a[d*(n-1)+1]+a2)
+    line(a[d*(n-1)],a[d*(n-1)+1]+screen_height,a[d*(n-1)]+a1,a[d*(n-1)+1]+screen_height+a2)
+    line(a[d*(n-1)],a[d*(n-1)+1]-screen_height,a[d*(n-1)]+a1,a[d*(n-1)+1]-screen_height+a2)
   
