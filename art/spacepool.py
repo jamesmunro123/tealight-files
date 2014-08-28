@@ -101,7 +101,7 @@ def handle_mousemove(x,y):
   my=y
   
 def handle_frame():
-  global mx,my, gamestate
+  global mx,my, gamestate, sr, sb
   
   sleep(20)
   color("black")
@@ -267,8 +267,11 @@ def handle_frame():
         
       #Pocket
       if (a[d*i]-cx)**2+(a[d*i+1]-cy)**2<4*radius**2 and i!=n-1:
-        print("Ding!")
         a[d*i+7]=1
+        if i<int(n/2):
+          sr=sr+1
+        else:
+          sb=sb+1
         
               
       
@@ -312,4 +315,5 @@ def handle_frame():
     line(a[d*(n-1)]+screen_width,a[d*(n-1)+1]-screen_height,a[d*(n-1)]+screen_width+a1,a[d*(n-1)+1]-screen_height+a2)
     line(a[d*(n-1)]-screen_width,a[d*(n-1)+1]+screen_height,a[d*(n-1)]-screen_width+a1,a[d*(n-1)+1]+screen_height+a2)
     line(a[d*(n-1)]-screen_width,a[d*(n-1)+1]-screen_height,a[d*(n-1)]-screen_width+a1,a[d*(n-1)+1]-screen_height+a2)
-    
+  color("rgba(255,0,0,0)")
+  text(cx,cy,sr)  
