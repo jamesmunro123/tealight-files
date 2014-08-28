@@ -296,11 +296,11 @@ def handle_frame():
       c=[min(a[d*i+4]+100,255),min(a[d*i+5]+100,255),min(a[d*i+6]+100,255),1]
       colstring = ctorgba(c)
       color(colstring)
-      spot(a[d*i],a[d*i+1],radius)
-      spot(a[d*i]+screen_width,a[d*i+1],radius)
-      spot(a[d*i]-screen_width,a[d*i+1],radius)
-      spot(a[d*i],a[d*i+1]+screen_height,radius)
-      spot(a[d*i],a[d*i+1]-screen_height,radius)
+      spot(a[d*i]+radius/2,a[d*i+1]+radius/2,radius/3)
+      spot(a[d*i]+radius/2+screen_width,a[d*i+1]+radius/2,radius/3)
+      spot(a[d*i]+radius/2-screen_width,a[d*i+1]+radius/2,radius/3)
+      spot(a[d*i]+radius/2,a[d*i+1]+radius/2+screen_height,radius/3)
+      spot(a[d*i]+radius/2,a[d*i+1]+radius/2-screen_height,radius/3)
   
   
   if vsum>0.1:
