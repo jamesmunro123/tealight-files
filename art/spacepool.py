@@ -37,6 +37,7 @@ shiftx=0
 shifty=0
 dshiftx=0
 dshifty=0
+ffwd=0
 
 sr=0
 sb=0
@@ -127,6 +128,8 @@ def handle_keydown(key):
     dshiftx=5
   elif key == "down":
     dshifty=5
+  elif key == "q":
+    ffwd=1
     
 def handle_keyup(key):
   global dshiftx, dshifty
@@ -138,11 +141,16 @@ def handle_keyup(key):
     dshiftx=0
   elif key == "down":
     dshifty=0
+  elif key == "q":
+    ffwd=0
   
 
 def handle_frame():
   global mx,my, gamestate, sr, sb, shiftx, shifty, dshiftx, dshifty, gameover, player, aimrad
-  sleep(20)
+  
+  if ffwd==0:
+    sleep(20)
+    
   color("black")
   box(0,0,screen_width,screen_height)
   
