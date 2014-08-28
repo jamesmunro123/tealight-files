@@ -388,9 +388,9 @@ def handle_frame():
         a[d*i+3]=0
     
     if sr==int(n/2):
-       gamestate==2
+       gamestate=2
        print("Red wins.")
     if sb==int(n/2):
-       gamestate==2
+       gamestate=2
        print("Blue wins.")
     
