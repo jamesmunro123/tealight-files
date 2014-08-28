@@ -82,15 +82,7 @@ def ctorgba(c):
   string_out = string_out + str(c[0]) + "," + str(c[1]) + "," + str(c[2]) + "," + str(c[3]) + ")"
   return string_out
 
-def sphere(x,y,rad,colr,colg,colb):
-  for i in range(0,rad):
-    r=radius-i
-    
-    c=[min(colr+8*i,255),min(colg+8*i,255),min(colb+8*i,255),1]
-    colstring = ctorgba(c)
-    color(colstring)
-    spot((x+i/(2*sqrt(2))),(y+i/(2*sqrt(2))),r)
-  
+ 
 
 def handle_mousedown(x,y):
   global n, a, gamestate
@@ -293,14 +285,14 @@ def handle_frame():
         
               
       
-      #c=[a[d*i+4],a[d*i+5],a[d*i+6],1]
-      #colstring = ctorgba(c)
-      #color(colstring)
-      sphere(a[d*i],a[d*i+1],radius,a[d*i+4],a[d*i+5],a[d*i+6])
-      #spot(a[d*i]+screen_width,a[d*i+1],radius)
-      #spot(a[d*i]-screen_width,a[d*i+1],radius)
-      #spot(a[d*i],a[d*i+1]+screen_height,radius)
-      #spot(a[d*i],a[d*i+1]-screen_height,radius)
+      c=[a[d*i+4],a[d*i+5],a[d*i+6],1]
+      colstring = ctorgba(c)
+      color(colstring)
+      spot(a[d*i],a[d*i+1],radius)
+      spot(a[d*i]+screen_width,a[d*i+1],radius)
+      spot(a[d*i]-screen_width,a[d*i+1],radius)
+      spot(a[d*i],a[d*i+1]+screen_height,radius)
+      spot(a[d*i],a[d*i+1]-screen_height,radius)
   
   if vsum>0.1:
     gamestate=1
