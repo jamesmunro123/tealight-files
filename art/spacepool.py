@@ -108,6 +108,8 @@ def handle_mousedown(x,y):
     player=1
   elif player==1:
     player=0
+  gamestate=1
+  
 def handle_mousemove(x,y):
   global mmx, mmy
   mmx=x
