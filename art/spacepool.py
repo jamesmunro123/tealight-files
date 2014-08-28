@@ -85,10 +85,10 @@ def ctorgba(c):
 def sphere(x,y,rad,colr,colg,colb):
   for i in range(0,rad):
     r=radius-i
-    c=[max(colr-10*i,0),max(colg-10*i,0),max(colb-10*i,0),1]
+    c=[min(colr+10*i,255),min(colg+10*i,255),min(colb+10*i,255),1]
     colstring = ctorgba(c)
     color(colstring)
-    spot(x,y,r)
+    spot(x+i,y+i,r)
     
   
 
