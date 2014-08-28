@@ -12,6 +12,7 @@ from tealight.utils import sleep
 
 a=[]
 n=13
+# n odd, total number of balls
 s1=10
 e=0.5
 e2=1
@@ -21,8 +22,8 @@ mx=0
 my=0
 mmx=mx
 mmy=my
-redcount=2*n
-bluecount=2*n
+redcount=int(n/2)
+bluecount=int(n/2)
 radius=15
 
 aimrad=100*radius
@@ -388,4 +389,10 @@ def handle_frame():
         a[d*i+2]=0
         a[d*i+3]=0
     
+    if redcount==0:
+       gamestate==2
+       print("Red wins.")
+    if bluecount==0:
+       gamestate==2
+       print("Blue wins.")
     
