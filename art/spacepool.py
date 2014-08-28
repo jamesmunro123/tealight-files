@@ -19,6 +19,8 @@ mu=0.01
 
 mx=0
 my=0
+mmx=mx
+mmy=my
 redcount=2*n
 bluecount=2*n
 domain=min(screen_width,screen_height)/2-10
@@ -106,9 +108,9 @@ def handle_mousedown(x,y):
     a[d*(n-1)+3]=s1*a2/sqrt(aa)
 
 def handle_mousemove(x,y):
-  global mx, my
-  mx=x
-  my=y
+  global mmx, mmy
+  mmx=x
+  mmy=y
 
 def handle_keydown(key):
   global dshiftx, dshifty
@@ -149,7 +151,8 @@ def handle_frame():
   vsum=0
   shiftx=(shiftx+dshiftx)%screen_width
   shifty=(shifty+dshifty)%screen_height
-  
+  mx=mmx-shiftx
+  my=mmy-shifty
   for i in range (0,n):
     if a[d*i+7]!=1:
       a[d*i]=a[d*i]+a[d*i+2]
