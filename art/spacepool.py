@@ -139,7 +139,7 @@ def handle_keyup(key):
   
 
 def handle_frame():
-  global mx,my, gamestate, sr, sb, shiftx, shifty, dshiftx, dshifty, gameover, player
+  global mx,my, gamestate, sr, sb, shiftx, shifty, dshiftx, dshifty, gameover, player, aimrad
   sleep(20)
   color("black")
   box(0,0,screen_width,screen_height)
@@ -193,6 +193,8 @@ def handle_frame():
   elif a2<-screen_height/2:
     a2=screen_height+a2
   aa=a1*a1+a2*a2
+  a1=a1*aimrad/sqrt(aa)
+  a2=a2*aimrad/sqrt(aa)
   if gamestate==0 and aa<aimrad**2:
     if player==0:
       color("rgba(255,0,0,1)")
