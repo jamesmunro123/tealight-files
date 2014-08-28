@@ -162,6 +162,10 @@ def handle_frame():
       colstring = ctorgba(c)
       color(colstring)
       spot(a[d*i],a[d*i+1],radius)
+      spot(a[d*i]+screen_width,a[d*i+1],radius)
+      spot(a[d*i]-screen_width,a[d*i+1],radius)
+      spot(a[d*i],a[d*i+1]+screen_height,radius)
+      spot(a[d*i],a[d*i+1]-screen_height,radius)
   
   if vsum>0.1:
     gamestate=1
