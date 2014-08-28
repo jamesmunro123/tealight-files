@@ -107,8 +107,8 @@ def handle_mousedown(x,y):
 
 def handle_mousemove(x,y):
   global mx, my
-  mx=x-shiftx
-  my=y-shifty
+  mx=x
+  my=y
 
 def handle_keydown(key):
   global dshiftx, dshifty
@@ -149,6 +149,7 @@ def handle_frame():
   vsum=0
   shiftx=(shiftx+dshiftx)%screen_width
   shifty=(shifty+dshifty)%screen_height
+  
   for i in range (0,n):
     if a[d*i+7]!=1:
       a[d*i]=a[d*i]+a[d*i+2]
