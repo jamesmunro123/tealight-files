@@ -21,15 +21,15 @@ mx=0
 my=0
 mmx=mx
 mmy=my
-redcount=2*n
-bluecount=2*n
-domain=min(screen_width,screen_height)/2-10
+#redcount=2*n
+#bluecount=2*n
+#domain=min(screen_width,screen_height)/2-10
 radius=15
 
 aimrad=100*radius
 
-domain=domain-radius
-hipporadius=domain/4
+#domain=domain-radius
+#hipporadius=domain/4
 cx=screen_width/2
 cy=screen_height/2
 #(x,y,u,v,colr,colg,colb,out)
