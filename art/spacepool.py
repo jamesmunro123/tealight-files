@@ -389,9 +389,9 @@ def handle_frame():
   
   if gameover==0:
     if sr==int(n/2):
-       gamestate=2
+       gameover=1
        print("Red wins.")
     if sb==int(n/2):
-       gamestate=2
+       gameover=1
        print("Blue wins.")
     
