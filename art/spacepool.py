@@ -169,7 +169,7 @@ def handle_frame():
   text(cx+shiftx-screen_width-6,cy+shifty+screen_height-24,sr)
   text(cx+shiftx-screen_width-6,cy+shifty-screen_height-24,sr)
   
-  #color("rgba(0,0,255,1)") 
+  color("rgba(0,0,255,1)") 
   text(cx+shiftx-6,cy+shifty,sb)
   text(cx+shiftx+screen_width-6,cy+shifty,sb)
   text(cx+shiftx-screen_width-6,cy+shifty,sb)
