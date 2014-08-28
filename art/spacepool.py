@@ -321,7 +321,10 @@ def handle_frame():
       spot(a[d*i]+shiftx-screen_width,a[d*i+1]+shifty,radius)
       spot(a[d*i]+shiftx,a[d*i+1]+shifty+screen_height,radius)
       spot(a[d*i]+shiftx,a[d*i+1]+shifty-screen_height,radius)
-      
+      spot(a[d*i]+shiftx+screen_width,a[d*i+1]+shifty+screen_height,radius)
+      spot(a[d*i]+shiftx+screen_width,a[d*i+1]+shifty-screen_height,radius)
+      spot(a[d*i]+shiftx-screen_width,a[d*i+1]+shifty+screen_height,radius)
+      spot(a[d*i]+shiftx-screen_width,a[d*i+1]+shifty-screen_height,radius)
   
   
   if vsum>0.1:
