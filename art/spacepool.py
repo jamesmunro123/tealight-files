@@ -34,6 +34,9 @@ d=8
 sr=0
 sb=0
 gamestate=0
+# gamestate 0 shot ready
+# gamestate 1 no shot, balls moving
+# gamestate 2 no shot, mouse too far
 player=0
 
 
@@ -77,9 +80,12 @@ def handle_mousedown(x,y):
   global n, a, gamestate
   a1=x-a[d*(n-1)]
   a2=y-a[d*(n-1)+1]
+  if a1>screen_width/2
+    a1=screen_width-a1
+  elif a1<-screen_width/2
+    a1=screen_width+a1
   aa=a1*a1+a2*a2
-  if gamestate==0 and aa<16*radius**2:
-
+  if gamestate==0:
     a[d*(n-1)+2]=s1*a1/sqrt(aa)
     a[d*(n-1)+3]=s1*a2/sqrt(aa)
 
