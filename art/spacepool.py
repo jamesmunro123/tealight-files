@@ -22,8 +22,6 @@ mx=0
 my=0
 mmx=mx
 mmy=my
-redcount=int(n/2)
-bluecount=int(n/2)
 radius=15
 
 aimrad=100*radius
@@ -389,10 +387,10 @@ def handle_frame():
         a[d*i+2]=0
         a[d*i+3]=0
     
-    if redcount==0:
+    if sr==int(n/2):
        gamestate==2
        print("Red wins.")
-    if bluecount==0:
+    if sb==int(n/2):
        gamestate==2
        print("Blue wins.")
     
