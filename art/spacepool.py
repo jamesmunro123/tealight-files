@@ -89,7 +89,7 @@ def ctorgba(c):
  
 
 def handle_mousedown(x,y):
-  global n, a, gamestate
+  global n, a, gamestate, player
   a1=x-shiftx-a[d*(n-1)]
   a2=y-shifty-a[d*(n-1)+1]
   if a1>screen_width/2:
