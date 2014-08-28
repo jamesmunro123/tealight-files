@@ -64,9 +64,9 @@ for i in range (0,n):
         a[d*i]=r1
         a[d*i+1]=r2
 
-a[d*(n-1)+4]=0
-a[d*(n-1)+5]=0
-a[d*(n-1)+6]=0
+a[d*(n-1)+4]=255
+a[d*(n-1)+5]=255
+a[d*(n-1)+6]=255
 
 def ctorgba(c):
   string_out = "rgba("
@@ -91,9 +91,9 @@ def handle_frame():
   global mx,my, gamestate
   
   sleep(20)
-  color("white")
-  box(0,0,screen_width,screen_height)
   color("black")
+  box(0,0,screen_width,screen_height)
+  color("white")
   circle(cx,cy,2*radius)
   
   vsum=0
