@@ -192,6 +192,7 @@ def handle_frame():
     a2=screen_height+a2
   aa=a1*a1+a2*a2
   if gamestate==0 and aa<aimrad**2:
+    print(player)
     if player==0:
       color("rbga(255,0,0,1)")
     elif player==1:
