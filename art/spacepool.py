@@ -308,7 +308,7 @@ def handle_frame():
               a[d*j+1]=a[d*j+1]-(0+radius-sqrt(nn)/2)*n2/sqrt(nn)
         
       #Pocket
-      if (a[d*i]-cx)**2+(a[d*i+1]-cy)**2<4*radius**2 and i!=n-1:
+      if (a[d*i]+shiftx-cx)**2+(a[d*i+1]+shifty-cy)**2<4*radius**2 and i!=n-1:
         a[d*i+7]=1
         if i<int(n/2):
           sr=sr+1
