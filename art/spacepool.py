@@ -24,7 +24,7 @@ mmx=mx
 mmy=my
 radius=15
 
-aimrad=10*radius
+aimrad=screen_width/4
 
 cx=screen_width/2
 cy=screen_height/2
