@@ -180,7 +180,30 @@ def handle_frame():
   text(cx+shiftx-screen_width-6,cy+shifty+screen_height,sb)
   text(cx+shiftx-screen_width-6,cy+shifty-screen_height,sb)
   
-  
+  a1=mx-a[d*(n-1)]
+  a2=my-a[d*(n-1)+1]
+  if a1>screen_width/2:
+    a1=-screen_width+a1
+  elif a1<-screen_width/2:
+    a1=screen_width+a1
+  if a2>screen_height/2:
+    a2=-screen_height+a2
+  elif a2<-screen_height/2:
+    a2=screen_height+a2
+  aa=a1*a1+a2*a2
+  if gamestate==0 and aa<aimrad**2:
+    color("rbga(0,0,0,0)")
+    line(a[d*(n-1)]+shiftx,a[d*(n-1)+1]+shifty,a[d*(n-1)]+shiftx+a1,a[d*(n-1)+1]+shifty+a2)
+    line(a[d*(n-1)]+shiftx+screen_width,a[d*(n-1)+1]+shifty,a[d*(n-1)]+shiftx+screen_width+a1,a[d*(n-1)+1]+shifty+a2)
+    line(a[d*(n-1)]+shiftx-screen_width,a[d*(n-1)+1]+shifty,a[d*(n-1)]+shiftx-screen_width+a1,a[d*(n-1)+1]+shifty+a2)
+    line(a[d*(n-1)]+shiftx,a[d*(n-1)+1]+shifty+screen_height,a[d*(n-1)]+shiftx+a1,a[d*(n-1)+1]+shifty+screen_height+a2)
+    line(a[d*(n-1)]+shiftx,a[d*(n-1)+1]+shifty-screen_height,a[d*(n-1)]+shiftx+a1,a[d*(n-1)+1]+shifty-screen_height+a2)
+    
+    line(a[d*(n-1)]+shiftx+screen_width,a[d*(n-1)+1]+shifty+screen_height,a[d*(n-1)]+shiftx+screen_width+a1,a[d*(n-1)+1]+shifty+screen_height+a2)
+    line(a[d*(n-1)]+shiftx+screen_width,a[d*(n-1)+1]+shifty-screen_height,a[d*(n-1)]+shiftx+screen_width+a1,a[d*(n-1)+1]+shifty-screen_height+a2)
+    line(a[d*(n-1)]+shiftx-screen_width,a[d*(n-1)+1]+shifty+screen_height,a[d*(n-1)]+shiftx-screen_width+a1,a[d*(n-1)+1]+shifty+screen_height+a2)
+    line(a[d*(n-1)]+shiftx-screen_width,a[d*(n-1)+1]+shifty-screen_height,a[d*(n-1)]+shiftx-screen_width+a1,a[d*(n-1)+1]+shifty-screen_height+a2)
+
   for i in range (0,n):
     if a[d*i+7]!=1:
       a[d*i]=a[d*i]+a[d*i+2]
@@ -367,26 +390,4 @@ def handle_frame():
       a[d*i+2]=0
       a[d*i+3]=0
   
-  a1=mx-a[d*(n-1)]
-  a2=my-a[d*(n-1)+1]
-  if a1>screen_width/2:
-    a1=-screen_width+a1
-  elif a1<-screen_width/2:
-    a1=screen_width+a1
-  if a2>screen_height/2:
-    a2=-screen_height+a2
-  elif a2<-screen_height/2:
-    a2=screen_height+a2
-  aa=a1*a1+a2*a2
-  if gamestate==0 and aa<aimrad**2:
-    color("rbga(0,0,0,0)")
-    line(a[d*(n-1)]+shiftx,a[d*(n-1)+1]+shifty,a[d*(n-1)]+shiftx+a1,a[d*(n-1)+1]+shifty+a2)
-    line(a[d*(n-1)]+shiftx+screen_width,a[d*(n-1)+1]+shifty,a[d*(n-1)]+shiftx+screen_width+a1,a[d*(n-1)+1]+shifty+a2)
-    line(a[d*(n-1)]+shiftx-screen_width,a[d*(n-1)+1]+shifty,a[d*(n-1)]+shiftx-screen_width+a1,a[d*(n-1)+1]+shifty+a2)
-    line(a[d*(n-1)]+shiftx,a[d*(n-1)+1]+shifty+screen_height,a[d*(n-1)]+shiftx+a1,a[d*(n-1)+1]+shifty+screen_height+a2)
-    line(a[d*(n-1)]+shiftx,a[d*(n-1)+1]+shifty-screen_height,a[d*(n-1)]+shiftx+a1,a[d*(n-1)+1]+shifty-screen_height+a2)
-    
-    line(a[d*(n-1)]+shiftx+screen_width,a[d*(n-1)+1]+shifty+screen_height,a[d*(n-1)]+shiftx+screen_width+a1,a[d*(n-1)+1]+shifty+screen_height+a2)
-    line(a[d*(n-1)]+shiftx+screen_width,a[d*(n-1)+1]+shifty-screen_height,a[d*(n-1)]+shiftx+screen_width+a1,a[d*(n-1)+1]+shifty-screen_height+a2)
-    line(a[d*(n-1)]+shiftx-screen_width,a[d*(n-1)+1]+shifty+screen_height,a[d*(n-1)]+shiftx-screen_width+a1,a[d*(n-1)+1]+shifty+screen_height+a2)
-    line(a[d*(n-1)]+shiftx-screen_width,a[d*(n-1)+1]+shifty-screen_height,a[d*(n-1)]+shiftx-screen_width+a1,a[d*(n-1)+1]+shifty-screen_height+a2)
+  
