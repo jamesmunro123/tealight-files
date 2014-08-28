@@ -23,6 +23,9 @@ redcount=2*n
 bluecount=2*n
 domain=min(screen_width,screen_height)/2-10
 radius=15
+
+aimrad=8*radius
+
 domain=domain-radius
 hipporadius=domain/4
 cx=screen_width/2
@@ -89,7 +92,7 @@ def handle_mousedown(x,y):
   elif a2<-screen_height/2:
     a2=screen_height+a2
   aa=a1*a1+a2*a2
-  if gamestate==0:
+  if gamestate==0 and aa<aimrad**2:
     a[d*(n-1)+2]=s1*a1/sqrt(aa)
     a[d*(n-1)+3]=s1*a2/sqrt(aa)
 
@@ -298,7 +301,7 @@ def handle_frame():
   elif a2<-screen_height/2:
     a2=screen_height+a2
   aa=a1*a1+a2*a2
-  if gamestate==0:
+  if gamestate==0 and aa<aimrad**2:
     color("rbga(0,0,0,0)")
     line(a[d*(n-1)],a[d*(n-1)+1],a[d*(n-1)]+a1,a[d*(n-1)+1]+a2)
     line(a[d*(n-1)]+screen_width,a[d*(n-1)+1],a[d*(n-1)]+screen_width+a1,a[d*(n-1)+1]+a2)
