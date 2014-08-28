@@ -104,7 +104,10 @@ def handle_mousedown(x,y):
   if gamestate==0 and aa<aimrad**2:
     a[d*(n-1)+2]=s1*a1/sqrt(aa)
     a[d*(n-1)+3]=s1*a2/sqrt(aa)
-
+  if player==0:
+    player=1
+  elif player==1:
+    player=0
 def handle_mousemove(x,y):
   global mmx, mmy
   mmx=x
