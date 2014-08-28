@@ -24,7 +24,7 @@ bluecount=2*n
 domain=min(screen_width,screen_height)/2-10
 radius=15
 
-aimrad=16*radius
+aimrad=32*radius
 
 domain=domain-radius
 hipporadius=domain/4
