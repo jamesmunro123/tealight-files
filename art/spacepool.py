@@ -316,4 +316,4 @@ def handle_frame():
     line(a[d*(n-1)]-screen_width,a[d*(n-1)+1]+screen_height,a[d*(n-1)]-screen_width+a1,a[d*(n-1)+1]+screen_height+a2)
     line(a[d*(n-1)]-screen_width,a[d*(n-1)+1]-screen_height,a[d*(n-1)]-screen_width+a1,a[d*(n-1)+1]-screen_height+a2)
   color("rgba(255,0,0,1)")
-  text(cx,cy,sr)  
+  text(cx-24,cy-4,sr)  
