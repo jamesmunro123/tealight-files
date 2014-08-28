@@ -75,10 +75,11 @@ def ctorgba(c):
 
 def handle_mousedown(x,y):
   global n, a, gamestate
-  if gamestate==0:
-    a1=x-a[d*(n-1)]
-    a2=y-a[d*(n-1)+1]
-    aa=a1*a1+a2*a2
+  a1=x-a[d*(n-1)]
+  a2=y-a[d*(n-1)+1]
+  aa=a1*a1+a2*a2
+  if gamestate==0 and aa<16*radius**2:
+
     a[d*(n-1)+2]=s1*a1/sqrt(aa)
     a[d*(n-1)+3]=s1*a2/sqrt(aa)
 
