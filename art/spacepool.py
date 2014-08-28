@@ -110,6 +110,27 @@ def handle_mousemove(x,y):
   mx=x
   my=y
 
+def handle_keydown(key):
+  global dshiftx, dshifty
+  if key == "left":
+    dshiftx=-0.1
+  elif key == "up":
+    dshifty=-0.1
+  elif key == "right":
+    dshiftx=0.1
+  elif key == "down":
+    dshifty=0.1
+    
+def handle_keyup(key):
+  global dshiftx, dshifty
+  if key == "left":
+    dshiftx=0
+  elif key == "up":
+    dshifty=0
+  elif key == "right":
+    dshiftx=0
+  elif key == "down":
+    dshifty=0
   
 
 def handle_frame():
