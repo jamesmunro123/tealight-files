@@ -56,7 +56,7 @@ for i in range (0,n):
   #r3=randint(0,s1*100)/100-s1/2
   #r4=randint(0,s1*100)/100-s1/2
   
-  if i<int(n/2):
+  if i<(n/2)-1:
     a=a+[r1,r2,0,0,255,0,0,0]
   else:
     a=a+[r1,r2,0,0,0,0,255,0]
