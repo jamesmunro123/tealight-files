@@ -189,7 +189,10 @@ def handle_frame():
     a2=screen_height+a2
   aa=a1*a1+a2*a2
   if gamestate==0 and aa<aimrad**2:
-    color("rbga(0,0,0,0)")
+    if player==0:
+      color("rbga(255,0,0,1)")
+    elif player==1:
+      color("rbga(0,0,255,1)")
     line(a[d*(n-1)]+shiftx,a[d*(n-1)+1]+shifty,a[d*(n-1)]+shiftx+a1,a[d*(n-1)+1]+shifty+a2)
     line(a[d*(n-1)]+shiftx+screen_width,a[d*(n-1)+1]+shifty,a[d*(n-1)]+shiftx+screen_width+a1,a[d*(n-1)+1]+shifty+a2)
     line(a[d*(n-1)]+shiftx-screen_width,a[d*(n-1)+1]+shifty,a[d*(n-1)]+shiftx-screen_width+a1,a[d*(n-1)+1]+shifty+a2)
