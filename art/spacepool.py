@@ -305,4 +305,9 @@ def handle_frame():
     line(a[d*(n-1)]-screen_width,a[d*(n-1)+1],a[d*(n-1)]-screen_width+a1,a[d*(n-1)+1]+a2)
     line(a[d*(n-1)],a[d*(n-1)+1]+screen_height,a[d*(n-1)]+a1,a[d*(n-1)+1]+screen_height+a2)
     line(a[d*(n-1)],a[d*(n-1)+1]-screen_height,a[d*(n-1)]+a1,a[d*(n-1)+1]-screen_height+a2)
-  
+    
+    line(a[d*(n-1)]+screen_width,a[d*(n-1)+1]+screen_height,a[d*(n-1)]+screen_width+a1,a[d*(n-1)+1]+screen_height+a2)
+    line(a[d*(n-1)]+screen_width,a[d*(n-1)+1]-screen_height,a[d*(n-1)]+screen_width+a1,a[d*(n-1)+1]-screen_height+a2)
+    line(a[d*(n-1)]-screen_width,a[d*(n-1)+1]+screen_height,a[d*(n-1)]-screen_width+a1,a[d*(n-1)+1]+screen_height+a2)
+    line(a[d*(n-1)]-screen_width,a[d*(n-1)+1]-screen_height,a[d*(n-1)]-screen_width+a1,a[d*(n-1)+1]-screen_height+a2)
+    
