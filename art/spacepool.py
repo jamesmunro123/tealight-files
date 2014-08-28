@@ -42,6 +42,7 @@ gamestate=0
 # gamestate 0 shot ready
 # gamestate 1 no shot, balls moving
 # gamestate 2 gameover
+gameover=0
 player=0
 
 
@@ -386,7 +387,7 @@ def handle_frame():
       a[d*i+2]=0
       a[d*i+3]=0
   
-  if gameover==0
+  if gameover==0:
     if sr==int(n/2):
        gamestate=2
        print("Red wins.")
