@@ -107,8 +107,8 @@ def handle_mousedown(x,y):
 
 def handle_mousemove(x,y):
   global mx, my
-  mx=x
-  my=y
+  mx=x-shiftx
+  my=y-shifty
 
 def handle_keydown(key):
   global dshiftx, dshifty
