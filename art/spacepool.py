@@ -82,6 +82,16 @@ def ctorgba(c):
   string_out = string_out + str(c[0]) + "," + str(c[1]) + "," + str(c[2]) + "," + str(c[3]) + ")"
   return string_out
 
+def sphere(x,y,radius,colr,colg,colb)
+  for i=1 in range(0,radius)
+    r=radius-i
+    c=[max(colr-i,0),max(colg-i,0),max(colb-i,0),1]
+    colstring = ctorgba(c)
+    color(colstring)
+    spot(x,y,r)
+    
+  
+
 def handle_mousedown(x,y):
   global n, a, gamestate
   a1=x-a[d*(n-1)]
