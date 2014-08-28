@@ -134,7 +134,7 @@ def handle_keyup(key):
   
 
 def handle_frame():
-  global mx,my, gamestate, sr, sb, shiftx, shifty, dshiftx, dshifty
+  global mx,my, gamestate, sr, sb, shiftx, shifty, dshiftx, dshifty, gameover
   sleep(20)
   color("black")
   box(0,0,screen_width,screen_height)
