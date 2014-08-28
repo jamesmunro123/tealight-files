@@ -62,13 +62,17 @@ for i in range (0,n):
       
       if nn<4*radius*radius:
         c=1
-        r5=randint(0,domain)
-        r6=randint(0,100)*(360)/100
-        r1=r5*cos(r6)+screen_width/2
-        r2=r6*sin(r6)+screen_height/2
+        r1=randint(0,screen_width)
+        r2=randint(0,screen_height)
         a[d*i]=r1
         a[d*i+1]=r2
-
+      if (a[d*i]-cx)**2+(a[d*i+1]-cy)**2<4*radius**2 and i!=n-1:
+        c=1
+        r1=randint(0,screen_width)
+        r2=randint(0,screen_height)
+        a[d*i]=r1
+        a[d*i+1]=r2
+        
 a[d*(n-1)+4]=255
 a[d*(n-1)+5]=255
 a[d*(n-1)+6]=255
