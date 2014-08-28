@@ -86,7 +86,7 @@ def handle_mousedown(x,y):
     a1=screen_width+a1
   if a2>screen_height/2:
     a2=-screen_height+a2
-  elif a2<-screen_height/2
+  elif a2<-screen_height/2:
     a2=screen_height+a2
   aa=a1*a1+a2*a2
   if gamestate==0:
