@@ -286,7 +286,19 @@ def handle_frame():
     for i in range(0,n):
       a[d*i+2]=0
       a[d*i+3]=0
+  
+  a1=mx-a[d*(n-1)]
+  a2=my-a[d*(n-1)+1]
+  if a1>screen_width/2:
+    a1=-screen_width+a1
+  elif a1<-screen_width/2:
+    a1=screen_width+a1
+  if a2>screen_height/2:
+    a2=-screen_height+a2
+  elif a2<-screen_height/2:
+    a2=screen_height+a2
+  aa=a1*a1+a2*a2
   if gamestate==0:
     color("rbga(0,0,0,0)")
-    line(a[d*(n-1)],a[d*(n-1)+1],mx,my)
+    line(a[d*(n-1)],a[d*(n-1)+1],a[d*(n-1)]+a1,a[d*(n-1)+1]+a2)
   
