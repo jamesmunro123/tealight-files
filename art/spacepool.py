@@ -35,8 +35,8 @@ d=8
 
 shiftx=0
 shifty=0
-dshifx=0
-dhifty=0
+dshiftx=0
+dshifty=0
 
 sr=0
 sb=0
