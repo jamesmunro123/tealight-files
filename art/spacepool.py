@@ -382,10 +382,18 @@ def handle_frame():
       #Pocket
       if (a[d*i]-cx)**2+(a[d*i+1]-cy)**2<4*radius**2 and i!=n-1:
         a[d*i+7]=1
-        if i<int(n/2):
+        if i<(n/2)-1:
           sr=sr+1
-        else:
+        elif i<n-2:
           sb=sb+1
+        else:
+          if gameover==0:
+            if player==1:
+               gameover=1
+               print("Red wins.")
+            if player==1:
+               gameover=1
+               print("Blue wins.")
         
               
       
@@ -412,10 +420,10 @@ def handle_frame():
       a[d*i+3]=0
   
   if gameover==0:
-    if sr==int(n/2):
+    if sr==int(n/2-1):
        gameover=1
        print("Red wins.")
-    if sb==int(n/2):
+    if sb==int(n/2-1):
        gameover=1
        print("Blue wins.")
     
