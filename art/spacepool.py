@@ -147,7 +147,8 @@ def handle_frame():
   text(cx-6,cy,sb)  
   
   vsum=0
-  
+  shiftx=(shiftx+dshiftx)%screen_width
+  shifty=(shifty+dshifty)%screen_height
   for i in range (0,n):
     if a[d*i+7]!=1:
       a[d*i]=a[d*i]+a[d*i+2]
