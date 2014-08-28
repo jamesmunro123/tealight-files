@@ -15,7 +15,7 @@ n=3
 # n odd, total number of balls
 
 radius=15
-s1=10
+s1=7
 e=0.7
 e2=1
 mu=0.01
