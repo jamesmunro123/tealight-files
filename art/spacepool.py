@@ -11,10 +11,10 @@ from random import (random, randint)
 from tealight.utils import sleep
 
 a=[]
-n=7
+n=21
 # n odd, total number of balls
 
-radius=25
+radius=15
 s1=10
 e=0.7
 e2=1
