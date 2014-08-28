@@ -39,7 +39,6 @@ sb=0
 gamestate=0
 # gamestate 0 shot ready
 # gamestate 1 no shot, balls moving
-# gamestate 2 no shot, mouse too far
 player=0
 
 
