@@ -81,7 +81,7 @@ def handle_mousedown(x,y):
   a1=x-a[d*(n-1)]
   a2=y-a[d*(n-1)+1]
   if a1>screen_width/2:
-    a1=screen_width-a1
+    a1=-screen_width+a1
   elif a1<-screen_width/2:
     a1=screen_width+a1
   aa=a1*a1+a2*a2
