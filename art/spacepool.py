@@ -141,6 +141,13 @@ def handle_frame():
   sleep(20)
   color("black")
   box(0,0,screen_width,screen_height)
+  
+  vsum=0
+  shiftx=(shiftx+dshiftx)%screen_width
+  shifty=(shifty+dshifty)%screen_height
+  mx=mmx-shiftx
+  my=mmy-shifty
+  
   color("white")
   circle(cx+shiftx,cy+shifty,2*radius)
   circle(cx+screen_width+shiftx,cy+shifty,2*radius)
@@ -156,11 +163,7 @@ def handle_frame():
   color("rgba(0,0,255,1)")
   text(cx-6,cy,sb)  
   
-  vsum=0
-  shiftx=(shiftx+dshiftx)%screen_width
-  shifty=(shifty+dshifty)%screen_height
-  mx=mmx-shiftx
-  my=mmy-shifty
+  
   for i in range (0,n):
     if a[d*i+7]!=1:
       a[d*i]=a[d*i]+a[d*i+2]
