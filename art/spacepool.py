@@ -109,7 +109,9 @@ def handle_mousemove(x,y):
   global mx, my
   mx=x
   my=y
+
   
+
 def handle_frame():
   global mx,my, gamestate, sr, sb
   
