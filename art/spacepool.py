@@ -119,7 +119,7 @@ def handle_mousemove(x,y):
   mmy=y
 
 def handle_keydown(key):
-  global dshiftx, dshifty
+  global dshiftx, dshifty, ffwd
   if key == "left":
     dshiftx=-5
   elif key == "up":
@@ -132,7 +132,7 @@ def handle_keydown(key):
     ffwd=1
     
 def handle_keyup(key):
-  global dshiftx, dshifty
+  global dshiftx, dshifty, ffwd
   if key == "left":
     dshiftx=0
   elif key == "up":
