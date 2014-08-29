@@ -73,7 +73,7 @@ for i in range (0,n):
         r2=randint(0,screen_height)
         a[d*i]=r1
         a[d*i+1]=r2
-      if (a[d*i]-cx)**2+(a[d*i+1]-cy)**2<4*radius**2 and i!=n-1:
+      if (a[d*i]-cx)**2+(a[d*i+1]-cy)**2<9*radius**2 and i!=n-1:
         c=1
         r1=randint(0,screen_width)
         r2=randint(0,screen_height)
