@@ -47,7 +47,7 @@ gamestate=0
 # gamestate 2 gameover
 gameover=0
 player=0
-
+counter=0
 
 for i in range (0,n):
   c=1
@@ -151,12 +151,13 @@ def handle_keyup(key):
   
 
 def handle_frame():
-  global mx,my, gamestate, sr, sb, shiftx, shifty, dshiftx, dshifty, gameover, player, aimrad, ffwd
+  global mx,my, gamestate, sr, sb, shiftx, shifty, dshiftx, dshifty, gameover, player, aimrad, ffwd, counter
   
+  counter=(counter+1)%10
   
-    
-  color("black")
-  box(0,0,screen_width,screen_height)
+  if ffwd==0 or counter==0:  
+    color("black")
+    box(0,0,screen_width,screen_height)
   
   vsum=0
   shiftx=(shiftx+dshiftx)%screen_width
@@ -164,66 +165,67 @@ def handle_frame():
   mx=mmx-shiftx
   my=mmy-shifty
   
-  color("white")
-  circle(cx+shiftx,cy+shifty,2*radius)
-  circle(cx+screen_width+shiftx,cy+shifty,2*radius)
-  circle(cx+shiftx-screen_width,cy+shifty,2*radius)
-  circle(cx+shiftx,cy+shifty+screen_height,2*radius)
-  circle(cx+shiftx,cy+shifty-screen_height,2*radius)
-  circle(cx+shiftx+screen_width,cy+shifty+screen_height,2*radius)
-  circle(cx+shiftx+screen_width,cy+shifty-screen_height,2*radius)
-  circle(cx+shiftx-screen_width,cy+shifty+screen_height,2*radius)
-  circle(cx+shiftx-screen_width,cy+shifty-screen_height,2*radius)
-  color("rgba(255,0,0,1)")
-  text(cx+shiftx-6,cy+shifty-24,sr)
-  text(cx+shiftx+screen_width-6,cy+shifty-24,sr)
-  text(cx+shiftx-screen_width-6,cy+shifty-24,sr)
-  text(cx+shiftx-6,cy+shifty+screen_height-24,sr)
-  text(cx+shiftx-6,cy+shifty-screen_height-24,sr)
-  text(cx+shiftx+screen_width-6,cy+shifty+screen_height-24,sr)
-  text(cx+shiftx+screen_width-6,cy+shifty-screen_height-24,sr)
-  text(cx+shiftx-screen_width-6,cy+shifty+screen_height-24,sr)
-  text(cx+shiftx-screen_width-6,cy+shifty-screen_height-24,sr)
-  
-  color("rgba(0,0,255,1)") 
-  text(cx+shiftx-6,cy+shifty,sb)
-  text(cx+shiftx+screen_width-6,cy+shifty,sb)
-  text(cx+shiftx-screen_width-6,cy+shifty,sb)
-  text(cx+shiftx-6,cy+shifty+screen_height,sb)
-  text(cx+shiftx-6,cy+shifty-screen_height,sb)
-  text(cx+shiftx+screen_width-6,cy+shifty+screen_height,sb)
-  text(cx+shiftx+screen_width-6,cy+shifty-screen_height,sb)
-  text(cx+shiftx-screen_width-6,cy+shifty+screen_height,sb)
-  text(cx+shiftx-screen_width-6,cy+shifty-screen_height,sb)
-  
-  a1=mx-a[d*(n-1)]
-  a2=my-a[d*(n-1)+1]
-  if a1>screen_width/2:
-    a1=-screen_width+a1
-  elif a1<-screen_width/2:
-    a1=screen_width+a1
-  if a2>screen_height/2:
-    a2=-screen_height+a2
-  elif a2<-screen_height/2:
-    a2=screen_height+a2
-  aa=a1*a1+a2*a2
-  a1=a1*aimrad/sqrt(aa)
-  a2=a2*aimrad/sqrt(aa)
-  if gamestate==0 and aa<aimrad**2:
-    if player==0:
-      color("rgba(255,0,0,1)")
-    elif player==1:
-      color("rgba(0,0,255,1)")
-    line(a[d*(n-1)]+shiftx,a[d*(n-1)+1]+shifty,a[d*(n-1)]+shiftx+a1,a[d*(n-1)+1]+shifty+a2)
-    line(a[d*(n-1)]+shiftx+screen_width,a[d*(n-1)+1]+shifty,a[d*(n-1)]+shiftx+screen_width+a1,a[d*(n-1)+1]+shifty+a2)
-    line(a[d*(n-1)]+shiftx-screen_width,a[d*(n-1)+1]+shifty,a[d*(n-1)]+shiftx-screen_width+a1,a[d*(n-1)+1]+shifty+a2)
-    line(a[d*(n-1)]+shiftx,a[d*(n-1)+1]+shifty+screen_height,a[d*(n-1)]+shiftx+a1,a[d*(n-1)+1]+shifty+screen_height+a2)
-    line(a[d*(n-1)]+shiftx,a[d*(n-1)+1]+shifty-screen_height,a[d*(n-1)]+shiftx+a1,a[d*(n-1)+1]+shifty-screen_height+a2)
+  if ffwd==0 or counter==0:
+    color("white")
+    circle(cx+shiftx,cy+shifty,2*radius)
+    circle(cx+screen_width+shiftx,cy+shifty,2*radius)
+    circle(cx+shiftx-screen_width,cy+shifty,2*radius)
+    circle(cx+shiftx,cy+shifty+screen_height,2*radius)
+    circle(cx+shiftx,cy+shifty-screen_height,2*radius)
+    circle(cx+shiftx+screen_width,cy+shifty+screen_height,2*radius)
+    circle(cx+shiftx+screen_width,cy+shifty-screen_height,2*radius)
+    circle(cx+shiftx-screen_width,cy+shifty+screen_height,2*radius)
+    circle(cx+shiftx-screen_width,cy+shifty-screen_height,2*radius)
+    color("rgba(255,0,0,1)")
+    text(cx+shiftx-6,cy+shifty-24,sr)
+    text(cx+shiftx+screen_width-6,cy+shifty-24,sr)
+    text(cx+shiftx-screen_width-6,cy+shifty-24,sr)
+    text(cx+shiftx-6,cy+shifty+screen_height-24,sr)
+    text(cx+shiftx-6,cy+shifty-screen_height-24,sr)
+    text(cx+shiftx+screen_width-6,cy+shifty+screen_height-24,sr)
+    text(cx+shiftx+screen_width-6,cy+shifty-screen_height-24,sr)
+    text(cx+shiftx-screen_width-6,cy+shifty+screen_height-24,sr)
+    text(cx+shiftx-screen_width-6,cy+shifty-screen_height-24,sr)
     
-    line(a[d*(n-1)]+shiftx+screen_width,a[d*(n-1)+1]+shifty+screen_height,a[d*(n-1)]+shiftx+screen_width+a1,a[d*(n-1)+1]+shifty+screen_height+a2)
-    line(a[d*(n-1)]+shiftx+screen_width,a[d*(n-1)+1]+shifty-screen_height,a[d*(n-1)]+shiftx+screen_width+a1,a[d*(n-1)+1]+shifty-screen_height+a2)
-    line(a[d*(n-1)]+shiftx-screen_width,a[d*(n-1)+1]+shifty+screen_height,a[d*(n-1)]+shiftx-screen_width+a1,a[d*(n-1)+1]+shifty+screen_height+a2)
-    line(a[d*(n-1)]+shiftx-screen_width,a[d*(n-1)+1]+shifty-screen_height,a[d*(n-1)]+shiftx-screen_width+a1,a[d*(n-1)+1]+shifty-screen_height+a2)
+    color("rgba(0,0,255,1)") 
+    text(cx+shiftx-6,cy+shifty,sb)
+    text(cx+shiftx+screen_width-6,cy+shifty,sb)
+    text(cx+shiftx-screen_width-6,cy+shifty,sb)
+    text(cx+shiftx-6,cy+shifty+screen_height,sb)
+    text(cx+shiftx-6,cy+shifty-screen_height,sb)
+    text(cx+shiftx+screen_width-6,cy+shifty+screen_height,sb)
+    text(cx+shiftx+screen_width-6,cy+shifty-screen_height,sb)
+    text(cx+shiftx-screen_width-6,cy+shifty+screen_height,sb)
+    text(cx+shiftx-screen_width-6,cy+shifty-screen_height,sb)
+  
+    a1=mx-a[d*(n-1)]
+    a2=my-a[d*(n-1)+1]
+    if a1>screen_width/2:
+      a1=-screen_width+a1
+    elif a1<-screen_width/2:
+      a1=screen_width+a1
+    if a2>screen_height/2:
+      a2=-screen_height+a2
+    elif a2<-screen_height/2:
+      a2=screen_height+a2
+    aa=a1*a1+a2*a2
+    a1=a1*aimrad/sqrt(aa)
+    a2=a2*aimrad/sqrt(aa)
+    if gamestate==0 and aa<aimrad**2:
+      if player==0:
+        color("rgba(255,0,0,1)")
+      elif player==1:
+        color("rgba(0,0,255,1)")
+      line(a[d*(n-1)]+shiftx,a[d*(n-1)+1]+shifty,a[d*(n-1)]+shiftx+a1,a[d*(n-1)+1]+shifty+a2)
+      line(a[d*(n-1)]+shiftx+screen_width,a[d*(n-1)+1]+shifty,a[d*(n-1)]+shiftx+screen_width+a1,a[d*(n-1)+1]+shifty+a2)
+      line(a[d*(n-1)]+shiftx-screen_width,a[d*(n-1)+1]+shifty,a[d*(n-1)]+shiftx-screen_width+a1,a[d*(n-1)+1]+shifty+a2)
+      line(a[d*(n-1)]+shiftx,a[d*(n-1)+1]+shifty+screen_height,a[d*(n-1)]+shiftx+a1,a[d*(n-1)+1]+shifty+screen_height+a2)
+      line(a[d*(n-1)]+shiftx,a[d*(n-1)+1]+shifty-screen_height,a[d*(n-1)]+shiftx+a1,a[d*(n-1)+1]+shifty-screen_height+a2)
+      
+      line(a[d*(n-1)]+shiftx+screen_width,a[d*(n-1)+1]+shifty+screen_height,a[d*(n-1)]+shiftx+screen_width+a1,a[d*(n-1)+1]+shifty+screen_height+a2)
+      line(a[d*(n-1)]+shiftx+screen_width,a[d*(n-1)+1]+shifty-screen_height,a[d*(n-1)]+shiftx+screen_width+a1,a[d*(n-1)+1]+shifty-screen_height+a2)
+      line(a[d*(n-1)]+shiftx-screen_width,a[d*(n-1)+1]+shifty+screen_height,a[d*(n-1)]+shiftx-screen_width+a1,a[d*(n-1)+1]+shifty+screen_height+a2)
+      line(a[d*(n-1)]+shiftx-screen_width,a[d*(n-1)+1]+shifty-screen_height,a[d*(n-1)]+shiftx-screen_width+a1,a[d*(n-1)+1]+shifty-screen_height+a2)
 
   for i in range (0,n):
     if a[d*i+7]!=1:
@@ -400,19 +402,19 @@ def handle_frame():
               else:
                 print("Blue wins.")
               
-      
-      c=[a[d*i+4],a[d*i+5],a[d*i+6],1]
-      colstring = ctorgba(c)
-      color(colstring)
-      spot(a[d*i]+shiftx,a[d*i+1]+shifty,radius)
-      spot(a[d*i]+shiftx+screen_width,a[d*i+1]+shifty,radius)
-      spot(a[d*i]+shiftx-screen_width,a[d*i+1]+shifty,radius)
-      spot(a[d*i]+shiftx,a[d*i+1]+shifty+screen_height,radius)
-      spot(a[d*i]+shiftx,a[d*i+1]+shifty-screen_height,radius)
-      spot(a[d*i]+shiftx+screen_width,a[d*i+1]+shifty+screen_height,radius)
-      spot(a[d*i]+shiftx+screen_width,a[d*i+1]+shifty-screen_height,radius)
-      spot(a[d*i]+shiftx-screen_width,a[d*i+1]+shifty+screen_height,radius)
-      spot(a[d*i]+shiftx-screen_width,a[d*i+1]+shifty-screen_height,radius)
+      if ffwd==0 or counter==0:
+        c=[a[d*i+4],a[d*i+5],a[d*i+6],1]
+        colstring = ctorgba(c)
+        color(colstring)
+        spot(a[d*i]+shiftx,a[d*i+1]+shifty,radius)
+        spot(a[d*i]+shiftx+screen_width,a[d*i+1]+shifty,radius)
+        spot(a[d*i]+shiftx-screen_width,a[d*i+1]+shifty,radius)
+        spot(a[d*i]+shiftx,a[d*i+1]+shifty+screen_height,radius)
+        spot(a[d*i]+shiftx,a[d*i+1]+shifty-screen_height,radius)
+        spot(a[d*i]+shiftx+screen_width,a[d*i+1]+shifty+screen_height,radius)
+        spot(a[d*i]+shiftx+screen_width,a[d*i+1]+shifty-screen_height,radius)
+        spot(a[d*i]+shiftx-screen_width,a[d*i+1]+shifty+screen_height,radius)
+        spot(a[d*i]+shiftx-screen_width,a[d*i+1]+shifty-screen_height,radius)
   
   
   if vsum>0.1:
