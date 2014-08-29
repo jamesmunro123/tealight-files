@@ -236,8 +236,13 @@ def handle_frame():
         a[d*i+2]=a[d*i+2]*(1-mu/vv)
         a[d*i+3]=a[d*i+3]*(1-mu/vv)
       
+      
+      k1=int(a[d*i+1]/screen_height)
+      k2=a[d*i+1]%screen_height
+      
       a[d*i]=a[d*i]%screen_width
-      a[d*i+1]=a[d*i+1]%screen_height
+      a[d*i+1]=k2*(-1)**k1
+      a[d*i+3]=a[d*i+3]*(-1)**k1
       
       vsum=vsum+vv
       
