@@ -153,7 +153,7 @@ def handle_keyup(key):
 def handle_frame():
   global mx,my, gamestate, sr, sb, shiftx, shifty, dshiftx, dshifty, gameover, player, aimrad, ffwd, counter
   
-  counter=(counter+1)%10
+  counter=(counter+1)%20
   
   if ffwd==0 or counter==0:  
     color("black")
