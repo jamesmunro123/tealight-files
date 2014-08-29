@@ -388,13 +388,17 @@ def handle_frame():
           sb=sb+1
         else:
           if gameover==0:
+            gameover=1
             if player==0:
-               gameover=1
-               print("Red wins.")
+              if sb==n/2-1:
+                print("Blue wins.")
+              else:
+                print("Red wins.")
             if player==1:
-               gameover=1
-               print("Blue wins.")
-        
+              if sr==n/2-1:
+                print("Red wins.")
+              else:
+                print("Blue wins.")
               
       
       c=[a[d*i+4],a[d*i+5],a[d*i+6],1]
@@ -419,11 +423,5 @@ def handle_frame():
       a[d*i+2]=0
       a[d*i+3]=0
   
-  if gameover==0:
-    if sr==int(n/2-1):
-       gameover=1
-       print("Red wins.")
-    if sb==int(n/2-1):
-       gameover=1
-       print("Blue wins.")
+  
     
