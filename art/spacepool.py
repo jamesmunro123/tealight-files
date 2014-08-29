@@ -14,7 +14,7 @@ a=[]
 n=4
 # n even, total number of balls
 
-radius=15
+radius=20
 s1=7
 e=0.7
 e2=1
