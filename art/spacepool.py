@@ -388,7 +388,7 @@ def handle_frame():
           sb=sb+1
         else:
           if gameover==0:
-            if player==1:
+            if player==0:
                gameover=1
                print("Red wins.")
             if player==1:
