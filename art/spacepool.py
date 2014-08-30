@@ -404,14 +404,14 @@ def handle_frame():
             gameover=1
             if player==0:
               if sb==n/2-1:
-                print("Player 1 wins.")
-              else:
                 print("Player 2 wins.")
+              else:
+                print("Player 1 wins.")
             if player==1:
               if sr==n/2-1:
-                print("Player 2 wins.")
-              else:
                 print("Player 1 wins.")
+              else:
+                print("Player 2 wins.")
               
       if ffwd==0 or counter==0:
         c=[a[d*i+4],a[d*i+5],a[d*i+6],1]
