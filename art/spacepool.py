@@ -190,7 +190,7 @@ def handle_frame():
     text(cx+shiftx-screen_width-6,cy+shifty+screen_height-24,sr)
     text(cx+shiftx-screen_width-6,cy+shifty-screen_height-24,sr)
     
-    color("rgba(cb[0],cb[1],cb[2],1)") 
+    color(ctorgba((cb[0],cb[1],cb[2],1))) 
     text(cx+shiftx-6,cy+shifty,sb)
     text(cx+shiftx+screen_width-6,cy+shifty,sb)
     text(cx+shiftx-screen_width-6,cy+shifty,sb)
@@ -216,9 +216,9 @@ def handle_frame():
     a2=a2*aimrad/sqrt(aa)
     if gamestate==0 and aa<aimrad**2:
       if player==0:
-        color("rgba(cr[0],cr[1],cr[2],1)")
+        color(ctorgba((cr[0],cr[1],cr[2],1)))
       elif player==1:
-        color("rgba(cb[0],cb[1],cb[2],1)")
+        color(ctorgba((cb[0],cb[1],cb[2],1)))
       line(a[d*(n-1)]+shiftx,a[d*(n-1)+1]+shifty,a[d*(n-1)]+shiftx+a1,a[d*(n-1)+1]+shifty+a2)
       line(a[d*(n-1)]+shiftx+screen_width,a[d*(n-1)+1]+shifty,a[d*(n-1)]+shiftx+screen_width+a1,a[d*(n-1)+1]+shifty+a2)
       line(a[d*(n-1)]+shiftx-screen_width,a[d*(n-1)+1]+shifty,a[d*(n-1)]+shiftx-screen_width+a1,a[d*(n-1)+1]+shifty+a2)
