@@ -179,7 +179,7 @@ def handle_frame():
     circle(cx+shiftx+screen_width,cy+shifty-screen_height,2*radius)
     circle(cx+shiftx-screen_width,cy+shifty+screen_height,2*radius)
     circle(cx+shiftx-screen_width,cy+shifty-screen_height,2*radius)
-    color("rgba(cr[0],cr[1],cr[2],1)")
+    color(ctorgba(cr[0],cr[1],cr[2],1))
     text(cx+shiftx-6,cy+shifty-24,sr)
     text(cx+shiftx+screen_width-6,cy+shifty-24,sr)
     text(cx+shiftx-screen_width-6,cy+shifty-24,sr)
