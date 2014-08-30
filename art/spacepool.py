@@ -28,7 +28,7 @@ cb=[0,0,255]
 
 cw=[255,255,255]
 ck=[70,70,70]
-bgcol="black"
+bgcol="gray"
 
 mx=0
 my=0
