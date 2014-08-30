@@ -404,9 +404,10 @@ def handle_frame():
             gameover=1
             if player==0:
               if sb==n/2-1:
-                print("Blue wins.")
+                color(ctorgba((cr[0],cr[1],cr[2],1)))
+                text(cx+shiftx-6,cy+shifty-24,"Winner")
               else:
-                print("Red wins.")
+                print("First team wins.")
             if player==1:
               if sr==n/2-1:
                 print("Red wins.")
