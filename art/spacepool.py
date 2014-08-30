@@ -21,7 +21,7 @@ e2=1
 mu=0.01
 
 cr=[255,0,0]
-cb=[220,220,0]
+cb=[230,230,0]
 
 #cr=[0,33,71]
 #cb=[163,193,173]
@@ -404,7 +404,7 @@ def handle_frame():
             gameover=1
             if player==0:
               if sb==n/2-1:
-                color(ctorgba((cr[0],cr[1],cr[2],1)))
+                color(ctorgba((cb[0],cb[1],cb[2],1)))
                 text(cx+shiftx-6,cy+shifty-24,"Winner")
               else:
                 print("First team wins.")
