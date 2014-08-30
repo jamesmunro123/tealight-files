@@ -20,6 +20,9 @@ e=0.7
 e2=1
 mu=0.01
 
+cr=[255,0,0]
+cb=[0,0,255]
+
 mx=0
 my=0
 mmx=mx
@@ -57,9 +60,9 @@ for i in range (0,n):
   #r4=randint(0,s1*100)/100-s1/2
   
   if i<(n/2)-1:
-    a=a+[r1,r2,0,0,255,0,0,0]
+    a=a+[r1,r2,0,0,cr[0],cr[1],cr[2],0]
   else:
-    a=a+[r1,r2,0,0,0,0,255,0]
+    a=a+[r1,r2,0,0,cb[0],cb[1],cb[2],0]
   while c==1:
     c=0
     for j in range (0,i):
@@ -151,7 +154,7 @@ def handle_keyup(key):
   
 
 def handle_frame():
-  global mx,my, gamestate, sr, sb, shiftx, shifty, dshiftx, dshifty, gameover, player, aimrad, ffwd, counter
+  global mx,my, gamestate, sr, sb, shiftx, shifty, dshiftx, dshifty, gameover, player, aimrad, ffwd, counter, cr, cb
   
   counter=(counter+1)%20
   
@@ -176,7 +179,7 @@ def handle_frame():
     circle(cx+shiftx+screen_width,cy+shifty-screen_height,2*radius)
     circle(cx+shiftx-screen_width,cy+shifty+screen_height,2*radius)
     circle(cx+shiftx-screen_width,cy+shifty-screen_height,2*radius)
-    color("rgba(255,0,0,1)")
+    color("rgba(cr[0],cr[1],cr[2],1)")
     text(cx+shiftx-6,cy+shifty-24,sr)
     text(cx+shiftx+screen_width-6,cy+shifty-24,sr)
     text(cx+shiftx-screen_width-6,cy+shifty-24,sr)
@@ -187,7 +190,7 @@ def handle_frame():
     text(cx+shiftx-screen_width-6,cy+shifty+screen_height-24,sr)
     text(cx+shiftx-screen_width-6,cy+shifty-screen_height-24,sr)
     
-    color("rgba(0,0,255,1)") 
+    color("rgba(cb[0],cb[1],cb[2],1)") 
     text(cx+shiftx-6,cy+shifty,sb)
     text(cx+shiftx+screen_width-6,cy+shifty,sb)
     text(cx+shiftx-screen_width-6,cy+shifty,sb)
@@ -213,9 +216,9 @@ def handle_frame():
     a2=a2*aimrad/sqrt(aa)
     if gamestate==0 and aa<aimrad**2:
       if player==0:
-        color("rgba(255,0,0,1)")
+        color("rgba(cr[0],cr[1],cr[2],1)")
       elif player==1:
-        color("rgba(0,0,255,1)")
+        color("rgba(cb[0],cb[1],cb[2],1)")
       line(a[d*(n-1)]+shiftx,a[d*(n-1)+1]+shifty,a[d*(n-1)]+shiftx+a1,a[d*(n-1)+1]+shifty+a2)
       line(a[d*(n-1)]+shiftx+screen_width,a[d*(n-1)+1]+shifty,a[d*(n-1)]+shiftx+screen_width+a1,a[d*(n-1)+1]+shifty+a2)
       line(a[d*(n-1)]+shiftx-screen_width,a[d*(n-1)+1]+shifty,a[d*(n-1)]+shiftx-screen_width+a1,a[d*(n-1)+1]+shifty+a2)
