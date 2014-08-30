@@ -23,8 +23,9 @@ mu=0.01
 cr=[163,193,173]
 cb=[0,33,71]
 
-cw=[255,255,255]
+cw=[200,200,200]
 ck=[70,70,70]
+bgcol="white"
 
 mx=0
 my=0
@@ -157,12 +158,12 @@ def handle_keyup(key):
   
 
 def handle_frame():
-  global mx,my, gamestate, sr, sb, shiftx, shifty, dshiftx, dshifty, gameover, player, aimrad, ffwd, counter, cr, cb
+  global mx,my, gamestate, sr, sb, shiftx, shifty, dshiftx, dshifty, gameover, player, aimrad, ffwd, counter, cr, cb, bgcol
   
   counter=(counter+1)%20
   
   if ffwd==0 or counter==0:  
-    color("black")
+    color(bgcol)
     box(0,0,screen_width,screen_height)
   
   vsum=0
