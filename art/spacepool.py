@@ -49,6 +49,7 @@ shifty=0
 dshiftx=0
 dshifty=0
 ffwd=0
+scrspd=5
 
 sr=0
 sb=0
@@ -135,15 +136,15 @@ def handle_mousemove(x,y):
   mmy=y
 
 def handle_keydown(key):
-  global dshiftx, dshifty, ffwd
+  global dshiftx, dshifty, ffwd, scrspd
   if key == "left":
-    dshiftx=-5
+    dshiftx=-scrspd
   elif key == "up":
-    dshifty=-5
+    dshifty=-scrspd
   elif key == "right":
-    dshiftx=5
+    dshiftx=scrspd
   elif key == "down":
-    dshifty=5
+    dshifty=scrspd
   elif key == "q":
     ffwd=1
     
