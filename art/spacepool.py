@@ -49,7 +49,7 @@ shifty=0
 dshiftx=0
 dshifty=0
 ffwd=0
-scrspd=5
+scrspd=10
 
 sr=0
 sb=0
